@@ -52,8 +52,7 @@
   gsap.utils.toArray('.cards').forEach(function (group) {
     gsap.from(group.children, { scrollTrigger: { trigger: group, start: 'top 85%' }, y: 70, opacity: 0, duration: .8, stagger: .15, ease: 'power3.out', clearProps: 'transform,opacity' });
   });
-  gsap.from('.spk', { scrollTrigger: { trigger: '#rail', start: 'top 85%' }, clipPath: 'inset(50% round 10px)', scale: .9, duration: 1, stagger: .1, ease: 'power3.out', clearProps: 'clipPath,transform' });
-  gsap.from('.pop', { scrollTrigger: { trigger: '#past', start: 'top 90%' }, scale: .6, opacity: 0, duration: .6, stagger: .06, ease: 'back.out(1.7)' });
+  gsap.from('.pop', { scrollTrigger: { trigger: '#rail', start: 'top 90%' }, scale: .6, opacity: 0, duration: .6, stagger: .06, ease: 'back.out(1.7)' });
   gsap.from('.story-item', { scrollTrigger: { trigger: '#story-grid', start: 'top 85%' }, y: 60, opacity: 0, scale: .94, duration: .9, stagger: .12, ease: 'power3.out', clearProps: 'transform,opacity' });
   gsap.to('.ticker', { scrollTrigger: { trigger: '.ticker', scrub: true, start: 'top bottom', end: 'bottom top' }, rotate: 1.2 });
 

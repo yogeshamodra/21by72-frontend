@@ -6,7 +6,9 @@ Static HTML/CSS/JS prototype built on Bootstrap 5.3. Every section is plain mark
 
 ```
 index.html              page; each section is wrapped in a comment banner naming its WP template part
+home.html               light-theme demo: same markup as index.html + <body class="theme-light"> + assets/css/theme-light.css
 assets/css/style.css    all theme styles, with a table of contents at the top
+assets/img/             21by72-logo.png (header, footer, loader)
 assets/js/
   marquee.js            repeats [data-marquee] content for seamless loops
   countdown.js          [data-countdown] date -> [data-cd] numbers

@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>21BY72 Season 6 - Light Theme Demo</title>
+<!-- WP: wp_head() goes here; enqueue the CSS below from functions.php (see README.md) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/theme-light.css">
+</head>
+<body class="theme-light">
+
+<!-- ============================================================
+     SECTION: page chrome (loader, progress bar, cursor glow)
+     WP: header.php
+     ============================================================ -->
+<div class="loader d-flex align-items-center justify-content-center" id="loader"><span><img src="assets/img/21by72-logo.png" width="110" height="110" alt="21BY72"></span></div>
+<div id="bar" class="bg-grad"></div><div id="glow"></div>
+
+<!-- ============================================================
+     SECTION: header / navigation
+     WP: header.php  (menu items -> wp_nav_menu with a custom walker for the .nav-link classes)
+     ============================================================ -->
+<nav class="navbar navbar-expand-lg fixed-top" id="hd"><div class="container">
+  <a class="logo logo-img d-inline-flex align-items-center" href="#top" aria-label="21BY72 home"><img src="assets/img/21by72-logo.png" width="48" height="48" alt="21BY72"></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="nav">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item"><a class="nav-link" href="#book">Exhibitors</a></li>
+      <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+      <li class="nav-item"><a class="nav-link" href="#speakers">Speakers</a></li>
+      <li class="nav-item"><a class="nav-link" href="#partners">Partners</a></li>
+      <li class="nav-item"><a class="nav-link" href="#roles">Pitching Event</a></li>
+      <li class="nav-item"><a class="nav-link" href="#team">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#book">Book</a></li>
+    </ul>
+    <a class="btn btn-grad btn-sm-x" href="#book">Grab Your Pass</a>
+  </div>
+</div></nav>
+
+<!-- ============================================================
+     SECTION: hero
+     WP: template-parts/section-hero.php
+     JS: hero-hex.js (canvas), countdown.js (data-countdown date), animations.js (intro)
+     ============================================================ -->
+<section class="hero d-flex align-items-center text-center position-relative" id="top">
+  <canvas id="hex" aria-hidden="true"></canvas>
+  <div class="orb o1"></div><div class="orb o2"></div>
+  <div class="container">
+    <span class="eyebrow d-inline-block" data-in>Beyond the Pitch &middot; Season 6</span>
+    <h1 id="h1" class="my-1" aria-label="21BY72"><span class="w"><i>21<b>BY</b>72</i></span></h1>
+    <p class="tagline t-mute mb-3" data-in>Bharat's Leading Startup Summit</p>
+    <div class="d-flex justify-content-center flex-wrap gap-2 gap-md-5 fs-5 fw-medium mb-4" data-in><span class="dot">10 &ndash; 11 April 2027</span><span class="dot">Avadh Utopia, Surat</span></div>
+    <div class="d-flex justify-content-center flex-wrap gap-3" data-in><a href="#book" class="btn btn-grad">Grab Your Pass</a><a href="#book" class="btn btn-ghost">Exhibit Your Startup</a></div>
+    <div class="panel row align-items-center g-3" data-in>
+      <div class="col-md-4 text-md-start"><h3 class="mb-0">Hurry Up!</h3><p class="t-mute fw-medium mb-0">Book your seat now</p></div>
+      <!-- WP: event date from an ACF/option field -> data-countdown -->
+      <div class="col-md-4 cd d-flex justify-content-center gap-2" role="timer" aria-label="Time left until the event" data-countdown="2027-04-10T09:00:00+05:30">
+        <div><b data-cd="d">00</b><small class="t-mute fs-xs ls-wide">Days</small></div><div><b data-cd="h">00</b><small class="t-mute fs-xs ls-wide">Hours</small></div><div><b data-cd="m">00</b><small class="t-mute fs-xs ls-wide">Minutes</small></div><div><b data-cd="s">00</b><small class="t-mute fs-xs ls-wide">Seconds</small></div>
+      </div>
+      <div class="col-md-4 venue d-flex align-items-center justify-content-center justify-content-md-end gap-3 fw-medium text-start">Avadh Utopia,<br>Surat, Gujarat</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION: ticker (marquee)
+     WP: template-parts/ticker.php  (list -> ACF repeater)
+     JS: marquee.js repeats the content so the loop is seamless - output ONE copy here
+     ============================================================ -->
+<div class="ticker bg-grad"><div data-marquee="4"><span>Exhibitions &#10022;</span><span>Live Startup Pitches &#10022;</span><span>Keynote Sessions &#10022;</span><span>Panel Discussions &#10022;</span><span>Fireside Chats &#10022;</span><span>Workshops &#10022;</span><span>Speed Dating &#10022;</span></div></div>
+
+<!-- ============================================================
+     SECTION: roles
+     WP: template-parts/section-roles.php  (3 cards -> ACF repeater or 3 blocks)
+     ============================================================ -->
+<section class="sec" id="roles"><div class="container">
+  <h2 class="h-sec mb-2" data-in>Choose your <span class="t-grad">role</span></h2><p class="sub mb-5" data-in>Exhibit, pitch or attend - there is a place for everyone at 21BY72.</p>
+  <div class="row g-4 cards">
+    <div class="col-md-4"><div class="box h-100" data-in><div class="ico mb-3">&#127970;</div><h3 class="h4">Exhibition</h3><p class="t-mute mb-4">Showcase your startup to thousands of visitors and investors.</p><a class="btn btn-grad" href="#book">Book Now</a></div></div>
+    <div class="col-md-4"><div class="box h-100" data-in><div class="ico mb-3">&#9935;&#65039;</div><h3 class="h4">Trailblazers Mine</h3><p class="t-mute mb-4">Pitch live to a panel of investors and grow your business.</p><a class="btn btn-grad" href="#book">Apply Now</a></div></div>
+    <div class="col-md-4"><div class="box h-100" data-in><div class="ico mb-3">&#127903;&#65039;</div><h3 class="h4">Passes</h3><p class="t-mute mb-4">Attend keynotes, panels, workshops and networking sessions.</p><a class="btn btn-grad" href="#book">Book Now</a></div></div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: our story (masonry gallery)
+     WP: template-parts/section-story.php
+     Loop: ACF gallery field (or a "gallery" post type with featured image + caption). Each .story-item = one loop iteration. Masonry is pure CSS columns - no script needed.
+     ============================================================ -->
+<section class="sec" id="journey"><div class="container">
+  <div class="text-center mb-5" data-in>
+    <span class="eyebrow">Our Story</span>
+    <h2 class="h-sec t-metal mt-2 mb-3">4 Years of <span class="t-grad">21BY72</span></h2>
+    <p class="sub t-soft mx-auto mb-0">From a first gathering in Surat to Bharat's leading startup summit - moments from the journey.</p>
+  </div>
+  <div class="story" id="story-grid">
+      <figure class="story-item">
+        <img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/12/banner-4.jpeg" width="1921" height="801" alt="A speaker addressing the audience at 21BY72">
+        <figcaption>Keynote</figcaption>
+      </figure>
+      <figure class="story-item">
+        <img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/02/21BY72-Season-4-Event.jpg" width="640" height="853" alt="21BY72 Season 4 on stage">
+        <figcaption>Season 4</figcaption>
+      </figure>
+      <figure class="story-item">
+        <img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/07/the-ultimate-event-highlights-mu.jpg" width="1200" height="675" alt="A founder speaking on the 21BY72 stage">
+        <figcaption>On stage</figcaption>
+      </figure>
+      <figure class="story-item">
+        <img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/03/we-are.webp" width="1200" height="675" alt="The 21BY72 team together at the event">
+        <figcaption>Team 21BY72</figcaption>
+      </figure>
+      <figure class="story-item">
+        <img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/12/past-events-banner.jpg" width="1600" height="1022" alt="Speakers from all seasons of 21BY72">
+        <figcaption>Our speakers</figcaption>
+      </figure>
+      <figure class="story-item">
+        <img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/07/21by72-startup-summit-unleashing.jpg" width="1200" height="675" alt="Guests enjoying the 21BY72 startup summit">
+        <figcaption>The community</figcaption>
+      </figure>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: schedule
+     WP: template-parts/section-schedule.php
+     Loop: custom post type "session" (title, from/to time, type, hall, speakers, day taxonomy). One .tab-pane per day and one .sched-item per session.
+     NOTE: content below is the Season 5 agenda (13-14 June 2026) from the official PDF. Replace with the Season 6 agenda when it is confirmed.
+     ============================================================ -->
+<section class="sec bg-alt" id="schedule"><div class="container">
+  <div class="text-center mb-5" data-in>
+    <span class="eyebrow">Agenda</span>
+    <h2 class="h-sec t-metal mt-2 mb-3">Two Days. One Stage for Bharat.</h2>
+    <p class="sub t-soft mx-auto mb-4">Fireside chats, panel discussions, keynotes, live startup pitches and masterclasses at Avadh Utopia, Surat.</p>
+    <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+      <span class="sched-note">Season 5 agenda &middot; 13&ndash;14 June 2026 &middot; Registration from 9:30 AM</span>
+      <a class="btn btn-ghost btn-sm-x" href="https://www.21by72.com/wp-content/uploads/2024/04/21BY72-Season5-Agenda-Final.pdf" target="_blank" rel="noopener">Download agenda (PDF)</a>
+    </div>
+  </div>
+  <ul class="nav nav-pills sched-tabs justify-content-center gap-2 mb-5" role="tablist" data-in>
+    <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#day1" type="button" role="tab" aria-selected="true">Day 1 <small>Sat, 13 June 2026</small></button></li>
+    <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#day2" type="button" role="tab" aria-selected="false">Day 2 <small>Sun, 14 June 2026</small></button></li>
+  </ul>
+  <div class="tab-content" data-in>
+    <div class="tab-pane fade show active" id="day1" role="tabpanel">
+      <div class="sched-wrap mx-auto">
+        <h3 class="sched-hall">Main Stage <span class="t-mute fs-sm fw-normal">Orchid 1 &middot; 2nd Floor</span></h3>
+        <ol class="sched list-unstyled mb-0">
+        <li class="sched-item">
+          <div class="sched-time">10:00<small class="d-block fw-normal t-mute">to 10:45</small></div>
+          <div class="sched-card"><span class="sched-tag">Ceremony</span><h3>Opening Ceremony</h3><p class="t-mute mb-2">Ribbon cutting (10:00), opening speech by IVY Growth Associates (10:15) and presentation by sponsors (10:30)</p><div class="d-flex flex-wrap gap-2 mb-2"><span class="sched-p">Mehul Shah</span><span class="sched-p">Prateek Tosniwal</span><span class="sched-p">Rachit Poddar</span></div><div class="sched-where fs-sm t-soft">Marigold Hall, Ground Floor</div></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">11:00<small class="d-block fw-normal t-mute">to 11:45</small></div>
+          <div class="sched-card"><span class="sched-tag">Fireside Chat</span><h3>Ashneer Grover</h3><p class="mb-2 t-mute">in conversation with <b class="t-white">Prateek Tosniwal</b></p></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">11:45<small class="d-block fw-normal t-mute">to 12:20</small></div>
+          <div class="sched-card"><span class="sched-tag">Panel</span><h3>Old Money, New Playbook</h3><p class="t-mute mb-2">How Family Offices Are Betting on the Next Bharat</p><div class="d-flex flex-wrap gap-2 mb-2"><span class="sched-p">Mohnish Yerra</span><span class="sched-p">Kapil Hingorani</span><span class="sched-p">Dhruv Sane</span><span class="sched-p">Amit Jain</span><span class="sched-p sched-mod">Nirav Jogani &middot; Moderator</span></div></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">12:20<small class="d-block fw-normal t-mute">to 12:55</small></div>
+          <div class="sched-card"><span class="sched-tag">Panel</span><h3>Marketing that Sticks</h3><p class="t-mute mb-2">Cutting through the Noise in a Crowded Digital World</p><div class="d-flex flex-wrap gap-2 mb-2"><span class="sched-p">Shivangi Dham</span><span class="sched-p">Anuj Tosniwal</span><span class="sched-p">Gauri More</span><span class="sched-p">Rikki Agarwal</span><span class="sched-p sched-mod">Sakshi Lalwani &middot; Moderator</span></div></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">12:55<small class="d-block fw-normal t-mute">to 13:30</small></div>
+          <div class="sched-card"><span class="sched-tag">Fireside Chat</span><h3>Angad Bedi</h3><p class="t-mute mb-2">Indian Actor</p><p class="mb-2 t-mute">in conversation with <b class="t-white">Anuj Tosniwal</b></p></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">13:30<small class="d-block fw-normal t-mute">to 14:00</small></div>
+          <div class="sched-card"><span class="sched-tag">Break</span><h3>Break</h3></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">14:00<small class="d-block fw-normal t-mute">to 14:35</small></div>
+          <div class="sched-card"><span class="sched-tag">Panel</span><h3>Cracking the Global Investor Lens</h3><p class="t-mute mb-2">What It Takes for Startups to Scale Internationally</p><div class="d-flex flex-wrap gap-2 mb-2"><span class="sched-p">Burzin Luth</span><span class="sched-p">Uday Barot</span><span class="sched-p">Ashutosh Jha</span><span class="sched-p">Hitesh Sachdev</span><span class="sched-p sched-mod">Meghna Dixit &middot; Moderator</span></div></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">14:35<small class="d-block fw-normal t-mute">to 15:15</small></div>
+          <div class="sched-card"><span class="sched-tag">Fireside Chat</span><h3>Zaheer Iqbal</h3><p class="t-mute mb-2">Indian Actor</p><p class="mb-2 t-mute">in conversation with <b class="t-white">Ishita Nandwani</b></p></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">15:15<small class="d-block fw-normal t-mute">to 15:50</small></div>
+          <div class="sched-card"><span class="sched-tag">Panel</span><h3>The Algorithm Game</h3><p class="t-mute mb-2">Winning on Instagram, YouTube &amp; Beyond</p><div class="d-flex flex-wrap gap-2 mb-2"><span class="sched-p">Ujjawal Kedia</span><span class="sched-p">CA Meher Kaur</span><span class="sched-p">Pooja Patel</span><span class="sched-p">Muskan Agarwal</span><span class="sched-p sched-mod">Amanda Robinson &middot; Moderator</span></div></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">15:50<small class="d-block fw-normal t-mute">to 16:25</small></div>
+          <div class="sched-card"><span class="sched-tag">Panel</span><h3>Show Me the Money</h3><p class="t-mute mb-2">Chasing Unicorns Across Fintech, Healthtech, Consumer &amp; Beyond</p><div class="d-flex flex-wrap gap-2 mb-2"><span class="sched-p">Nisha Barot</span><span class="sched-p">Pratekk Agarwaal</span><span class="sched-p">Mitesh Shah</span><span class="sched-p">Narendra Bhandari</span><span class="sched-p sched-mod">Sahil Khan &middot; Moderator</span></div></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">16:25<small class="d-block fw-normal t-mute">to 17:00</small></div>
+          <div class="sched-card"><span class="sched-tag">Keynote</span><h3>Arjun Vaidya</h3><p class="t-mute mb-2">Co-founder, V3 Ventures</p></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">17:00<small class="d-block fw-normal t-mute">to 17:35</small></div>
+          <div class="sched-card"><span class="sched-tag">Panel</span><h3>eChai-Led Panel</h3><p class="t-mute mb-2">The Unglamorous Truth about Building Businesses</p><div class="d-flex flex-wrap gap-2 mb-2"><span class="sched-p">Snehal Shah</span><span class="sched-p">Ankit Virani</span><span class="sched-p">Chirag Pipaliya</span><span class="sched-p">Shreya Jaiswal</span><span class="sched-p sched-mod">Jatin Chaudhary &middot; Moderator</span></div></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">17:35<small class="d-block fw-normal t-mute">onwards</small></div>
+          <div class="sched-card"><span class="sched-tag">Live</span><h3>Indian Classical Live</h3><p class="t-mute mb-2">by Abhilasha Bhantia</p></div>
+        </li>
+        </ol>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="day2" role="tabpanel">
+      <div class="sched-wrap mx-auto">
+        <h3 class="sched-hall">Main Stage <span class="t-mute fs-sm fw-normal">Orchid 1 &middot; 2nd Floor</span></h3>
+        <ol class="sched list-unstyled mb-0">
+        <li class="sched-item">
+          <div class="sched-time">10:00<small class="d-block fw-normal t-mute">to 10:30</small></div>
+          <div class="sched-card"><span class="sched-tag">Panel</span><h3>From FDs to Funds</h3><p class="t-mute mb-2">India’s Wealth Migration Into Alternative Assets</p><div class="d-flex flex-wrap gap-2 mb-2"><span class="sched-p">Prem Patel</span><span class="sched-p">Abdul Faizal</span><span class="sched-p">Rohan Mehta</span><span class="sched-p">Jatin Kataria</span><span class="sched-p sched-mod">Mehak Choradia &middot; Moderator</span></div></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">10:30<small class="d-block fw-normal t-mute">to 11:05</small></div>
+          <div class="sched-card"><span class="sched-tag">Panel</span><h3>Micro VC Session</h3><p class="t-mute mb-2">Red Flags &amp; Green Lights – Fund Managers Speak Unfiltered</p><div class="d-flex flex-wrap gap-2 mb-2"><span class="sched-p">Sharad Bansal</span><span class="sched-p">Kuldeep Mirani</span><span class="sched-p">Paras Barot</span><span class="sched-p">Sanya Kalani</span><span class="sched-p sched-mod">Garima Seth &middot; Moderator</span></div></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">11:05<small class="d-block fw-normal t-mute">to 11:25</small></div>
+          <div class="sched-card"><span class="sched-tag">Panel</span><h3>Get it Right, Get it Early</h3><p class="t-mute mb-2">Startup Law &amp; Compliance in Plain English</p><div class="d-flex flex-wrap gap-2 mb-2"><span class="sched-p">Ranjeet Kejriwal</span><span class="sched-p">Sujeet Karkala</span><span class="sched-p">Avinash Poddar</span><span class="sched-p sched-mod">Karishma Chandak &middot; Moderator</span></div></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">11:25<small class="d-block fw-normal t-mute">to 11:35</small></div>
+          <div class="sched-card"><span class="sched-tag">Keynote</span><h3>Shri M Nagarajan, IAS</h3><p class="t-mute mb-2">Municipal Commissioner, Surat</p></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">11:35<small class="d-block fw-normal t-mute">to 11:55</small></div>
+          <div class="sched-card"><span class="sched-tag">Fireside Chat</span><h3>Dhruv Luthra</h3><p class="t-mute mb-2">Waste to Wealth – How a Textile Family Bet Everything on Sustainability</p><p class="mb-2 t-mute">in conversation with <b class="t-white">Mehul Shah</b></p></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">11:55<small class="d-block fw-normal t-mute">to 12:35</small></div>
+          <div class="sched-card"><span class="sched-tag">Panel</span><h3>Bits, Atoms &amp; Electrons</h3><p class="t-mute mb-2">India’s AI, Deep Tech &amp; Clean Energy Moment Is Now</p><div class="d-flex flex-wrap gap-2 mb-2"><span class="sched-p">Aashish Gupta</span><span class="sched-p">Vineet Mittal</span><span class="sched-p">Dhaval Shah</span><span class="sched-p">Raj Narula</span><span class="sched-p sched-mod">Sneha Hingorani &middot; Moderator</span></div></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">12:35<small class="d-block fw-normal t-mute">to 13:30</small></div>
+          <div class="sched-card"><span class="sched-tag">Fireside Chat</span><h3>Pratik Gandhi</h3><p class="t-mute mb-2">Indian Actor</p><p class="mb-2 t-mute">in conversation with <b class="t-white">Mehul Shah &amp; Anuj Tosniwal</b></p></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">13:30<small class="d-block fw-normal t-mute">to 14:00</small></div>
+          <div class="sched-card"><span class="sched-tag">Break</span><h3>Break</h3></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">14:00<small class="d-block fw-normal t-mute">to 14:30</small></div>
+          <div class="sched-card"><span class="sched-tag">Keynote</span><h3>Sarthak Ahuja</h3><p class="t-mute mb-2">Investment Banker &amp; Author</p></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">14:30<small class="d-block fw-normal t-mute">to 15:10</small></div>
+          <div class="sched-card"><span class="sched-tag">Fireside Chat</span><h3>Parul Gulati</h3><p class="t-mute mb-2">Actor · Founder, Nish Hair</p><p class="mb-2 t-mute">in conversation with <b class="t-white">Sunidhi Poddar &amp; Rachit Poddar</b></p></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">15:10<small class="d-block fw-normal t-mute">to 15:30</small></div>
+          <div class="sched-card"><span class="sched-tag">Fireside Chat</span><h3>Yash Gajjar</h3><p class="t-mute mb-2">MD, Navjivan Group</p><p class="mb-2 t-mute">in conversation with <b class="t-white">Anuj Tosniwal</b></p></div>
+        </li>
+        <li class="sched-item">
+          <div class="sched-time">15:30<small class="d-block fw-normal t-mute">to 16:15</small></div>
+          <div class="sched-card"><span class="sched-tag">Panel</span><h3>Building Trust-First Communities in Tier 2 &amp; Tier 3 Cities</h3><div class="d-flex flex-wrap gap-2 mb-2"><span class="sched-p">Adhiraj Banarjee</span><span class="sched-p">Jimish Kapadia</span><span class="sched-p">Luandro Richard</span><span class="sched-p sched-mod">Prakash Hathi &middot; Moderator</span></div></div>
+        </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <p class="text-center t-mute fs-sm mt-5 mb-0">The agenda is tentative and subject to change.</p>
+</div></section>
+
+<!-- ============================================================
+     SECTION: booking / pricing
+     WP: template-parts/section-book.php  (4 cards -> WooCommerce products or ACF repeater)
+     ============================================================ -->
+<section class="sec" id="book"><div class="container">
+  <h2 class="h-sec mb-2" data-in>Book your <span class="t-grad">experience</span></h2><p class="sub mb-5" data-in>Passes, stalls and rooms - all in one cart.</p>
+  <div class="row g-4 cards">
+    <div class="col-md-6 col-lg-3"><div class="box h-100 d-flex flex-column" data-in><h3 class="h4">Exhibition &amp; Panel Pass</h3><div class="price">&#8377;1,299</div>
+      <ul class="ticks list-unstyled t-mute fs-sm my-3 flex-grow-1"><li>Exhibition area</li><li>Speaker sessions</li><li>Workshops</li></ul><a class="btn btn-grad" href="#">Add to Cart</a></div></div>
+    <div class="col-md-6 col-lg-3"><div class="box h-100 d-flex flex-column" data-in><span class="ribbon bg-grad">POPULAR</span><h3 class="h4">Investor Pass</h3><div class="price">&#8377;2,199</div>
+      <ul class="ticks list-unstyled t-mute fs-sm my-3 flex-grow-1"><li>Everything in Exhibition Pass</li><li>Trailblazers Mine live pitching</li><li>Investor networking</li></ul><a class="btn btn-grad" href="#">Add to Cart</a></div></div>
+    <div class="col-md-6 col-lg-3"><div class="box h-100 d-flex flex-column" data-in><h3 class="h4">Stalls</h3><div class="price">&#8377;35,000 <small>+ GST, from</small></div>
+      <ul class="ticks list-unstyled t-mute fs-sm my-3 flex-grow-1"><li>Silver, Gold, Platinum tiers</li><li>Lights, chairs, branded table, TV</li><li>Networking lounge access</li></ul><a class="btn btn-grad" href="#">Apply Now</a></div></div>
+    <div class="col-md-6 col-lg-3"><div class="box h-100 d-flex flex-column" data-in><h3 class="h4">Hotel Rooms</h3><div class="price">&#8377;6,500 <small>/ night, from</small></div>
+      <ul class="ticks list-unstyled t-mute fs-sm my-3 flex-grow-1"><li>Dual &amp; Triple occupancy</li><li>Breakfast included</li><li>Check availability by date</li></ul><a class="btn btn-grad" href="#">Check Availability</a></div></div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: speakers
+     WP: template-parts/section-speakers.php
+     Loop: custom post type "speaker" (title, photo, role). Each .pop block below = one loop iteration.
+     ============================================================ -->
+<section class="sec" id="speakers"><div class="container">
+  <div class="text-center mb-5" data-in><span class="eyebrow">Speakers</span><h2 class="h-sec t-metal mt-2 mb-3">Meet the Visionaries</h2><p class="sub t-soft mx-auto mb-0">Founders, investors and creators who shape Bharat's startup story.</p></div>
+  <div class="row g-4 text-center justify-content-center" id="rail">
+    <div class="col-6 col-md-3 pop">
+      <img loading="lazy" class="avatar d-block mx-auto mb-2" src="https://www.21by72.com/wp-content/uploads/2026/06/Ashneer-Grover-1.png" alt="Ashneer Grover">
+      <div class="fw-semibold">Ashneer Grover</div>
+      <div class="t-mute fs-sm">Co-founder, BharatPe</div>
+    </div>
+    <div class="col-6 col-md-3 pop">
+      <img loading="lazy" class="avatar d-block mx-auto mb-2" src="https://www.21by72.com/wp-content/uploads/2026/06/Manan-Vohra.png" alt="Manan Vohra">
+      <div class="fw-semibold">Manan Vohra</div>
+      <div class="t-mute fs-sm">Indian Cricketer</div>
+    </div>
+    <div class="col-6 col-md-3 pop">
+      <img loading="lazy" class="avatar d-block mx-auto mb-2" src="https://www.21by72.com/wp-content/uploads/2026/06/Pratik-Gandhi.png" alt="Pratik Gandhi">
+      <div class="fw-semibold">Pratik Gandhi</div>
+      <div class="t-mute fs-sm">Indian Actor</div>
+    </div>
+    <div class="col-6 col-md-3 pop">
+      <img loading="lazy" class="avatar d-block mx-auto mb-2" src="https://www.21by72.com/wp-content/uploads/2026/06/Zaheer-Iqbal.png" alt="Zaheer Iqbal">
+      <div class="fw-semibold">Zaheer Iqbal</div>
+      <div class="t-mute fs-sm">Actor</div>
+    </div>
+    <div class="col-6 col-md-3 pop">
+      <img loading="lazy" class="avatar d-block mx-auto mb-2" src="https://www.21by72.com/wp-content/uploads/2026/06/Angad-Bedi.png" alt="Angad Bedi">
+      <div class="fw-semibold">Angad Bedi</div>
+      <div class="t-mute fs-sm">Actor</div>
+    </div>
+    <div class="col-6 col-md-3 pop">
+      <img loading="lazy" class="avatar d-block mx-auto mb-2" src="https://www.21by72.com/wp-content/uploads/2024/06/Parul-Gualti-.png" alt="Parul Gulati">
+      <div class="fw-semibold">Parul Gulati</div>
+      <div class="t-mute fs-sm">Founder, Nish Hair</div>
+    </div>
+    <div class="col-6 col-md-3 pop">
+      <img loading="lazy" class="avatar d-block mx-auto mb-2" src="https://www.21by72.com/wp-content/uploads/2023/04/Sarthak-Ahuja.png" alt="Sarthak Ahuja">
+      <div class="fw-semibold">Sarthak Ahuja</div>
+      <div class="t-mute fs-sm">Director, Niamh Ventures LLC</div>
+    </div>
+    <div class="col-6 col-md-3 pop">
+      <img loading="lazy" class="avatar d-block mx-auto mb-2" src="https://www.21by72.com/wp-content/uploads/2024/04/Arjun-Vaidya-Co-Founder-21BY72.png" alt="Arjun Vaidya">
+      <div class="fw-semibold">Arjun Vaidya</div>
+      <div class="t-mute fs-sm">Co-Founder, V3 Ventures</div>
+    </div>
+  </div>
+</div></section>
+<!-- ============================================================
+     SECTION: testimonials (slick slider)
+     WP: template-parts/section-testimonials.php
+     Loop: custom post type "testimonial" (quote, name, role, photo). Each .testi-slide = one loop iteration. JS: sliders.js (jQuery + slick).
+     ============================================================ -->
+<section class="sec bg-alt" id="testimonials"><div class="container">
+  <div class="text-center mb-5" data-in><span class="eyebrow">Testimonials</span><h2 class="h-sec t-metal mt-2 mb-3">Loved by Founders &amp; Creators</h2><p class="sub t-soft mx-auto mb-0">Hear what our speakers and guests say about 21BY72.</p></div>
+  <div class="testi-slider" id="testi" data-in>
+    <div class="testi-slide">
+      <figure class="testi">
+        <span class="testi-mark" aria-hidden="true">&ldquo;</span>
+        <blockquote class="testi-q">I am absolutely impressed and blown away! I never expected such a phenomenal event to be organized in Surat year after year. Truly incredible work.</blockquote>
+        <figcaption class="d-flex align-items-center gap-3">
+          <img loading="lazy" class="testi-av" src="https://www.21by72.com/wp-content/uploads/2024/02/anupam-mittal-150x150.png" alt="Anupam Mittal">
+          <div><b class="d-block">Anupam Mittal</b><span class="t-mute fs-sm">Founder &amp; CEO, Shaadi.com</span></div>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="testi-slide">
+      <figure class="testi">
+        <span class="testi-mark" aria-hidden="true">&ldquo;</span>
+        <blockquote class="testi-q">It was a great opportunity to be here, surrounded by dreamers and immerse in such an inspiring environment.</blockquote>
+        <figcaption class="d-flex align-items-center gap-3">
+          <img loading="lazy" class="testi-av" src="https://www.21by72.com/wp-content/uploads/2024/06/radhika-madan-150x150.png" alt="Radhika Madan">
+          <div><b class="d-block">Radhika Madan</b><span class="t-mute fs-sm">Actress</span></div>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="testi-slide">
+      <figure class="testi">
+        <span class="testi-mark" aria-hidden="true">&ldquo;</span>
+        <blockquote class="testi-q">It’s a surreal feeling that the city where I started doing great from, the city where I was really under confident, is the city which is valuing me. I really loved it. Thank you so much for giving me this honour.</blockquote>
+        <figcaption class="d-flex align-items-center gap-3">
+          <img loading="lazy" class="testi-av" src="https://www.21by72.com/wp-content/uploads/2024/05/raj-shamani-1-150x150.png" alt="Raj Shamani">
+          <div><b class="d-block">Raj Shamani</b><span class="t-mute fs-sm">Co-Founder, Figuring Out &amp; House of X</span></div>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="testi-slide">
+      <figure class="testi">
+        <span class="testi-mark" aria-hidden="true">&ldquo;</span>
+        <blockquote class="testi-q">I am truly grateful to have been here. I feel lucky that my shoot got rescheduled, allowing me to attend this incredible event.</blockquote>
+        <figcaption class="d-flex align-items-center gap-3">
+          <img loading="lazy" class="testi-av" src="https://www.21by72.com/wp-content/uploads/2024/06/Parul-gulati-150x150.png" alt="Parul Gulati">
+          <div><b class="d-block">Parul Gulati</b><span class="t-mute fs-sm">Founder, Nish Hair</span></div>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="testi-slide">
+      <figure class="testi">
+        <span class="testi-mark" aria-hidden="true">&ldquo;</span>
+        <blockquote class="testi-q">I have been coming here every year. In Season 1, it took 3-4 calls to convince me to come to Surat. But today, when Rachit, Prateek, Sharad, and Mehul Bhai called me six months in advance, I immediately blocked my dates for this remarkable event.</blockquote>
+        <figcaption class="d-flex align-items-center gap-3">
+          <img loading="lazy" class="testi-av" src="https://www.21by72.com/wp-content/uploads/2024/05/Arjun-Vaidya-1-150x150.png" alt="Arjun Vaidya">
+          <div><b class="d-block">Arjun Vaidya</b><span class="t-mute fs-sm">Co-Founder, V3 Ventures</span></div>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="testi-slide">
+      <figure class="testi">
+        <span class="testi-mark" aria-hidden="true">&ldquo;</span>
+        <blockquote class="testi-q">The ideas I’ve seen here and the kind of innovations here is truly remarkable. There’s a complete ecosystem here. If I wanted to take a product from a stall and have it delivered in Gurgaon, everything—from delivery services to packaging—is available right here.</blockquote>
+        <figcaption class="d-flex align-items-center gap-3">
+          <img loading="lazy" class="testi-av" src="https://www.21by72.com/wp-content/uploads/2024/02/ghazal-alag-150x150.png" alt="Ghazal Alagh">
+          <div><b class="d-block">Ghazal Alagh</b><span class="t-mute fs-sm">Chief Mama &amp; Co-founder, Mamaearth</span></div>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="testi-slide">
+      <figure class="testi">
+        <span class="testi-mark" aria-hidden="true">&ldquo;</span>
+        <blockquote class="testi-q">Before answering any questions, I would like to say that I have never addressed such a large audience before.</blockquote>
+        <figcaption class="d-flex align-items-center gap-3">
+          <img loading="lazy" class="testi-av" src="https://www.21by72.com/wp-content/uploads/2024/04/Aman-Gupta-Founder-of-Boat-150x150.webp" alt="Aman Gupta">
+          <div><b class="d-block">Aman Gupta</b><span class="t-mute fs-sm">Co-Founder &amp; CMO, boAt Lifestyle</span></div>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="testi-slide">
+      <figure class="testi">
+        <span class="testi-mark" aria-hidden="true">&ldquo;</span>
+        <blockquote class="testi-q">Thank you, Surat! It was a pleasure to be here again and attend this event.</blockquote>
+        <figcaption class="d-flex align-items-center gap-3">
+          <img loading="lazy" class="testi-av" src="https://www.21by72.com/wp-content/uploads/2023/03/Sarthak-Ahuja-150x150.webp" alt="Sarthak Ahuja">
+          <div><b class="d-block">Sarthak Ahuja</b><span class="t-mute fs-sm">Director, Niamh Ventures LLC</span></div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="testi-controls d-flex align-items-center justify-content-center gap-4 mt-4" id="testi-controls"></div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: leaders
+     WP: template-parts/section-leaders.php
+     Loop: custom post type "leader" (or the same "speaker" CPT with group = leader).
+     ============================================================ -->
+<section class="sec bg-alt"><div class="container">
+  <h2 class="h-sec mb-2" data-in>Blessed by <span class="t-grad">Leaders</span></h2><p class="sub mb-5" data-in>Government and industry leaders who support 21BY72.</p>
+  <div class="row g-4 text-center justify-content-center" id="lead">
+    <div class="col-6 col-md-4 pop">
+      <img loading="lazy" class="avatar d-block mx-auto mb-2" src="https://www.21by72.com/wp-content/uploads/2026/01/shri-bhupendra-patel__1-350x350.png" alt="Shri Bhupendra Patel">
+      <div class="fw-semibold">Shri Bhupendra Patel</div>
+      <div class="t-mute fs-sm">Chief Minister of Gujarat</div>
+    </div>
+    <div class="col-6 col-md-4 pop">
+      <img loading="lazy" class="avatar d-block mx-auto mb-2" src="https://www.21by72.com/wp-content/uploads/2024/06/C.R._Patil.png" alt="Shri C.R Patil">
+      <div class="fw-semibold">Shri C.R Patil</div>
+      <div class="t-mute fs-sm">Union Minister of Jal Shakti</div>
+    </div>
+    <div class="col-6 col-md-4 pop">
+      <img loading="lazy" class="avatar d-block mx-auto mb-2" src="https://www.21by72.com/wp-content/uploads/2024/06/harsh-sanghvi-350x350.png" alt="Shri Harsh Sanghavi">
+      <div class="fw-semibold">Shri Harsh Sanghavi</div>
+      <div class="t-mute fs-sm">Deputy Chief Minister of Gujarat</div>
+    </div>
+    <div class="col-6 col-md-4 pop">
+      <img loading="lazy" class="avatar d-block mx-auto mb-2" src="https://www.21by72.com/wp-content/uploads/2026/01/Shri_Banchhanidhi_Pani-350x350.png" alt="Shri Banchhanidhi Pani">
+      <div class="fw-semibold">Shri Banchhanidhi Pani</div>
+      <div class="t-mute fs-sm">Municipal Commissioner, Ahmedabad</div>
+    </div>
+    <div class="col-6 col-md-4 pop">
+      <img loading="lazy" class="avatar d-block mx-auto mb-2" src="https://www.21by72.com/wp-content/uploads/2026/06/Nagrajan-M-IAS.png" alt="Shri M Nagarajan">
+      <div class="fw-semibold">Shri M Nagarajan</div>
+      <div class="t-mute fs-sm">SMC Commissioner</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: ambassadors
+     WP: template-parts/section-ambassadors.php
+     Loop: custom post type "team" with group = ambassador. Same card markup as Core Team.
+     ============================================================ -->
+<section class="sec"><div class="container">
+  <div class="text-center mb-5" data-in><span class="eyebrow">Ambassadors</span><h2 class="h-sec t-metal mt-2 mb-0">Our Ambassadors</h2></div>
+  <div class="row g-4 justify-content-center" id="amb">
+    <div class="col-sm-6 col-lg-4">
+      <article class="cspk" tabindex="0">
+        <img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/02/SARTHAK-AHUJA-270x360.png" alt="CA Sarthak Ahuja">
+        <div class="cspk-box"><h3>CA Sarthak Ahuja</h3><div class="opacity-75">Co-Director, Niamh Ventures</div></div>
+        <div class="cspk-over"><div><h3>CA Sarthak Ahuja</h3><div class="opacity-75">Co-Director, Niamh Ventures</div></div><p class="mb-0">Partner at Sandeep Ahuja, Startup &amp; Business Consulting. Co-Director at Niamh Ventures. ISB Gold Medalist and author.</p><div><a class="cspk-in d-inline-flex align-items-center justify-content-center" href="https://www.linkedin.com/in/casarthakahuja/" target="_blank" rel="noopener" aria-label="CA Sarthak Ahuja on LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3V9.75zm6.5 0h3.8v1.6h.06c.53-1 1.82-2 3.75-2 4 0 4.75 2.63 4.75 6.05V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.58V21h-4V9.75z"/></svg></a></div></div>
+      </article>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+      <article class="cspk" tabindex="0">
+        <img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/02/ARJUN-VAIDYA-270x360.png" alt="Arjun Vaidya">
+        <div class="cspk-box"><h3>Arjun Vaidya</h3><div class="opacity-75">Co-Founder, V3 Ventures</div></div>
+        <div class="cspk-over"><div><h3>Arjun Vaidya</h3><div class="opacity-75">Co-Founder, V3 Ventures</div></div><p class="mb-0">Founder of Dr. Vaidya’s (acquired), Venture Lead at Verlinvest, and Forbes Asia 30 Under 30.</p><div><a class="cspk-in d-inline-flex align-items-center justify-content-center" href="https://www.linkedin.com/in/arjunvaidya/" target="_blank" rel="noopener" aria-label="Arjun Vaidya on LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3V9.75zm6.5 0h3.8v1.6h.06c.53-1 1.82-2 3.75-2 4 0 4.75 2.63 4.75 6.05V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.58V21h-4V9.75z"/></svg></a></div></div>
+      </article>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+      <article class="cspk" tabindex="0">
+        <img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/03/mahaveer-pratap.png" alt="Mahavir Pratap Sharma">
+        <div class="cspk-box"><h3>Mahavir Pratap Sharma</h3><div class="opacity-75">Chairman, Rajasthan Angel Innovators Network</div></div>
+        <div class="cspk-over"><div><h3>Mahavir Pratap Sharma</h3><div class="opacity-75">Chairman, Rajasthan Angel Innovators Network</div></div><p class="mb-0">Chairman and Co-Founder of Rajasthan Angel Innovators Network.</p><div></div></div>
+      </article>
+    </div>
+  </div>
+</div></section>
+
+
+<!-- ============================================================
+     SECTION: partners
+     WP: template-parts/section-partners.php
+     Loop: custom post type "partner" (logo, name, link). Output the loop twice (second row in reverse order). Each .logo-box = one loop iteration. marquee.js repeats each row so the loop is seamless - output ONE copy per row.
+     ============================================================ -->
+<section class="sec partners" id="partners"><div class="container">
+  <div class="text-center mb-5" data-in><span class="eyebrow">Partners</span><h2 class="h-sec t-metal mt-2 mb-3">Our Partners</h2><p class="sub t-soft mx-auto mb-0">The ecosystem and community partners who grow 21BY72 with us.</p></div>
+</div>
+<div class="mq mq-fade" data-in><div class="t" data-marquee="2">
+  <div class="logo-box d-flex align-items-center justify-content-center flex-shrink-0"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/ihub.png" alt="ihub"></div>
+  <div class="logo-box d-flex align-items-center justify-content-center flex-shrink-0"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/mehta-wealth.png" alt="mehta wealth"></div>
+  <div class="logo-box d-flex align-items-center justify-content-center flex-shrink-0"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Startup-Chaupal.png" alt="Startup Chaupal"></div>
+  <div class="logo-box d-flex align-items-center justify-content-center flex-shrink-0"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/StartLabs.png" alt="StartLabs"></div>
+  <div class="logo-box d-flex align-items-center justify-content-center flex-shrink-0"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/E-chai.png" alt="E chai"></div>
+  <div class="logo-box d-flex align-items-center justify-content-center flex-shrink-0"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/DPG_MEDIA_LOGO.png" alt="DPG MEDIA LOGO"></div>
+  <div class="logo-box d-flex align-items-center justify-content-center flex-shrink-0"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/fourpillars.png" alt="fourpillars"></div>
+  <div class="logo-box d-flex align-items-center justify-content-center flex-shrink-0"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/t-hub.png" alt="t hub"></div>
+  <div class="logo-box d-flex align-items-center justify-content-center flex-shrink-0"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/ivca.png" alt="ivca"></div>
+  <div class="logo-box d-flex align-items-center justify-content-center flex-shrink-0"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/khushi.png" alt="khushi"></div>
+</div></div>
+<div class="mq mq-fade mq-rev mt-3" data-in><div class="t" data-marquee="2">
+  <div class="logo-box d-flex align-items-center justify-content-center flex-shrink-0"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/khushi.png" alt="khushi"></div>
+  <div class="logo-box d-flex align-items-center justify-content-center flex-shrink-0"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/ivca.png" alt="ivca"></div>
+  <div class="logo-box d-flex align-items-center justify-content-center flex-shrink-0"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/t-hub.png" alt="t hub"></div>
+  <div class="logo-box d-flex align-items-center justify-content-center flex-shrink-0"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/fourpillars.png" alt="fourpillars"></div>
+  <div class="logo-box d-flex align-items-center justify-content-center flex-shrink-0"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/DPG_MEDIA_LOGO.png" alt="DPG MEDIA LOGO"></div>
+  <div class="logo-box d-flex align-items-center justify-content-center flex-shrink-0"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/E-chai.png" alt="E chai"></div>
+  <div class="logo-box d-flex align-items-center justify-content-center flex-shrink-0"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/StartLabs.png" alt="StartLabs"></div>
+  <div class="logo-box d-flex align-items-center justify-content-center flex-shrink-0"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Startup-Chaupal.png" alt="Startup Chaupal"></div>
+  <div class="logo-box d-flex align-items-center justify-content-center flex-shrink-0"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/mehta-wealth.png" alt="mehta wealth"></div>
+  <div class="logo-box d-flex align-items-center justify-content-center flex-shrink-0"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/ihub.png" alt="ihub"></div>
+</div></div>
+</section>
+
+<!-- ============================================================
+     SECTION: core team
+     WP: template-parts/section-team.php
+     Loop: custom post type "team" with group = core. Same card markup as Ambassadors.
+     ============================================================ -->
+<section class="sec" id="team"><div class="container">
+  <div class="text-center mb-5" data-in><span class="eyebrow">Our Team</span><h2 class="h-sec t-metal mt-2 mb-0">Core Team</h2></div>
+  <div class="row g-4 justify-content-center" id="tm">
+    <div class="col-sm-6 col-lg-3">
+      <article class="cspk" tabindex="0">
+        <img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/04/Rachit-Poddar.png" alt="Rachit Poddar">
+        <div class="cspk-box"><h3>Rachit Poddar</h3><div class="opacity-75">Co-Founder, 21BY72</div></div>
+        <div class="cspk-over"><div><h3>Rachit Poddar</h3><div class="opacity-75">Co-Founder, 21BY72</div></div><p class="mb-0">Co-founder of 21BY72, bringing together founders, investors and creators from across Bharat in Surat.</p><div><a class="cspk-in d-inline-flex align-items-center justify-content-center" href="https://www.linkedin.com/in/rachit-poddar/" target="_blank" rel="noopener" aria-label="Rachit Poddar on LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3V9.75zm6.5 0h3.8v1.6h.06c.53-1 1.82-2 3.75-2 4 0 4.75 2.63 4.75 6.05V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.58V21h-4V9.75z"/></svg></a></div></div>
+      </article>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <article class="cspk" tabindex="0">
+        <img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/04/Prateek-Tosniwal.png" alt="Prateek Tosniwal">
+        <div class="cspk-box"><h3>Prateek Tosniwal</h3><div class="opacity-75">Co-Founder, 21BY72</div></div>
+        <div class="cspk-over"><div><h3>Prateek Tosniwal</h3><div class="opacity-75">Co-Founder, 21BY72</div></div><p class="mb-0">Co-founder of 21BY72, bringing together founders, investors and creators from across Bharat in Surat.</p><div><a class="cspk-in d-inline-flex align-items-center justify-content-center" href="https://www.linkedin.com/in/prateek-tosniwal-1372bab8/" target="_blank" rel="noopener" aria-label="Prateek Tosniwal on LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3V9.75zm6.5 0h3.8v1.6h.06c.53-1 1.82-2 3.75-2 4 0 4.75 2.63 4.75 6.05V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.58V21h-4V9.75z"/></svg></a></div></div>
+      </article>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <article class="cspk" tabindex="0">
+        <img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/04/Mehul-Shah.png" alt="Mehul Shah">
+        <div class="cspk-box"><h3>Mehul Shah</h3><div class="opacity-75">Co-Founder, 21BY72</div></div>
+        <div class="cspk-over"><div><h3>Mehul Shah</h3><div class="opacity-75">Co-Founder, 21BY72</div></div><p class="mb-0">Co-founder of 21BY72, bringing together founders, investors and creators from across Bharat in Surat.</p><div><a class="cspk-in d-inline-flex align-items-center justify-content-center" href="https://www.linkedin.com/in/mehul87/" target="_blank" rel="noopener" aria-label="Mehul Shah on LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3V9.75zm6.5 0h3.8v1.6h.06c.53-1 1.82-2 3.75-2 4 0 4.75 2.63 4.75 6.05V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.58V21h-4V9.75z"/></svg></a></div></div>
+      </article>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <article class="cspk" tabindex="0">
+        <img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/04/Sharad-Todi.png" alt="Sharad Todi">
+        <div class="cspk-box"><h3>Sharad Todi</h3><div class="opacity-75">Co-Founder, 21BY72</div></div>
+        <div class="cspk-over"><div><h3>Sharad Todi</h3><div class="opacity-75">Co-Founder, 21BY72</div></div><p class="mb-0">Co-founder of 21BY72, bringing together founders, investors and creators from across Bharat in Surat.</p><div><a class="cspk-in d-inline-flex align-items-center justify-content-center" href="https://www.linkedin.com/in/sharad-todi-09a78820b/" target="_blank" rel="noopener" aria-label="Sharad Todi on LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3V9.75zm6.5 0h3.8v1.6h.06c.53-1 1.82-2 3.75-2 4 0 4.75 2.63 4.75 6.05V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.58V21h-4V9.75z"/></svg></a></div></div>
+      </article>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: footer
+     WP: footer.php  (link lists -> wp_nav_menu locations "footer-links" and "footer-policies"; contact + social -> options page)
+     The animated background (.foot-bg) is pure CSS - no script needed.
+     ============================================================ -->
+<footer class="foot position-relative overflow-hidden">
+  <div class="foot-bg" aria-hidden="true"><span class="foot-orb fo1"></span><span class="foot-orb fo2"></span><span class="foot-grid"></span></div>
+  <div class="container position-relative">
+
+    <div class="foot-cta d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-4">
+      <div>
+        <h2 class="h-sec t-metal mb-2">Be part of <span class="t-grad">Season 6</span></h2>
+        <p class="t-soft mb-0">10 &ndash; 11 April 2027 &middot; Avadh Utopia, Surat</p>
+      </div>
+      <div class="d-flex flex-wrap gap-3">
+        <a class="btn btn-grad" href="#book">Grab Your Pass</a>
+        <a class="btn btn-ghost" href="#book">Exhibit Your Startup</a>
+      </div>
+    </div>
+
+    <div class="row g-5 foot-main">
+      <div class="col-lg-4">
+        <div class="logo logo-img mb-3"><img src="assets/img/21by72-logo.png" width="72" height="72" alt="21BY72" loading="lazy"></div>
+        <p class="t-mute mb-4">Bharat's Leading Startup Summit &mdash; where conversations converge into companies.</p>
+        <div class="d-flex gap-2">
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.linkedin.com/company/ivy-growth-associates/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3V9.75zm6.5 0h3.8v1.6h.06c.53-1 1.82-2 3.75-2 4 0 4.75 2.63 4.75 6.05V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.58V21h-4V9.75z"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.instagram.com/21by72/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.facebook.com/21by72" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8z"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://twitter.com/Ivygrowth" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h3 class="foot-title">Explore</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#partners">Partners</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#book">Book Passes</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h3 class="foot-title">Policies</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li><a href="https://www.21by72.com/terms-of-service/" target="_blank" rel="noopener">Terms of Service</a></li>
+          <li><a href="https://www.21by72.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></li>
+          <li><a href="https://www.21by72.com/refund-cancellation/" target="_blank" rel="noopener">Refund &amp; Cancellation</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h3 class="foot-title">Contact</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li>Avadh Utopia, Surat, Gujarat</li>
+          <li><a href="mailto:pitch@ivygrowth.co.in">pitch@ivygrowth.co.in</a></li>
+          <li><a href="tel:+918758812000">+91 87588 12000</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span>&copy; 2026 IVY Growth Associates. All rights reserved.</span>
+      <span>Redesign demo for client preview &ndash; not the live site.</span>
+    </div>
+  </div>
+  <div class="foot-mark" aria-hidden="true">21BY72</div>
+</footer>
+
+<a class="wa d-flex align-items-center justify-content-center" href="#" aria-label="WhatsApp">&#128172;</a>
+<div class="note">Light theme demo &middot; <a href="index.html" class="t-white" style="text-decoration:underline">View dark theme</a></div>
+
+<!-- WP: wp_footer(); enqueue in this order (see README.md): bootstrap, jquery (WP core), slick, gsap, ScrollTrigger, lenis, then the theme scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js"></script>
+<script src="assets/js/marquee.js"></script>
+<script src="assets/js/countdown.js"></script>
+<script src="assets/js/hero-hex.js"></script>
+<script src="assets/js/sliders.js"></script>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>
