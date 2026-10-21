@@ -1,0 +1,224 @@
+/* ==========================================================================
+   21BY72 - theme styles (on top of Bootstrap 5.3)
+   --------------------------------------------------------------------------
+   Contents
+    1. Tokens & base
+    2. Utilities (colors, fonts, backgrounds)
+    3. Buttons
+    4. Boxes & pricing
+    5. Page chrome (loader, progress, cursor glow, navbar, WhatsApp, note)
+    6. Hero
+    7. Ticker & marquee
+    8. Our story (masonry gallery)
+    9. Speaker cards (.spk)
+   10. People: round avatars (.avatar)
+   11. Portrait cards (.cspk) - ambassadors & core team
+   12. Logos
+   13. Testimonials slider (.testi)
+   14. Reduced motion
+   15. Schedule (tabs + timeline)
+   ========================================================================== */
+
+/* ===== 1. Tokens & base ===== */
+:root{--bg:#0a0d1f;--bg2:#10142e;--card:#161b3d;--text:#f3f5ff;--mute:#9aa3c7;--a:#ff6a3d;--b:#7a4dff;--grad:linear-gradient(135deg,var(--a),var(--b));--line:1px solid rgba(255,255,255,.1)}
+body{font-family:Poppins,system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.sec{padding:90px 0;position:relative}
+
+/* ===== 2. Utilities ===== */
+.t-mute{color:var(--mute)}
+.t-soft{color:#c3c8e6}
+.t-a{color:var(--a)}
+.t-white{color:#fff}
+.t-grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.t-metal{background:linear-gradient(180deg,#fff 20%,#a9aed0 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.bg-main{background:var(--bg)}
+.bg-alt{background:var(--bg2)}
+.bg-deep{background:#070918}
+.bg-box{background:var(--card)}
+.bg-grad{background:var(--grad)}
+.fw-800{font-weight:800}
+.fs-xs{font-size:.75rem}
+.fs-sm{font-size:.875rem}
+.ls-wide{letter-spacing:2px;text-transform:uppercase}
+.h-sec{font-size:clamp(28px,4vw,46px);font-weight:800}
+.h-sub{font-size:28px;font-weight:800}
+.h-stat{font-size:clamp(38px,6vw,64px);font-weight:800}
+.sub{color:var(--mute);max-width:640px}
+.eyebrow{font-size:clamp(14px,1.6vw,18px);font-weight:500}
+.eyebrow:before{content:"[ ";color:var(--b);font-weight:700}
+.eyebrow:after{content:" ]";color:var(--b);font-weight:700}
+
+/* ===== 3. Buttons ===== */
+.btn-grad,.btn-ghost{padding:14px 28px;border-radius:50px;font-weight:600;color:#fff;transition:.3s;border:0}
+.btn-grad{background:var(--grad)}
+.btn-grad:hover{color:#fff;transform:translateY(-3px) scale(1.03);box-shadow:0 12px 30px rgba(122,77,255,.45)}
+.btn-ghost{border:2px solid rgba(255,255,255,.35)}
+.btn-ghost:hover{background:#fff;color:#111}
+.btn-sm-x{padding:10px 22px;font-size:14px}
+
+/* ===== 4. Boxes & pricing ===== */
+.box{background:var(--card);border:var(--line);border-radius:22px;padding:34px;transition:.4s;position:relative;overflow:hidden}
+.box:hover{transform:translateY(-10px);border-color:rgba(122,77,255,.6);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.ico{font-size:38px}
+.price{font-size:34px;font-weight:800}
+.price small{font-size:13px;color:var(--mute);font-weight:400}
+.ticks li{padding:6px 0 6px 24px;position:relative}
+.ticks li:before{content:"\2713";position:absolute;left:0;color:var(--a);font-weight:700}
+.ribbon{position:absolute;top:18px;right:-34px;padding:5px 40px;font-size:11px;font-weight:700;transform:rotate(40deg)}
+
+/* ===== 5. Page chrome ===== */
+.loader{position:fixed;inset:0;background:var(--bg);z-index:999;font-size:44px;font-weight:800;letter-spacing:4px}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;z-index:1100}
+#glow{position:fixed;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(122,77,255,.25),transparent 70%);pointer-events:none;z-index:0;transform:translate(-50%,-50%)}
+.navbar{transition:.35s;padding:16px 0}
+.navbar.s{background:rgba(10,13,31,.9);backdrop-filter:blur(12px);padding:10px 0}
+.navbar .nav-link{position:relative;color:var(--mute);font-size:14px;font-weight:500;transition:.3s}
+.navbar .nav-link:hover{color:#fff}
+.navbar .nav-link:after{content:"";position:absolute;left:12px;bottom:2px;height:2px;width:0;background:var(--grad);transition:.3s}
+.navbar .nav-link:hover:after{width:calc(100% - 24px)}
+.navbar-toggler{border-color:rgba(255,255,255,.3)}
+.navbar-toggler-icon{filter:invert(1)}
+@media(max-width:991px){.navbar-collapse{background:rgba(10,13,31,.96);padding:10px 16px;border-radius:14px;margin-top:10px}}
+.logo{font-weight:800;font-size:24px}
+.wa{position:fixed;right:20px;bottom:20px;width:56px;height:56px;border-radius:50%;background:#25d366;font-size:28px;z-index:60;animation:pulse 2s infinite}
+@keyframes pulse{to{box-shadow:0 0 0 22px rgba(37,211,102,0)}}
+.note{position:fixed;left:14px;bottom:14px;background:rgba(0,0,0,.75);padding:8px 14px;border-radius:10px;font-size:11px;z-index:60;color:#ccc}
+
+/* ===== 6. Hero ===== */
+.hero{min-height:100vh;overflow:hidden;padding:110px 0 40px;background:radial-gradient(ellipse at 50% 30%,#1b1b5a 0%,#0e1033 45%,var(--bg) 100%)}
+.hero:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at center,transparent 35%,rgba(10,13,31,.85) 100%)}
+#hex{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.45;z-index:1}
+.o1{width:420px;height:420px;background:var(--b);top:-80px;left:-100px}
+.o2{width:380px;height:380px;background:var(--a);bottom:-100px;right:-60px;opacity:.3}
+.hero .container{position:relative;z-index:2}
+.hero h1{font-size:clamp(72px,17vw,250px);font-weight:800;line-height:.95;letter-spacing:-.02em}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .04em .06em}
+.hero h1 .w i{display:inline-block;font-style:normal;background:linear-gradient(180deg,#fff 15%,#8f98c8 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 10px 40px rgba(122,77,255,.45))}
+.hero h1 .w i b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tagline{font-size:clamp(16px,2vw,24px)}
+.dot:before{content:"";display:inline-block;width:.7em;height:.7em;margin-right:10px;border-radius:50%;background:var(--grad)}
+.panel{max-width:1100px;margin:44px auto 0;padding:22px 30px;border:1px solid rgba(255,255,255,.14);border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(122,77,255,.16));backdrop-filter:blur(10px)}
+.panel h3{font-size:clamp(26px,3vw,40px);font-weight:600}
+.cd div{text-align:center;min-width:78px}
+.cd b{display:block;font-size:clamp(28px,3.4vw,44px);font-weight:700;line-height:1}
+.venue:before{content:"";flex:0 0 16px;height:16px;border-radius:50%;background:var(--grad);box-shadow:0 0 0 6px rgba(122,77,255,.25)}
+
+/* ===== 7. Ticker & marquee ===== */
+.ticker{padding:16px 0;overflow:hidden;white-space:nowrap;transform:rotate(-1.2deg);margin:0 -10px}
+.ticker>div{display:inline-block;animation:mq 26s linear infinite;font-weight:700;font-size:20px}
+.ticker span{margin:0 26px}
+.mq{overflow:hidden}
+.mq .t{display:flex;gap:16px;width:max-content;animation:mq 30s linear infinite}
+.mq:hover .t{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ===== 8. Our story: masonry / bento gallery (CSS grid, repeats every 6 items) ===== */
+.story{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:190px;grid-auto-flow:dense;gap:16px}
+.story-item{position:relative;margin:0;border-radius:20px;overflow:hidden;background:var(--card)}
+.story-item:nth-child(6n+1){grid-column:span 4;grid-row:span 2}
+.story-item:nth-child(6n+2){grid-column:span 2;grid-row:span 4}
+.story-item:nth-child(6n+3),.story-item:nth-child(6n+4){grid-column:span 2;grid-row:span 2}
+.story-item:nth-child(6n+5),.story-item:nth-child(6n){grid-column:span 3;grid-row:span 2}
+.story-item img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .6s ease}
+.story-item:hover img{transform:scale(1.07)}
+.story-item:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(10,13,31,.85) 100%);opacity:0;transition:opacity .4s}
+.story-item:hover:after{opacity:1}
+.story-item figcaption{position:absolute;left:20px;bottom:18px;z-index:1;padding:5px 14px;border-radius:50px;background:var(--grad);font-size:.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;transform:translateY(12px);opacity:0;transition:.4s}
+.story-item:hover figcaption{transform:none;opacity:1}
+@media(max-width:991px){
+  .story{grid-template-columns:repeat(2,1fr);grid-auto-rows:230px}
+  .story-item:nth-child(n){grid-column:span 1;grid-row:span 1}
+  .story-item:nth-child(6n+1){grid-column:span 2}
+  .story-item:nth-child(6n+2){grid-row:span 2}
+}
+@media(max-width:575px){
+  .story{grid-template-columns:1fr;grid-auto-rows:240px}
+  .story-item:nth-child(n){grid-column:auto;grid-row:auto}
+}
+@media(hover:none){.story-item:after,.story-item figcaption{opacity:1;transform:none}}
+
+/* ===== 9. Speaker cards: photo, bottom fade, glass name panel ===== */
+.spk{position:relative;aspect-ratio:1;border-radius:10px;overflow:hidden;background:radial-gradient(circle at 50% 25%,#6c52ff 0%,#1d2166 65%,var(--card) 100%)}
+.spk img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s ease}
+.spk:hover img{transform:scale(1.08)}
+.spk:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(10,13,31,.95) 0%,rgba(10,13,31,0) 60%)}
+.spk:after{content:"";position:absolute;inset:0;z-index:1;opacity:0;transition:opacity 1s cubic-bezier(.6,.03,.2,.98);background:radial-gradient(circle,rgba(122,77,255,0) 50%,rgba(122,77,255,.9) 100%)}
+.spk:hover:after{opacity:1}
+.spk-info{position:absolute;left:24px;right:24px;bottom:24px;z-index:2;padding:22px 20px;border-radius:8px;text-align:center;background:rgba(0,0,0,.2);backdrop-filter:blur(10px)}
+.spk-info h4{font-size:26px}
+
+/* ===== 10. People: round avatars (past voices, leaders) ===== */
+.avatar{width:min(100%,230px);aspect-ratio:1;border-radius:50%;object-fit:cover;object-position:top;border:3px solid transparent;background:linear-gradient(var(--bg),var(--bg)) padding-box,var(--grad) border-box;transition:.4s}
+.avatar:hover{transform:scale(1.1)}
+
+/* ===== 11. Portrait cards: name over photo; gradient panel with bio + social on hover ===== */
+.cspk{position:relative;aspect-ratio:4/5;border-radius:30px;overflow:hidden;background:linear-gradient(160deg,#2a2f8f,var(--card))}
+.cspk>img{width:100%;height:100%;object-fit:cover;object-position:top}
+.cspk-box,.cspk-over{position:absolute;inset:0;padding:2rem;color:#fff}
+.cspk-box{display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(180deg,transparent 45%,var(--bg) 100%)}
+.cspk-over{display:flex;flex-direction:column;justify-content:space-between;background:var(--grad);opacity:0;transition:opacity .3s ease}
+.cspk:is(:hover,:focus-within) .cspk-over{opacity:1}
+.cspk h3{font-size:1.5rem;font-weight:700;margin:0}
+.cspk-in{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.7);color:#fff;transition:.3s}
+.cspk-in:hover{background:#fff;color:var(--bg)}
+@media(hover:none){.cspk-over{display:none}}
+
+/* ===== 12. Logos ===== */
+.logo-box{background:#fff;border-radius:14px;width:170px;height:84px;padding:12px;filter:grayscale(1);opacity:.85;transition:.4s}
+.logo-box:hover{filter:none;opacity:1;transform:scale(1.07)}
+.logo-box img{max-height:100%;object-fit:contain}
+.partner-group+.partner-group{margin-top:3.5rem}
+.partner-title{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:1.5rem;font-size:1.25rem;font-weight:700}
+.partner-title:before,.partner-title:after{content:"";width:48px;height:2px;background:var(--grad);border-radius:2px}
+
+/* ===== 13. Testimonials slider (Slick) ===== */
+.testi-slider .slick-list{margin:0 -12px;padding:10px 0}
+.testi-slider .slick-track{display:flex}
+.testi-slider .slick-slide{height:auto;float:none}
+.testi-slider .slick-slide>div{height:100%}
+.testi-slide{height:100%;padding:0 12px}
+.testi{position:relative;height:100%;margin:0;padding:2.6rem 2rem 2rem;display:flex;flex-direction:column;border-radius:24px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(122,77,255,.1));backdrop-filter:blur(8px);transition:transform .4s,border-color .4s,box-shadow .4s}
+.testi:hover{transform:translateY(-6px);border-color:rgba(122,77,255,.6);box-shadow:0 24px 50px rgba(0,0,0,.35)}
+.testi:before{content:"";position:absolute;top:0;left:2rem;right:2rem;height:3px;border-radius:0 0 4px 4px;background:var(--grad)}
+.testi-mark{display:block;height:42px;font:800 96px/.8 Georgia,serif;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.testi-q{flex:1;margin:0 0 1.8rem;font-size:1.05rem;line-height:1.75;color:#e3e6f7}
+.testi-av{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid transparent;background:linear-gradient(var(--card),var(--card)) padding-box,var(--grad) border-box}
+.testi-controls .slick-prev{order:1}
+.testi-controls .slick-dots{order:2}
+.testi-controls .slick-next{order:3}
+.testi-arrow{display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;transition:.3s}
+.testi-arrow:hover{background:var(--grad);border-color:transparent}
+.slick-dots{display:flex;align-items:center;gap:8px;margin:0;padding:0;list-style:none}
+.slick-dots li button{width:10px;height:10px;padding:0;border:0;border-radius:10px;background:rgba(255,255,255,.25);font-size:0;transition:.3s}
+.slick-dots li.slick-active button{width:28px;background:var(--grad)}
+
+/* ===== 14. Reduced motion ===== */
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+
+/* ===== 15. Schedule (tabs + timeline) ===== */
+.sched-tabs .nav-link{padding:12px 28px;border-radius:50px;color:var(--mute);border:1px solid rgba(255,255,255,.18);font-weight:600;transition:.3s}
+.sched-tabs .nav-link small{display:block;font-size:.75rem;font-weight:400;opacity:.8}
+.sched-tabs .nav-link:hover{color:#fff}
+.sched-tabs .nav-link.active{background:var(--grad);border-color:transparent;color:#fff}
+.sched-wrap{max-width:900px}
+.sched{position:relative;padding-left:0}
+.sched:before{content:"";position:absolute;top:8px;bottom:8px;left:153px;width:2px;background:linear-gradient(180deg,var(--a),var(--b));opacity:.5}
+.sched-item{position:relative;display:grid;grid-template-columns:130px 1fr;gap:48px;margin-bottom:1.5rem}
+.sched-item:before{content:"";position:absolute;top:22px;left:146px;width:16px;height:16px;border-radius:50%;background:var(--bg2);border:3px solid var(--a);z-index:1;transition:.3s}
+.sched-item:hover:before{background:var(--grad);border-color:transparent;transform:scale(1.25)}
+.sched-time{padding-top:16px;font-weight:700;color:#fff;text-align:right;white-space:nowrap}
+.sched-card{padding:1.4rem 1.6rem;border-radius:18px;border:var(--line);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(122,77,255,.08));transition:transform .3s,border-color .3s}
+.sched-item:hover .sched-card{transform:translateX(6px);border-color:rgba(122,77,255,.6)}
+.sched-card h3{font-size:1.2rem;font-weight:700;margin:.6rem 0 .4rem}
+.sched-tag{display:inline-block;padding:3px 12px;border-radius:50px;background:var(--grad);font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.sched-where:before{content:"\25CF";margin-right:8px;color:var(--a);font-size:.6rem;vertical-align:middle}
+@media(max-width:767px){.sched:before{left:7px}.sched-item{grid-template-columns:1fr;gap:0;padding-left:34px}.sched-item:before{left:0}.sched-time{text-align:left;padding:0 0 .4rem}}
+.sched-wrap{max-width:980px}
+.sched-hall{font-size:1.3rem;font-weight:700;margin-bottom:1.5rem}
+.sched-note{padding:8px 18px;border-radius:50px;border:1px solid rgba(255,255,255,.18);font-size:.85rem;color:var(--mute)}
+.sched-p{padding:4px 12px;border-radius:50px;background:rgba(255,255,255,.08);font-size:.8rem}
+.sched-mod{background:rgba(122,77,255,.28);border:1px solid rgba(122,77,255,.6)}
+.sched-time small{font-size:.75rem}
