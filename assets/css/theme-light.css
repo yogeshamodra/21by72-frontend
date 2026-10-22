@@ -10,25 +10,26 @@
 /* ===== light tokens (page) ===== */
 .theme-light{--bg:#f6f7ff;--bg2:#eceefc;--card:#ffffff;--text:#14173a;--mute:#5b6288;--line:1px solid rgba(20,23,58,.1);background:var(--bg);color:var(--text)}
 
-/* ===== dark zones: hero, top navbar (over the hero), loader, footer ===== */
-.theme-light .hero,
-.theme-light .navbar:not(.s),
+/* ===== dark zones: loader, footer (hero and navbar are light) ===== */
 .theme-light .loader,
 .theme-light .foot{--bg:#0a0d1f;--bg2:#10142e;--card:#161b3d;--text:#f3f5ff;--mute:#9aa3c7;--line:1px solid rgba(255,255,255,.1);color:var(--text)}
 .theme-light .foot{color:var(--mute)}
 .theme-light .loader{background:#0a0d1f}
-.theme-light .hero .t-white,.theme-light .foot .t-white,.theme-light .navbar:not(.s) .t-white{color:#fff}
-.theme-light .hero .t-soft,.theme-light .foot .t-soft{color:#c3c8e6}
-.theme-light .hero .t-metal,.theme-light .foot .t-metal{background:linear-gradient(180deg,#fff 20%,#a9aed0 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.theme-light .hero .btn-ghost,.theme-light .foot .btn-ghost{border-color:rgba(255,255,255,.35);color:#fff}
-.theme-light .hero .btn-ghost:hover,.theme-light .foot .btn-ghost:hover{background:#fff;color:#111;border-color:#fff}
-.theme-light .hero .logo-img img,.theme-light .foot .logo-img img,.theme-light .navbar:not(.s) .logo-img img{box-shadow:0 0 0 2px rgba(255,255,255,.25),0 6px 20px rgba(122,77,255,.35)}
-.theme-light .navbar:not(.s) .navbar-toggler{border-color:rgba(255,255,255,.3)}
-.theme-light .navbar:not(.s) .navbar-toggler-icon{filter:invert(1)}
-.theme-light .navbar:not(.s) .nav-link:hover{color:#fff}
+.theme-light .foot .t-white{color:#fff}
+.theme-light .foot .t-soft{color:#c3c8e6}
+.theme-light .foot .t-metal{background:linear-gradient(180deg,#fff 20%,#a9aed0 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.theme-light .foot .btn-ghost{border-color:rgba(255,255,255,.35);color:#fff}
+.theme-light .foot .btn-ghost:hover{background:#fff;color:#111;border-color:#fff}
+.theme-light .foot .logo-img img{box-shadow:0 0 0 2px rgba(255,255,255,.25),0 6px 20px rgba(122,77,255,.35)}
 
-/* hero: square edge; extra bottom space because the impact bar sits half inside it */
-.theme-light .hero{padding-bottom:120px}
+/* hero: light, square edge; extra bottom space because the impact bar sits half inside it */
+.theme-light .hero{padding-bottom:120px;background:radial-gradient(ellipse at 50% 30%,#e4e1ff 0%,#eef0ff 50%,var(--bg) 100%)}
+.theme-light .hero:after{background:radial-gradient(ellipse at center,transparent 45%,rgba(246,247,255,.9) 100%)}
+.theme-light .hero h1 .w i{background:linear-gradient(180deg,#14173a 15%,#5a5f9c 100%);-webkit-background-clip:text;background-clip:text;filter:drop-shadow(0 10px 30px rgba(122,77,255,.25))}
+.theme-light .hero h1 .w i b{background:var(--grad);-webkit-background-clip:text;background-clip:text}
+.theme-light .navbar:not(.s) .nav-link:hover{color:var(--text)}
+.theme-light .navbar:not(.s) .navbar-toggler{border-color:rgba(20,23,58,.3)}
+.theme-light .navbar:not(.s) .navbar-toggler-icon{filter:none}
 .theme-light .impact{margin-top:-66px}
 @media(max-width:991px){.theme-light .hero{padding-bottom:160px}.theme-light .impact{margin-top:-100px}}
 @media(max-width:575px){.theme-light .hero{padding-bottom:210px}.theme-light .impact{margin-top:-150px}}
