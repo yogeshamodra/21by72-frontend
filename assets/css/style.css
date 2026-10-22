@@ -19,6 +19,7 @@
    15. Schedule (tabs + timeline)
    16. Footer (animated background)
    17. Latest blog cards
+   18. Impact bar
    ========================================================================== */
 
 /* ===== 1. Tokens & base ===== */
@@ -283,3 +284,30 @@ img{max-width:100%}
 @media(max-width:575px){.sc-row{grid-template-columns:1fr auto;row-gap:2px}.sc-time{grid-column:1/-1}}
 /* full agenda page */
 .page-top{padding-top:150px}
+
+/* ===== 18. Impact bar (key numbers under the hero) ===== */
+.impact{position:relative;z-index:5;margin-top:56px;padding-bottom:20px}
+.impact-bar{position:relative;overflow:hidden;border-radius:26px;border:1px solid rgba(255,255,255,.14);background:linear-gradient(135deg,rgba(255,106,61,.14),rgba(122,77,255,.22));-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 30px 70px rgba(0,0,0,.35)}
+.impact-bar:before{content:"";position:absolute;top:0;bottom:0;left:-45%;width:35%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.1),transparent);animation:impact-shine 7s ease-in-out infinite}
+@keyframes impact-shine{0%,55%{left:-45%}100%{left:130%}}
+.impact-item{position:relative;display:flex;align-items:center;gap:16px;padding:1.9rem 1.6rem}
+.impact-item+.impact-item:after{content:"";position:absolute;left:0;top:22%;bottom:22%;width:1px;background:linear-gradient(180deg,transparent,rgba(255,255,255,.3),transparent)}
+.impact-ico{display:flex;flex:none;align-items:center;justify-content:center;width:54px;height:54px;border-radius:16px;background:var(--grad);color:#fff;box-shadow:0 8px 22px rgba(122,77,255,.45)}
+.impact-num{display:block;font-size:clamp(28px,3.2vw,42px);font-weight:800;line-height:1}
+.impact-label{display:block;margin-top:7px;font-size:.74rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--mute)}
+@media(max-width:991px){.impact-item:nth-child(odd):after{display:none}.impact-item:nth-child(n+3){border-top:1px solid rgba(255,255,255,.1)}}
+@media(max-width:575px){.impact-item{flex-direction:column;align-items:flex-start;gap:12px;padding:1.4rem 1.1rem}}
+
+/* ===== sponsors (6 cards) ===== */
+.sponsor-card{padding:18px}
+.sponsor-logo{height:100px;padding:10px;border-radius:16px;background:#fff;box-shadow:0 8px 22px rgba(0,0,0,.18);transition:transform .4s}
+.sponsor-card:hover .sponsor-logo{transform:scale(1.04)}
+.sponsor-logo img{max-width:100%;max-height:100%;object-fit:contain}
+.sponsor-tier{display:inline-block;padding:5px 10px;border-radius:50px;font-size:.58rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff}
+@media(max-width:575px){.sponsor-card{padding:16px}.sponsor-logo{height:100px}}
+.sponsor-lg{padding:16px}.sponsor-lg .sponsor-logo{height:170px;padding:16px}
+@media(max-width:575px){.sponsor-lg .sponsor-logo{height:130px}}
+
+/* ===== about video ===== */
+.about-video{position:relative;aspect-ratio:16/10;border-radius:22px;overflow:hidden;background:#000;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.about-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}

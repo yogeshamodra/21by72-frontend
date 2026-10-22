@@ -1,8 +1,8 @@
 /**
  * animations.js
  * Page-wide motion: smooth scroll (Lenis), scroll progress bar, sticky header
- * state, cursor glow, intro loader, scroll reveals, parallax orbs.
- * Hooks (markup): #loader #bar #glow #hd #h1 .hero [data-in] .cards
+ * state, cursor glow, intro loader, scroll reveals, counters, parallax orbs.
+ * Hooks (markup): #loader #bar #glow #hd #h1 .hero [data-in] .cards [data-n]
  *                 .story-item .spk .pop .orb .ticker
  * Needs: GSAP, ScrollTrigger, Lenis (Lenis is optional).
  */
@@ -56,4 +56,17 @@
   gsap.from('.story-item', { scrollTrigger: { trigger: '#story-grid', start: 'top 85%' }, y: 60, opacity: 0, scale: .94, duration: .9, stagger: .12, ease: 'power3.out', clearProps: 'transform,opacity' });
   gsap.to('.ticker', { scrollTrigger: { trigger: '.ticker', scrub: true, start: 'top bottom', end: 'bottom top' }, rotate: 1.2 });
 
+
+  /* ---------- counters: <b data-n="25000" data-s="+"> ---------- */
+  document.querySelectorAll('[data-n]').forEach(function (el) {
+    var o = { v: 0 }, end = +el.dataset.n, suffix = el.dataset.s || '';
+    ScrollTrigger.create({
+      trigger: el, start: 'top 92%', once: true,
+      onEnter: function () {
+        gsap.to(o, { v: end, duration: 2, ease: 'power2.out', onUpdate: function () {
+          el.textContent = Math.round(o.v).toLocaleString('en-IN') + suffix;
+        } });
+      }
+    });
+  });
 })();

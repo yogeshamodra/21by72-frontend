@@ -74,6 +74,54 @@
 <div class="ticker bg-grad"><div data-marquee="4"><span>Exhibitions &#10022;</span><span>Live Startup Pitches &#10022;</span><span>Keynote Sessions &#10022;</span><span>Panel Discussions &#10022;</span><span>Fireside Chats &#10022;</span><span>Workshops &#10022;</span><span>Speed Dating &#10022;</span></div></div>
 
 <!-- ============================================================
+     SECTION: impact bar (key numbers)
+     WP: template-parts/section-impact.php  (4 items -> ACF repeater: number, suffix, label, icon)
+     JS: animations.js counts the numbers up from data-n / data-s
+     ============================================================ -->
+<section class="impact" id="impact" aria-label="21BY72 in numbers"><div class="container">
+  <div class="impact-bar row g-0" data-in>
+    <div class="col-6 col-lg-3 impact-item">
+      <span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+      <div><b class="impact-num t-grad" data-n="25000" data-s="+">0</b><span class="impact-label">Visitors from pan India</span></div>
+    </div>
+    <div class="col-6 col-lg-3 impact-item">
+      <span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span>
+      <div><b class="impact-num t-grad" data-n="1200" data-s="+">0</b><span class="impact-label">Global investors</span></div>
+    </div>
+    <div class="col-6 col-lg-3 impact-item">
+      <span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22 22 0 0 1-4 2z"/><path d="M9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"/></svg></span>
+      <div><b class="impact-num t-grad" data-n="700" data-s="+">0</b><span class="impact-label">Startups &amp; founders</span></div>
+    </div>
+    <div class="col-6 col-lg-3 impact-item">
+      <span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4M8 22h8"/></svg></span>
+      <div><b class="impact-num t-grad" data-n="250" data-s="+">0</b><span class="impact-label">Eminent speakers</span></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: about / flagship gathering (text left, video right)
+     WP: template-parts/section-about.php
+     Fields (ACF): heading, text, button label + link, YouTube video id.
+     Video: muted autoplay + loop YouTube embed (no script). Change the video id in the iframe src to swap the video.
+     ============================================================ -->
+<section class="sec bg-alt" id="about"><div class="container">
+  <div class="row align-items-center g-5">
+    <div class="col-lg-6" data-in>
+      <span class="eyebrow">About 21BY72</span>
+      <h2 class="h-sec t-metal mt-2 mb-4">Join Our Flagship Gathering</h2>
+      <p class="t-soft mb-4">21BY72 is Bharat's leading startup summit, held in Surat - the birthplace of some of India's most consequential companies. Spend two days in candid conversations with the founders and investors backing bold ideas early, when conviction matters more than answers. Explore startup showcases spanning fintech, deep tech, healthcare and beyond, and walk away with real connections through curated investor-founder huddles. This is where ideas turn into companies that don't just scale, but solve meaningful problems and create lasting impact.</p>
+      <a class="btn btn-grad" href="#book">Register Now</a>
+    </div>
+    <div class="col-lg-6" data-in>
+      <div class="about-video">
+        <iframe loading="lazy" src="https://www.youtube.com/embed/NxmQqfd8IIQ?autoplay=1&mute=1&loop=1&playlist=NxmQqfd8IIQ&rel=0&playsinline=1" title="21BY72 video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============================================================
      SECTION: our story (masonry gallery)
      WP: template-parts/section-story.php
      Loop: ACF gallery field (or a "gallery" post type with featured image + caption). Each .story-item = one loop iteration. Masonry is pure CSS columns - no script needed.
@@ -173,6 +221,95 @@
     <a class="btn btn-ghost" href="https://www.21by72.com/wp-content/uploads/2024/04/21BY72-Season5-Agenda-Final.pdf" target="_blank" rel="noopener">Download PDF</a>
   </div>
   <p class="text-center t-mute fs-sm mt-4 mb-0">The agenda is tentative and subject to change.</p>
+</div></section>
+
+<!-- ============================================================
+     SECTION: sponsors (6 cards)
+     WP: template-parts/section-sponsors.php
+     Loop: custom post type "sponsor" (logo, name, role label, link). Each .col = one loop iteration.
+     ============================================================ -->
+<section class="sec" id="sponsors"><div class="container">
+  <div class="text-center mb-5" data-in><span class="eyebrow">Our Backers</span><h2 class="h-sec t-metal mt-2 mb-3">Our Sponsors</h2><p class="sub t-soft mx-auto mb-0">The organisations that power and support 21BY72.</p></div>
+  <div class="row g-4 justify-content-center cards">
+    <div class="col-6 col-md-4 col-xl-2">
+      <div class="box sponsor-card h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/arham-share.png" alt="Arham Share"></div>
+        <h3 class="h6 mt-4 mb-2">Arham Share</h3>
+        <span class="sponsor-tier bg-grad">Supported By</span>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-xl-2">
+      <div class="box sponsor-card h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/Sangini_Group.png" alt="Sangini Group"></div>
+        <h3 class="h6 mt-4 mb-2">Sangini Group</h3>
+        <span class="sponsor-tier bg-grad">Co-powered By</span>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-xl-2">
+      <div class="box sponsor-card h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/monkis-logo.png" alt="Monkis"></div>
+        <h3 class="h6 mt-4 mb-2">Monkis</h3>
+        <span class="sponsor-tier bg-grad">Associate Sponsor</span>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-xl-2">
+      <div class="box sponsor-card h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/Arigato.png" alt="Arigato Capital"></div>
+        <h3 class="h6 mt-4 mb-2">Arigato Capital</h3>
+        <span class="sponsor-tier bg-grad">Hosted By</span>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-xl-2">
+      <div class="box sponsor-card h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/3eco.png" alt="3eco"></div>
+        <h3 class="h6 mt-4 mb-2">3eco</h3>
+        <span class="sponsor-tier bg-grad">Supported By</span>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-xl-2">
+      <div class="box sponsor-card h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/artha.png" alt="Artha"></div>
+        <h3 class="h6 mt-4 mb-2">Artha</h3>
+        <span class="sponsor-tier bg-grad">Supported By</span>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: supported by (cards)
+     WP: template-parts/section-supported.php
+     Loop: custom post type "sponsor" filtered by tier = supported-by. Each .col = one loop iteration.
+     ============================================================ -->
+<section class="sec bg-alt" id="supported"><div class="container">
+  <div class="text-center mb-5" data-in><span class="eyebrow">With Thanks</span><h2 class="h-sec t-metal mt-2 mb-3">Supported By</h2></div>
+  <div class="row g-4 justify-content-center cards">
+    <div class="col-6 col-md-4 col-xl">
+      <div class="box sponsor-card sponsor-lg h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/iNDEXTb.png" alt="iNDEXTb"></div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-xl">
+      <div class="box sponsor-card sponsor-lg h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/vibrant_gujarat.png" alt="Vibrant Gujarat"></div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-xl">
+      <div class="box sponsor-card sponsor-lg h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Industries-Commissionerate.png" alt="Industries Commissionerate, Government of Gujarat"></div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-xl">
+      <div class="box sponsor-card sponsor-lg h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/ihub.png" alt="i-Hub"></div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-xl">
+      <div class="box sponsor-card sponsor-lg h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/mehta-wealth.png" alt="Mehta Wealth"></div>
+      </div>
+    </div>
+  </div>
 </div></section>
 
 <!-- ============================================================
