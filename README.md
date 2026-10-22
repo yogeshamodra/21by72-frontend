@@ -6,6 +6,7 @@ Static HTML/CSS/JS prototype built on Bootstrap 5.3. Every section is plain mark
 
 ```
 index.html              page; each section is wrapped in a comment banner naming its WP template part
+schedule.html           full detailed agenda (timeline + side programmes), linked from the home page
 home.html               light-theme demo: same markup as index.html + <body class="theme-light"> + assets/css/theme-light.css
 assets/css/style.css    all theme styles, with a table of contents at the top
 assets/img/             21by72-logo.png (header, footer, loader)
@@ -33,12 +34,12 @@ Styles: bootstrap.min.css, slick.min.css, then `assets/css/style.css`. Poppins i
 | header / navigation | header.php | wp_nav_menu |
 | hero | template-parts/section-hero.php | options page (date, venue); `data-countdown` takes the event date |
 | ticker | template-parts/ticker.php | ACF repeater (one copy only; marquee.js repeats it) |
-| roles, booking | section-roles.php, section-book.php | ACF repeater or WooCommerce products |
+| booking | section-book.php | ACF repeater or WooCommerce products |
 | our story (masonry gallery) | section-story.php | ACF gallery field; masonry is pure CSS columns |
 | speakers + past voices | section-speakers.php | CPT `speaker` (photo, role, group) |
 | sponsors & partners | section-partners.php | CPT `partner` + tier taxonomy |
 | leaders | section-leaders.php | CPT `leader` (or `speaker` with group) |
-| ambassadors, core team | section-ambassadors.php, section-team.php | CPT `team` with group; same card markup |
+| core team | section-team.php | CPT `team` |
 | testimonials | section-testimonials.php | CPT `testimonial` (quote, name, role, photo) |
 | footer | footer.php | wp_nav_menu, options |
 
