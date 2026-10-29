@@ -1,0 +1,1135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>21BY72 Blog - Stories and Insights</title>
+<!-- WP: wp_head() goes here; enqueue the CSS below from functions.php (see README.md) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/theme-light.css">
+</head>
+<body class="theme-light">
+<div id="bar" class="bg-grad"></div><div id="glow"></div>
+
+<!-- ============================================================
+     SECTION: header / navigation
+     WP: header.php  (menu items -> wp_nav_menu with a custom walker for the .nav-link classes)
+     ============================================================ -->
+<nav class="navbar navbar-expand-lg fixed-top" id="hd"><div class="container">
+  <a class="logo logo-img d-inline-flex align-items-center" href="index.html#top" aria-label="21BY72 home"><img src="assets/img/21by72-logo.png" width="48" height="48" alt="21BY72"></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="nav">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item"><a class="nav-link" href="exhibitors.html">Exhibitors</a></li>
+      <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+      <li class="nav-item"><a class="nav-link" href="speakers.html">Speakers</a></li>
+      <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
+      <li class="nav-item"><a class="nav-link" href="pitching.html">Pitching Event</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+      <li class="nav-item"><a class="nav-link" href="blogs.html">Blog</a></li>
+      <li class="nav-item"><a class="nav-link" href="tickets.html">Book</a></li>
+    </ul>
+    <a class="btn btn-grad btn-sm-x" href="tickets.html">Grab Your Pass</a>
+  </div>
+</div></nav>
+
+<!-- ============================================================
+     SECTION: featured post
+     WP: template-parts/blog-featured.php  (latest post, WP_Query posts_per_page=1)
+     ============================================================ -->
+<section class="sec pb-0" id="featured" style="padding-top:130px"><div class="container">
+  <article class="bl-feat" data-in>
+    <a class="bl-feat-img" href="https://www.21by72.com/early-stage-venture-capital/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://www.21by72.com/wp-content/uploads/2025/05/Early-Stage-Venture-Capital-768x432.jpeg" alt="Venture Capital 101: Smart Moves for First-Time Investors"><span class="bl-badge">Featured</span></a>
+    <div class="bl-feat-body">
+      <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">14 May 2025 &middot; 6 min read</span></div>
+      <h2 class="h-sec t-metal mb-3"><a href="https://www.21by72.com/early-stage-venture-capital/" target="_blank" rel="noopener">Venture Capital 101: Smart Moves for First-Time Investors</a></h2>
+      <p class="t-soft mb-4">As trendy things go, startups do not come under this category. They are the drivers of an innovative economy. For investors,…</p>
+      <div class="d-flex flex-wrap align-items-center gap-3 mt-auto"><a class="btn btn-grad" href="https://www.21by72.com/early-stage-venture-capital/" target="_blank" rel="noopener">Read the story</a><span class="t-mute fs-sm">By Riofos</span></div>
+    </div>
+  </article>
+</div></section>
+
+<!-- ============================================================
+     SECTION: all posts (category chips + search + load more)
+     WP: template-parts/blog-grid.php  (WP_Query paged; each .bl-item = one loop iteration; data-cats = category names)
+     NOTE: posts and images come from the live 21by72.com blog; links open the live posts.
+     ============================================================ -->
+<section class="sec" id="posts"><div class="container">
+  <div class="bl-bar" data-in>
+    <div class="gal-filter mb-0">
+      <button class="sch-chip active" type="button" data-cat="">All <small>89</small></button>
+      <button class="sch-chip" type="button" data-cat="Speakers">Speakers <small>6</small></button>
+      <button class="sch-chip" type="button" data-cat="Events">Events <small>67</small></button>
+      <button class="sch-chip" type="button" data-cat="Start-Up Summit">Start-Up Summit <small>81</small></button>
+      <button class="sch-chip" type="button" data-cat="Startup Ecosystem">Startup Ecosystem <small>63</small></button>
+    </div>
+    <label class="ex-search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input id="bl-q" type="search" placeholder="Search stories" aria-label="Search stories"></label>
+  </div>
+  <div class="row g-4 cards" id="bl-grid">
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="startup expos: catalysts for innovation ecosystems it is a universally agreed truth that startup expos are a significant part of a startup ecosystem. but why? what are the…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-exhibitions/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Startup-Exhibitions-768x432.jpg" alt="Startup Expos: Catalysts for Innovation Ecosystems"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">5 May 2025 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-exhibitions/" target="_blank" rel="noopener">Startup Expos: Catalysts for Innovation Ecosystems</a></h3>
+          <p class="t-mute mb-3">It is a universally agreed truth that startup expos are a significant part of a startup ecosystem. But why? What are the…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/startup-exhibitions/" target="_blank" rel="noopener" aria-label="Read more: Startup Expos: Catalysts for Innovation Ecosystems">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="why 90% of startups fail: the hard truth shocking or not, it is a fact that almost 90% of startups fail. in 2024, more than 5000 startups failed and shut down. the…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startups-fail/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Startups-Fail-768x432.jpg" alt="Why 90% of Startups Fail: The Hard Truth"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">5 May 2025 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startups-fail/" target="_blank" rel="noopener">Why 90% of Startups Fail: The Hard Truth</a></h3>
+          <p class="t-mute mb-3">Shocking or not, it is a fact that almost 90% of startups fail. In 2024, more than 5000 startups failed and shut down. The…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/startups-fail/" target="_blank" rel="noopener" aria-label="Read more: Why 90% of Startups Fail: The Hard Truth">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="indian angels: the secret behind new unicorns india is considered the land of trade and innovation. so, it’s no surprise that it ranks third on the list of countries with…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/indian-angel-investors/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Indian-Angel-Investors-768x432.jpg" alt="Indian Angels: The Secret Behind New Unicorns"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">5 May 2025 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/indian-angel-investors/" target="_blank" rel="noopener">Indian Angels: The Secret Behind New Unicorns</a></h3>
+          <p class="t-mute mb-3">India is considered the land of trade and innovation. So, it’s no surprise that it ranks third on the list of countries with…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/indian-angel-investors/" target="_blank" rel="noopener" aria-label="Read more: Indian Angels: The Secret Behind New Unicorns">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="startup venture capital: a guide for early-stage investors india is one of the most thriving startup ecosystems in the world, ranking 3rd globally. and venture capital for startups…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-venture-capital/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/04/Startup-Venture-Capital-768x432.jpeg" alt="Startup Venture Capital: A Guide for Early-Stage Investors"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">24 Apr 2025 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-venture-capital/" target="_blank" rel="noopener">Startup Venture Capital: A Guide for Early-Stage Investors</a></h3>
+          <p class="t-mute mb-3">India is one of the most thriving startup ecosystems in the world, ranking 3rd globally. And venture capital for startups…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/startup-venture-capital/" target="_blank" rel="noopener" aria-label="Read more: Startup Venture Capital: A Guide for Early-Stage Investors">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="investment opportunities in india: where to invest in 2025 it is undeniable that india is a diverse sub-continent, in its people, its culture and even in business opportunities. over…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/business-investment-opportunities-in-india/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/04/Business-Investment-Opportunities-in-India-768x432.jpeg" alt="Investment Opportunities in India: Where to Invest in 2025"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">21 Apr 2025 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/business-investment-opportunities-in-india/" target="_blank" rel="noopener">Investment Opportunities in India: Where to Invest in 2025</a></h3>
+          <p class="t-mute mb-3">It is undeniable that India is a diverse sub-continent, in its people, its culture and even in business opportunities. Over…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/business-investment-opportunities-in-india/" target="_blank" rel="noopener" aria-label="Read more: Investment Opportunities in India: Where to Invest in 2025">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="startup pitch deck: top 10 mistakes to avoid 1%, that is the percentage of startups who secure funding from venture capitalists. daily investors are approached by numerous…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-pitch-deck/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/04/Startup-Pitch-Deck-768x432.jpeg" alt="Startup Pitch Deck: Top 10 Mistakes to Avoid"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">14 Apr 2025 &middot; 8 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-pitch-deck/" target="_blank" rel="noopener">Startup Pitch Deck: Top 10 Mistakes to Avoid</a></h3>
+          <p class="t-mute mb-3">1%, that is the percentage of startups who secure funding from venture capitalists. Daily investors are approached by numerous…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/startup-pitch-deck/" target="_blank" rel="noopener" aria-label="Read more: Startup Pitch Deck: Top 10 Mistakes to Avoid">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="top newly listed startups in india to watch in 2025 every year, companies and startups get listed, and in 2024, there were 12 startups that went public. venture capital firms…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/listed-startups-in-india/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/04/Listed-Startups-in-India-768x432.jpeg" alt="Top Newly Listed Startups in India to Watch in 2025"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">11 Apr 2025 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/listed-startups-in-india/" target="_blank" rel="noopener">Top Newly Listed Startups in India to Watch in 2025</a></h3>
+          <p class="t-mute mb-3">Every year, companies and startups get listed, and in 2024, there were 12 startups that went public. Venture capital firms…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/listed-startups-in-india/" target="_blank" rel="noopener" aria-label="Read more: Top Newly Listed Startups in India to Watch in 2025">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="is coimbatore the next silicon valley of the south? there is number that needs to be brought to your attention, the reason we are talking about coimbatore. after 2020, there has…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/coimbatore-startups/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/04/Coimbatore-Startups-768x432.jpeg" alt="Is Coimbatore the Next Silicon Valley of the South?"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">3 Apr 2025 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/coimbatore-startups/" target="_blank" rel="noopener">Is Coimbatore the Next Silicon Valley of the South?</a></h3>
+          <p class="t-mute mb-3">There is number that needs to be brought to your attention, the reason we are talking about Coimbatore. After 2020, there has…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/coimbatore-startups/" target="_blank" rel="noopener" aria-label="Read more: Is Coimbatore the Next Silicon Valley of the South?">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="chennai’s startup scene: how tech is changing the game often called the “saas capital of india”, chennai has been steadily growing into a vibrant entrepreneurial hub. fueled by its…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-companies-in-chennai/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/03/Startup-Companies-in-Chennai-768x432.jpeg" alt="Chennai’s Startup Scene: How Tech is Changing the Game"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">31 Mar 2025 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-companies-in-chennai/" target="_blank" rel="noopener">Chennai’s Startup Scene: How Tech is Changing the Game</a></h3>
+          <p class="t-mute mb-3">Often called the “SaaS Capital of India”, Chennai has been steadily growing into a vibrant entrepreneurial hub. Fueled by its…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/startup-companies-in-chennai/" target="_blank" rel="noopener" aria-label="Read more: Chennai’s Startup Scene: How Tech is Changing the Game">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="pune’s bold startups: the future of indian innovation with its proximity to mumbai and roaring student culture, pune is creating buzz as one of the upcoming startup hubs to look…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startups-in-pune/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/03/Startups-in-Pune-768x432.jpeg" alt="Pune’s Bold Startups: The Future of Indian Innovation"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">26 Mar 2025 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startups-in-pune/" target="_blank" rel="noopener">Pune’s Bold Startups: The Future of Indian Innovation</a></h3>
+          <p class="t-mute mb-3">With its proximity to Mumbai and roaring student culture, Pune is creating buzz as one of the upcoming startup hubs to look…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/startups-in-pune/" target="_blank" rel="noopener" aria-label="Read more: Pune’s Bold Startups: The Future of Indian Innovation">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="mumbai startups: backbone of india’s digital revolution we all know, mumbai is the city where dreams come true. the same is true for its thriving startup ecosystem. mumbai’s startups…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startups-in-mumbai/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/03/Startups-in-Mumbai-768x432.jpeg" alt="Mumbai Startups: Backbone of India’s Digital Revolution"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">26 Mar 2025 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startups-in-mumbai/" target="_blank" rel="noopener">Mumbai Startups: Backbone of India’s Digital Revolution</a></h3>
+          <p class="t-mute mb-3">We all know, Mumbai is the city where dreams come true. The same is true for its thriving startup ecosystem. Mumbai’s startups…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/startups-in-mumbai/" target="_blank" rel="noopener" aria-label="Read more: Mumbai Startups: Backbone of India’s Digital Revolution">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="hyderabad’s startup boom: why entrepreneurs are flocking in? ‘the city of pearls’, also known as hyderabad, is famous for its pearls trade, charminar, ramoji film studio and its delicious…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-companies-in-hyderabad/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/03/Startup-Companies-in-Hyderabad-768x432.jpeg" alt="Hyderabad’s Startup Boom: Why Entrepreneurs Are Flocking In?"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">26 Mar 2025 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-companies-in-hyderabad/" target="_blank" rel="noopener">Hyderabad’s Startup Boom: Why Entrepreneurs Are Flocking In?</a></h3>
+          <p class="t-mute mb-3">‘The City of Pearls’, also known as Hyderabad, is famous for its pearls trade, Charminar, Ramoji Film Studio and its delicious…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/startup-companies-in-hyderabad/" target="_blank" rel="noopener" aria-label="Read more: Hyderabad’s Startup Boom: Why Entrepreneurs Are Flocking In?">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Start-Up Summit|Startup Ecosystem" data-q="the legal side of registering a startup in india before you start, as a reader, do you know what it takes to set up a startup? you might have a basic idea, but are you aware…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/registering-a-startup-in-india/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/03/Registering-a-Startup-in-India-768x432.jpeg" alt="The Legal Side of Registering a Startup in India"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">28 Feb 2025 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/registering-a-startup-in-india/" target="_blank" rel="noopener">The Legal Side of Registering a Startup in India</a></h3>
+          <p class="t-mute mb-3">Before you start, as a reader, do you know what it takes to set up a startup? You might have a basic idea, but are you aware…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/registering-a-startup-in-india/" target="_blank" rel="noopener" aria-label="Read more: The Legal Side of Registering a Startup in India">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Start-Up Summit|Startup Ecosystem" data-q="revolution in tech: top 10 startups in bangalore do you ever wonder why bangalore is known as the tech hub or the silicon valley of india? it is the hub for tech startups due…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startups-in-bangalore/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/03/Startups-in-Bangalore-768x432.jpeg" alt="Revolution in Tech: Top 10 Startups in Bangalore"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">28 Feb 2025 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startups-in-bangalore/" target="_blank" rel="noopener">Revolution in Tech: Top 10 Startups in Bangalore</a></h3>
+          <p class="t-mute mb-3">Do you ever wonder why Bangalore is known as the tech hub or the Silicon Valley of India? It is the hub for tech startups due…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/startups-in-bangalore/" target="_blank" rel="noopener" aria-label="Read more: Revolution in Tech: Top 10 Startups in Bangalore">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Start-Up Summit|Startup Ecosystem" data-q="bangalore startups: trends to look out for in 2025 since the start of the 2010s and the rise of technology, we have seen the rise of new tech and economy hubs in…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-companies-in-bangalore/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/03/Startup-Companies-in-Bangalore-768x432.jpeg" alt="Bangalore Startups: Trends to Look Out For in 2025"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">28 Feb 2025 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-companies-in-bangalore/" target="_blank" rel="noopener">Bangalore Startups: Trends to Look Out For in 2025</a></h3>
+          <p class="t-mute mb-3">Since the start of the 2010s and the rise of technology, we have seen the rise of new tech and economy hubs in…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/startup-companies-in-bangalore/" target="_blank" rel="noopener" aria-label="Read more: Bangalore Startups: Trends to Look Out For in 2025">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="what is takes to build a startup in india whether you are in a metro city or a tier 2 or 3 city, startup ideas have become a common discussion topic amongst friends or…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/starting-a-startup-in-india/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/02/Starting-a-Startup-in-India-768x432.jpeg" alt="What is Takes to Build a Startup in India"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">21 Feb 2025 &middot; 8 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/starting-a-startup-in-india/" target="_blank" rel="noopener">What is Takes to Build a Startup in India</a></h3>
+          <p class="t-mute mb-3">Whether you are in a metro city or a tier 2 or 3 city, startup ideas have become a common discussion topic amongst friends or…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/starting-a-startup-in-india/" target="_blank" rel="noopener" aria-label="Read more: What is Takes to Build a Startup in India">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Speakers" data-q="from impatience to empire: aman gupta’s boat story at 21by72 boat didn’t invent or discover something revolutionary; all they did was cater to the needs of their target audience and…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/aman-gupta-at-21by72/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/02/Aman-Gupta-768x474.jpg" alt="From Impatience to Empire: Aman Gupta’s boAt Story at 21BY72"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Speakers</span><span class="t-mute fs-sm">20 Feb 2025 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/aman-gupta-at-21by72/" target="_blank" rel="noopener">From Impatience to Empire: Aman Gupta’s boAt Story at 21BY72</a></h3>
+          <p class="t-mute mb-3">BoAt didn’t invent or discover something revolutionary; all they did was cater to the needs of their target audience and…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/aman-gupta-at-21by72/" target="_blank" rel="noopener" aria-label="Read more: From Impatience to Empire: Aman Gupta’s boAt Story at 21BY72">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Speakers" data-q="inspiring startup tips from dr arokiaswamy velumani at 21by72 ‘hum kisi se kam nahi!’ (we’re no less than anyone!) dr. arokiaswamy velumani shared this motto in the global startup summit…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/dr-arokiaswamy-velumani-at-21by72/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/02/5-768x474.jpg" alt="Inspiring Startup Tips from Dr Arokiaswamy Velumani at 21BY72"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Speakers</span><span class="t-mute fs-sm">19 Feb 2025 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/dr-arokiaswamy-velumani-at-21by72/" target="_blank" rel="noopener">Inspiring Startup Tips from Dr Arokiaswamy Velumani at 21BY72</a></h3>
+          <p class="t-mute mb-3">‘Hum kisi se kam nahi!’ (We’re no less than anyone!) Dr. Arokiaswamy Velumani shared this motto in the Global Startup Summit…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/dr-arokiaswamy-velumani-at-21by72/" target="_blank" rel="noopener" aria-label="Read more: Inspiring Startup Tips from Dr Arokiaswamy Velumani at 21BY72">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Speakers" data-q="raj shamani at 21by72: juggling successfully as an influencer, entrepreneur, and podcaster ‘i am either relentless or restless’ is what raj shamani thinks best describes him. raj shamani was our prestigious guest at…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/raj-shamani-at-21by72-raj-shamani/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/02/6-768x474.jpg" alt="Raj Shamani at 21BY72: Juggling Successfully as an Influencer, Entrepreneur, and Podcaster"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Speakers</span><span class="t-mute fs-sm">14 Feb 2025 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/raj-shamani-at-21by72-raj-shamani/" target="_blank" rel="noopener">Raj Shamani at 21BY72: Juggling Successfully as an Influencer, Entrepreneur, and Podcaster</a></h3>
+          <p class="t-mute mb-3">‘I am either relentless or restless’ is what Raj Shamani thinks best describes him. Raj Shamani was our prestigious guest at…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/raj-shamani-at-21by72-raj-shamani/" target="_blank" rel="noopener" aria-label="Read more: Raj Shamani at 21BY72: Juggling Successfully as an Influencer, Entrepreneur, and Podcaster">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Speakers" data-q="parul gulati at 21by72: the story behind nish hair’s success our hair is a big part of our personality. one bad-hair morning can affect our whole day. just like our bodies, our hair needs…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/parul-gulati-at-21by72/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/01/Parul-Gulati-768x485.jpg" alt="Parul Gulati at 21BY72: The Story Behind Nish Hair’s Success"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Speakers</span><span class="t-mute fs-sm">30 Jan 2025 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/parul-gulati-at-21by72/" target="_blank" rel="noopener">Parul Gulati at 21BY72: The Story Behind Nish Hair’s Success</a></h3>
+          <p class="t-mute mb-3">Our hair is a big part of our personality. One bad-hair morning can affect our whole day. Just like our bodies, our hair needs…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/parul-gulati-at-21by72/" target="_blank" rel="noopener" aria-label="Read more: Parul Gulati at 21BY72: The Story Behind Nish Hair’s Success">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Speakers" data-q="beyond shark tank: anupam mittal’s entrepreneur mantras at 21by72 the words matchmaking and shaadi.com go hand in hand in india. this platform made finding a potential partner a lot easier by…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/anupam-mittal-at-21by72/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/01/Anupam-Mittal-768x485.jpg" alt="Beyond Shark Tank: Anupam Mittal’s Entrepreneur Mantras at 21BY72"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Speakers</span><span class="t-mute fs-sm">30 Jan 2025 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/anupam-mittal-at-21by72/" target="_blank" rel="noopener">Beyond Shark Tank: Anupam Mittal’s Entrepreneur Mantras at 21BY72</a></h3>
+          <p class="t-mute mb-3">The words matchmaking and Shaadi.com go hand in hand in India. This platform made finding a potential partner a lot easier by…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/anupam-mittal-at-21by72/" target="_blank" rel="noopener" aria-label="Read more: Beyond Shark Tank: Anupam Mittal’s Entrepreneur Mantras at 21BY72">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Speakers" data-q="from baby care to self-care: mamaearth’s inspiring journey &quot;mamaearth was supposed to be just a baby care brand…&quot; is what ghazal alagh, co-founder of mamaearth, said in her insightful…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/mamaearth-ghazal-alagh/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/01/Mamaearth-768x486.jpg" alt="From Baby Care to Self-Care: Mamaearth’s Inspiring Journey"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Speakers</span><span class="t-mute fs-sm">23 Jan 2025 &middot; 8 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/mamaearth-ghazal-alagh/" target="_blank" rel="noopener">From Baby Care to Self-Care: Mamaearth’s Inspiring Journey</a></h3>
+          <p class="t-mute mb-3">&quot;Mamaearth was supposed to be just a baby care brand…&quot; is what Ghazal Alagh, co-founder of Mamaearth, said in her insightful…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/mamaearth-ghazal-alagh/" target="_blank" rel="noopener" aria-label="Read more: From Baby Care to Self-Care: Mamaearth’s Inspiring Journey">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="investor psychology: secrets to smart startup investments investments and startups are two vital sides of a huge and complicated piggy bank. they collectively keep the startup…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-investments/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/01/Startup-Investments-768x432.jpeg" alt="Investor Psychology: Secrets to Smart Startup Investments"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">22 Jan 2025 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-investments/" target="_blank" rel="noopener">Investor Psychology: Secrets to Smart Startup Investments</a></h3>
+          <p class="t-mute mb-3">Investments and startups are two vital sides of a huge and complicated piggy bank. They collectively keep the startup…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/startup-investments/" target="_blank" rel="noopener" aria-label="Read more: Investor Psychology: Secrets to Smart Startup Investments">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="mastering investor relations: dos &amp; don’ts for founders every entrepreneur is looking for ways to boost their startup growth. different people will give different answers, yet one…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/investor-relationships-for-founders/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/01/Investor-Relationships-768x432.jpeg" alt="Mastering Investor Relations: Dos &amp; Don’ts for Founders"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">18 Jan 2025 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/investor-relationships-for-founders/" target="_blank" rel="noopener">Mastering Investor Relations: Dos &amp; Don’ts for Founders</a></h3>
+          <p class="t-mute mb-3">Every entrepreneur is looking for ways to boost their startup growth. Different people will give different answers, yet one…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/investor-relationships-for-founders/" target="_blank" rel="noopener" aria-label="Read more: Mastering Investor Relations: Dos &amp; Don’ts for Founders">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="a founder’s journey: from idea to global success there is no feeling that can be compared to reaching the summit, and yet that feeling of elation comes because of the climb…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-journey-from-idea-to-global/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/01/Startup-Journey-768x432.jpeg" alt="A Founder’s Journey: From Idea to Global Success"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">18 Jan 2025 &middot; 8 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-journey-from-idea-to-global/" target="_blank" rel="noopener">A Founder’s Journey: From Idea to Global Success</a></h3>
+          <p class="t-mute mb-3">There is no feeling that can be compared to reaching the summit, and yet that feeling of elation comes because of the climb…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/startup-journey-from-idea-to-global/" target="_blank" rel="noopener" aria-label="Read more: A Founder’s Journey: From Idea to Global Success">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="ai, blockchain &amp; green tech: trends in indian startup ecosystem it is difficult to deny the fact that indian startup ecosystem are taking over the world. they are pushing india higher in…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/indian-startup-ecosystem/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/01/Indian-Startup-Ecosystem-768x432.jpeg" alt="AI, Blockchain &amp; Green Tech: Trends in Indian Startup Ecosystem"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">7 Jan 2025 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/indian-startup-ecosystem/" target="_blank" rel="noopener">AI, Blockchain &amp; Green Tech: Trends in Indian Startup Ecosystem</a></h3>
+          <p class="t-mute mb-3">It is difficult to deny the fact that Indian startup ecosystem are taking over the world. They are pushing India higher in…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/indian-startup-ecosystem/" target="_blank" rel="noopener" aria-label="Read more: AI, Blockchain &amp; Green Tech: Trends in Indian Startup Ecosystem">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="master startup funding: pre-seed to ipo explained funds are the fuel that runs businesses; without it, companies are like cars stranded on the side of the road—immobilized and…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-funding-stages/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/01/Startup-Funding-Stages-768x432.jpeg" alt="Master Startup Funding: Pre-Seed to IPO Explained"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">7 Jan 2025 &middot; 8 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-funding-stages/" target="_blank" rel="noopener">Master Startup Funding: Pre-Seed to IPO Explained</a></h3>
+          <p class="t-mute mb-3">Funds are the fuel that runs businesses; without it, companies are like cars stranded on the side of the road—immobilized and…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/startup-funding-stages/" target="_blank" rel="noopener" aria-label="Read more: Master Startup Funding: Pre-Seed to IPO Explained">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="investor startup meets 2025: secrets to explosive growth what would be your answer? if we ask you, which key factor contributes to a startup’s success? your answer might be capital,…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/investor-startup-meets/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/01/Investor-Startup-Meets-768x432.jpeg" alt="Investor Startup Meets 2025: Secrets to Explosive Growth"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">6 Jan 2025 &middot; 8 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/investor-startup-meets/" target="_blank" rel="noopener">Investor Startup Meets 2025: Secrets to Explosive Growth</a></h3>
+          <p class="t-mute mb-3">What would be your answer? If we ask you, which key factor contributes to a startup’s success? Your answer might be capital,…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/investor-startup-meets/" target="_blank" rel="noopener" aria-label="Read more: Investor Startup Meets 2025: Secrets to Explosive Growth">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="unlock funding: build investor connections for your startup what does it take to turn a dream into a successful startup? there are a lot of factors that drive success, and one of the…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/build-investor-connections-for-your-startup-dream/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/01/Startup-Dream-768x432.jpeg" alt="Unlock Funding: Build Investor Connections for Your Startup"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">6 Jan 2025 &middot; 8 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/build-investor-connections-for-your-startup-dream/" target="_blank" rel="noopener">Unlock Funding: Build Investor Connections for Your Startup</a></h3>
+          <p class="t-mute mb-3">What does it take to turn a dream into a successful startup? There are a lot of factors that drive success, and one of the…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/build-investor-connections-for-your-startup-dream/" target="_blank" rel="noopener" aria-label="Read more: Unlock Funding: Build Investor Connections for Your Startup">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="global exposure: lessons for indian startups abroad communication was very different even a few decades ago, let alone a century ago. we are now used to it, but it was only in…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/global-exposure-for-indian-startups/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/01/Indian-Startups-768x432.jpeg" alt="Global Exposure: Lessons for Indian Startups Abroad"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">4 Jan 2025 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/global-exposure-for-indian-startups/" target="_blank" rel="noopener">Global Exposure: Lessons for Indian Startups Abroad</a></h3>
+          <p class="t-mute mb-3">Communication was very different even a few decades ago, let alone a century ago. We are now used to it, but it was only in…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/global-exposure-for-indian-startups/" target="_blank" rel="noopener" aria-label="Read more: Global Exposure: Lessons for Indian Startups Abroad">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="bootstrapping vs vc: choosing the right path for startups the first thing any startup needs to get off the ground is capital. there are multitude of options available, but which one…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/bootstrapping-vs-venture-capital/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/01/Bootstrapping-vs-Venture-Capital-768x432.jpeg" alt="Bootstrapping vs VC: Choosing the Right Path for Startups"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">4 Jan 2025 &middot; 8 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/bootstrapping-vs-venture-capital/" target="_blank" rel="noopener">Bootstrapping vs VC: Choosing the Right Path for Startups</a></h3>
+          <p class="t-mute mb-3">The first thing any startup needs to get off the ground is capital. There are multitude of options available, but which one…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/bootstrapping-vs-venture-capital/" target="_blank" rel="noopener" aria-label="Read more: Bootstrapping vs VC: Choosing the Right Path for Startups">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="the startup ecosystem: a guide to building a strong network if your startup is the vehicle that drives you to success, networking is the grease that keeps it running smoothly without any…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-ecosystem/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/12/Startup-Ecosystem-768x432.jpeg" alt="The Startup Ecosystem: A Guide to Building a Strong Network"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">10 Dec 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-ecosystem/" target="_blank" rel="noopener">The Startup Ecosystem: A Guide to Building a Strong Network</a></h3>
+          <p class="t-mute mb-3">If your startup is the vehicle that drives you to success, networking is the grease that keeps it running smoothly without any…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/startup-ecosystem/" target="_blank" rel="noopener" aria-label="Read more: The Startup Ecosystem: A Guide to Building a Strong Network">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="a startup pitch guide: strategies for impressing investors what is a pitch exactly? and why is it important to have one? to answer these questions, let us use an analogy. let’s say you…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/pitch-your-startup/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/12/Pitch-your-Startup-768x432.jpeg" alt="A Startup Pitch Guide: Strategies for Impressing Investors"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">10 Dec 2024 &middot; 9 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/pitch-your-startup/" target="_blank" rel="noopener">A Startup Pitch Guide: Strategies for Impressing Investors</a></h3>
+          <p class="t-mute mb-3">What is a pitch exactly? And why is it important to have one? To answer these questions, let us use an analogy. Let’s say you…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/pitch-your-startup/" target="_blank" rel="noopener" aria-label="Read more: A Startup Pitch Guide: Strategies for Impressing Investors">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="supercharging your business: accelerators &amp; incubators we humans are not born with the knowledge of the universe in our hands. we learn about it as we mature. similarly,…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-incubators-and-accelerators/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/12/Startup-Accelerators-Incubators-768x432.jpeg" alt="Supercharging Your Business: Accelerators &amp; Incubators"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">3 Dec 2024 &middot; 8 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-incubators-and-accelerators/" target="_blank" rel="noopener">Supercharging Your Business: Accelerators &amp; Incubators</a></h3>
+          <p class="t-mute mb-3">We humans are not born with the knowledge of the universe in our hands. We learn about it as we mature. Similarly,…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/startup-incubators-and-accelerators/" target="_blank" rel="noopener" aria-label="Read more: Supercharging Your Business: Accelerators &amp; Incubators">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem|Uncategorized" data-q="a step-by-step process of navigating seed funding financial support can be one of the biggest hurdles between your innovative idea and a thriving startup. however, it has been…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/a-step-by-step-process-of-navigating-seed-funding/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/12/Seed-Funding-768x432.jpeg" alt="A Step-by-Step Process of Navigating Seed Funding"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">3 Dec 2024 &middot; 8 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/a-step-by-step-process-of-navigating-seed-funding/" target="_blank" rel="noopener">A Step-by-Step Process of Navigating Seed Funding</a></h3>
+          <p class="t-mute mb-3">Financial support can be one of the biggest hurdles between your innovative idea and a thriving startup. However, it has been…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/a-step-by-step-process-of-navigating-seed-funding/" target="_blank" rel="noopener" aria-label="Read more: A Step-by-Step Process of Navigating Seed Funding">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="from seed to series c: key stages in startup funding one of the many things an entrepreneur must understand while running a startup is the many types of funding available to them…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/seed-funding-to-series-c/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/11/Seed-Funding-to-Series-C-768x432.jpeg" alt="From Seed to Series C: Key Stages in Startup Funding"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">23 Nov 2024 &middot; 8 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/seed-funding-to-series-c/" target="_blank" rel="noopener">From Seed to Series C: Key Stages in Startup Funding</a></h3>
+          <p class="t-mute mb-3">One of the many things an entrepreneur must understand while running a startup is the many types of funding available to them…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/seed-funding-to-series-c/" target="_blank" rel="noopener" aria-label="Read more: From Seed to Series C: Key Stages in Startup Funding">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="pre-seed funding: a startup’s essential guide a startup’s journey begins with an innovative idea. however, a startup needs capital to keep it running. acquiring that…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/pre-seed-funding/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/11/Pre-seed-Funding-768x432.jpeg" alt="Pre-Seed Funding: A Startup’s Essential Guide"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">23 Nov 2024 &middot; 8 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/pre-seed-funding/" target="_blank" rel="noopener">Pre-Seed Funding: A Startup’s Essential Guide</a></h3>
+          <p class="t-mute mb-3">A startup’s journey begins with an innovative idea. However, a startup needs capital to keep it running. Acquiring that…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/pre-seed-funding/" target="_blank" rel="noopener" aria-label="Read more: Pre-Seed Funding: A Startup’s Essential Guide">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="venture capital 101: everything you need to know one of the entrepreneurs’ most daunting worries is having enough funds to keep the startup afloat. if you are an entrepreneur,…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/venture-capital/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/11/Venture-Capital-768x432.jpeg" alt="Venture Capital 101: Everything You Need to Know"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">18 Nov 2024 &middot; 8 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/venture-capital/" target="_blank" rel="noopener">Venture Capital 101: Everything You Need to Know</a></h3>
+          <p class="t-mute mb-3">One of the entrepreneurs’ most daunting worries is having enough funds to keep the startup afloat. If you are an entrepreneur,…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/venture-capital/" target="_blank" rel="noopener" aria-label="Read more: Venture Capital 101: Everything You Need to Know">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="from idea to growth: key strategies to scaling a startup as entrepreneurs, you know that, to increase your chance of securing funding, having a scalable business model is a must. but…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/scalable-startup/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/11/Scalable-Startup-768x432.jpeg" alt="From Idea to Growth: Key Strategies to Scaling a Startup"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">18 Nov 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/scalable-startup/" target="_blank" rel="noopener">From Idea to Growth: Key Strategies to Scaling a Startup</a></h3>
+          <p class="t-mute mb-3">As entrepreneurs, you know that, to increase your chance of securing funding, having a scalable business model is a must. But…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/scalable-startup/" target="_blank" rel="noopener" aria-label="Read more: From Idea to Growth: Key Strategies to Scaling a Startup">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="perfect pitching: 10 key tips to a successful startup pitch what does it take to get an investor interested in your startup? 21by72 has been working with investors from various…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-pitch-tips-for-pitching-to-investors/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/11/Startup-Pitch-768x432.jpeg" alt="Perfect Pitching: 10 Key Tips to a Successful Startup Pitch"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">13 Nov 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-pitch-tips-for-pitching-to-investors/" target="_blank" rel="noopener">Perfect Pitching: 10 Key Tips to a Successful Startup Pitch</a></h3>
+          <p class="t-mute mb-3">What does it take to get an investor interested in your startup? 21BY72 has been working with investors from various…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/startup-pitch-tips-for-pitching-to-investors/" target="_blank" rel="noopener" aria-label="Read more: Perfect Pitching: 10 Key Tips to a Successful Startup Pitch">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="winning investors: 10 must-knows for startup success as an entrepreneur, you understand that getting investors interested in your startup is more stressful than waiting for test…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-founders-to-attract-investors/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/11/Attract-Investors-768x432.jpeg" alt="Winning Investors: 10 Must-Knows for Startup Success"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">13 Nov 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-founders-to-attract-investors/" target="_blank" rel="noopener">Winning Investors: 10 Must-Knows for Startup Success</a></h3>
+          <p class="t-mute mb-3">As an entrepreneur, you understand that getting investors interested in your startup is more stressful than waiting for test…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/startup-founders-to-attract-investors/" target="_blank" rel="noopener" aria-label="Read more: Winning Investors: 10 Must-Knows for Startup Success">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Start-Up Summit|Startup Ecosystem" data-q="sustainable startups in india: creating a greener future just a few months ago, temperatures in india soared to 35-45 degrees celsius. many of us found ourselves lamenting the impacts…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/sustainable-startups-in-india/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/10/Sustainable-Startups-in-India-768x432.jpg" alt="Sustainable Startups in India: Creating a Greener Future"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">29 Oct 2024 &middot; 4 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/sustainable-startups-in-india/" target="_blank" rel="noopener">Sustainable Startups in India: Creating a Greener Future</a></h3>
+          <p class="t-mute mb-3">Just a few months ago, temperatures in India soared to 35-45 degrees Celsius. Many of us found ourselves lamenting the impacts…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/sustainable-startups-in-india/" target="_blank" rel="noopener" aria-label="Read more: Sustainable Startups in India: Creating a Greener Future">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Start-Up Summit|Startup Ecosystem" data-q="the rise of india as leading startup destination tourism has long been a significant contributor to india’s booming economy. however, another major factor drawing global…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/global-startup-hub/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/10/Global-Startup-Hub-768x432.jpg" alt="The Rise of India as Leading Startup Destination"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">29 Oct 2024 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/global-startup-hub/" target="_blank" rel="noopener">The Rise of India as Leading Startup Destination</a></h3>
+          <p class="t-mute mb-3">Tourism has long been a significant contributor to India’s booming economy. However, another major factor drawing global…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/global-startup-hub/" target="_blank" rel="noopener" aria-label="Read more: The Rise of India as Leading Startup Destination">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Start-Up Summit|Startup Ecosystem" data-q="what it takes to transform an idea into a successful startup ideas are the backbone of any society, and they have the power to change the course of the future. what if you have an…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/transforming-an-idea-into-a-startup/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/10/Idea-Into-a-Successful-Startup-768x432.jpg" alt="What it Takes to Transform an Idea into a Successful Startup"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">29 Oct 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/transforming-an-idea-into-a-startup/" target="_blank" rel="noopener">What it Takes to Transform an Idea into a Successful Startup</a></h3>
+          <p class="t-mute mb-3">Ideas are the backbone of any society, and they have the power to change the course of the future. What if you have an…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/transforming-an-idea-into-a-startup/" target="_blank" rel="noopener" aria-label="Read more: What it Takes to Transform an Idea into a Successful Startup">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="why surat is becoming a startup hotspot for global investors when you hear the name of the city of surat, what is the first thing that comes to your mind? food, diamonds, or textiles.…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/global-investors-eyeing-surat/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/10/Global-Investors-768x432.jpg" alt="Why Surat Is Becoming a Startup Hotspot for Global Investors"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">29 Oct 2024 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/global-investors-eyeing-surat/" target="_blank" rel="noopener">Why Surat Is Becoming a Startup Hotspot for Global Investors</a></h3>
+          <p class="t-mute mb-3">When you hear the name of the city of Surat, what is the first thing that comes to your mind? Food, diamonds, or textiles.…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/global-investors-eyeing-surat/" target="_blank" rel="noopener" aria-label="Read more: Why Surat Is Becoming a Startup Hotspot for Global Investors">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="5 defining traits that set successful early-stage founders apart with the recent boom in entrepreneurship and startups, one must wonder: what does it take to manage a successful firm and…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/early-stage-founders/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/10/Early-Stage-Founders-768x432.jpeg" alt="5 Defining Traits That Set Successful Early-Stage Founders Apart"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">17 Oct 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/early-stage-founders/" target="_blank" rel="noopener">5 Defining Traits That Set Successful Early-Stage Founders Apart</a></h3>
+          <p class="t-mute mb-3">With the recent boom in entrepreneurship and startups, one must wonder: what does it take to manage a successful firm and…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/early-stage-founders/" target="_blank" rel="noopener" aria-label="Read more: 5 Defining Traits That Set Successful Early-Stage Founders Apart">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="a guide to investing in early-stage startups imagine hiking up a mountain without any proper gear. it will be a struggle, and your probability of falling is high. that’s…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/early-stage-startups/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/10/Early-Stage-Startups-768x432.jpeg" alt="A Guide To Investing in Early-Stage Startups"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">14 Oct 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/early-stage-startups/" target="_blank" rel="noopener">A Guide To Investing in Early-Stage Startups</a></h3>
+          <p class="t-mute mb-3">Imagine hiking up a mountain without any proper gear. It will be a struggle, and your probability of falling is high. That’s…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/early-stage-startups/" target="_blank" rel="noopener" aria-label="Read more: A Guide To Investing in Early-Stage Startups">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="the perks and risks of crowdfunding for startup fundraising who does not need capital to run their startup? most entrepreneurs are always looking for ways to raise funds for their…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/crowdfunding-for-startup-fundraising/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/10/Crowdfunding-For-Startup-Fundraising-768x432.jpeg" alt="The Perks and Risks of Crowdfunding for Startup Fundraising"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">9 Oct 2024 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/crowdfunding-for-startup-fundraising/" target="_blank" rel="noopener">The Perks and Risks of Crowdfunding for Startup Fundraising</a></h3>
+          <p class="t-mute mb-3">Who does not need capital to run their startup? Most entrepreneurs are always looking for ways to raise funds for their…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/crowdfunding-for-startup-fundraising/" target="_blank" rel="noopener" aria-label="Read more: The Perks and Risks of Crowdfunding for Startup Fundraising">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="essentials of scaling your startup globally: networking ‘the sky is the limit’ is a well-known motivational phrase. however, reaching the figurative sky is not as simple as…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-globally-networking/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/10/Startup-Globally-768x432.jpeg" alt="Essentials of Scaling Your Startup Globally: Networking"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">9 Oct 2024 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-globally-networking/" target="_blank" rel="noopener">Essentials of Scaling Your Startup Globally: Networking</a></h3>
+          <p class="t-mute mb-3">‘The sky is the limit’ is a well-known motivational phrase. However, reaching the figurative sky is not as simple as…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/startup-globally-networking/" target="_blank" rel="noopener" aria-label="Read more: Essentials of Scaling Your Startup Globally: Networking">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="the future of startups: emerging trends and opportunities in the past decade, our country has seen tremendous economic growth. businesses and startups are the major forces behind this…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/the-future-of-startups/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/10/The-Future-of-Startups-768x432.jpeg" alt="The Future of Startups: Emerging Trends and Opportunities"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">2 Oct 2024 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/the-future-of-startups/" target="_blank" rel="noopener">The Future of Startups: Emerging Trends and Opportunities</a></h3>
+          <p class="t-mute mb-3">In the past decade, our country has seen tremendous economic growth. Businesses and startups are the major forces behind this…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/the-future-of-startups/" target="_blank" rel="noopener" aria-label="Read more: The Future of Startups: Emerging Trends and Opportunities">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="global startup ecosystem: growing stronger through international collaboration let’s go a little back in time—five decades to be exact. imagine asking someone living in a small town in india about the…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/global-startup-ecosystem/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/10/Global-Startup-Ecosystem-768x432.jpeg" alt="Global Startup Ecosystem: Growing Stronger Through International Collaboration"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">2 Oct 2024 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/global-startup-ecosystem/" target="_blank" rel="noopener">Global Startup Ecosystem: Growing Stronger Through International Collaboration</a></h3>
+          <p class="t-mute mb-3">Let’s go a little back in time—five decades to be exact. Imagine asking someone living in a small town in India about the…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/global-startup-ecosystem/" target="_blank" rel="noopener" aria-label="Read more: Global Startup Ecosystem: Growing Stronger Through International Collaboration">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="step-by-step guide to find startups to invest in india indians have always been recognized for their entrepreneurial spirit and business-minded philosophy. with these qualities and…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/find-startups-to-invest-in-india/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/09/find-startups-to-invest-in-India-768x432.jpeg" alt="Step-by-step Guide to find startups to invest in India"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">30 Sept 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/find-startups-to-invest-in-india/" target="_blank" rel="noopener">Step-by-step Guide to find startups to invest in India</a></h3>
+          <p class="t-mute mb-3">Indians have always been recognized for their entrepreneurial spirit and business-minded philosophy. With these qualities and…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/find-startups-to-invest-in-india/" target="_blank" rel="noopener" aria-label="Read more: Step-by-step Guide to find startups to invest in India">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="startup funding: attract investors &amp; avoid common pitfalls an entrepreneur may face a variety of challenges while building their startup, one of which is financial. whether it is to…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-funding-and-avoid-pitfalls/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/09/Startup-Funding-768x432.jpeg" alt="Startup Funding: Attract Investors &amp; Avoid Common Pitfalls"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">27 Sept 2024 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-funding-and-avoid-pitfalls/" target="_blank" rel="noopener">Startup Funding: Attract Investors &amp; Avoid Common Pitfalls</a></h3>
+          <p class="t-mute mb-3">An entrepreneur may face a variety of challenges while building their startup, one of which is financial. Whether it is to…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/startup-funding-and-avoid-pitfalls/" target="_blank" rel="noopener" aria-label="Read more: Startup Funding: Attract Investors &amp; Avoid Common Pitfalls">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="startup ecosystem in india: what is it and how does it work? innovation is the critical driver of growth in any industry. it can also take the form of startups creating products or…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-ecosystem-in-india/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/09/Startup-Ecosystem-in-India-768x432.jpeg" alt="Startup Ecosystem in India: What Is It and How Does It Work?"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">16 Sept 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-ecosystem-in-india/" target="_blank" rel="noopener">Startup Ecosystem in India: What Is It and How Does It Work?</a></h3>
+          <p class="t-mute mb-3">Innovation is the critical driver of growth in any industry. It can also take the form of startups creating products or…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/startup-ecosystem-in-india/" target="_blank" rel="noopener" aria-label="Read more: Startup Ecosystem in India: What Is It and How Does It Work?">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="fundraising for startups in india: opportunities and challenges imagine you have this fantastic recipe in your head, but you’ll need the ingredients and utensils to make it, which requires…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/fundraising-for-startups-in-india/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/09/Fundraising-for-Startups-in-India-768x432.jpeg" alt="Fundraising for Startups in India: Opportunities and Challenges"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">16 Sept 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/fundraising-for-startups-in-india/" target="_blank" rel="noopener">Fundraising for Startups in India: Opportunities and Challenges</a></h3>
+          <p class="t-mute mb-3">Imagine you have this fantastic recipe in your head, but you’ll need the ingredients and utensils to make it, which requires…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/fundraising-for-startups-in-india/" target="_blank" rel="noopener" aria-label="Read more: Fundraising for Startups in India: Opportunities and Challenges">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="why invest in early-stage startups in india? the first and foremost rule of investment and gaining high roi is taking risks. the risk you can take is proportional to your…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/why-invest-in-early-stage-startups-in-india/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/09/Early-Stage-Startup-in-India-768x432.jpeg" alt="Why Invest in Early-Stage Startups in India?"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">14 Sept 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/why-invest-in-early-stage-startups-in-india/" target="_blank" rel="noopener">Why Invest in Early-Stage Startups in India?</a></h3>
+          <p class="t-mute mb-3">The first and foremost rule of investment and gaining high ROI is taking risks. The risk you can take is proportional to your…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/why-invest-in-early-stage-startups-in-india/" target="_blank" rel="noopener" aria-label="Read more: Why Invest in Early-Stage Startups in India?">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="angel investment in india: a necessity for startups running your startup is as smooth as riding a roller coaster. it has many dips, highs, and slippery slopes that sometimes make…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/angel-investment-in-india-for-your-startup/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/09/Angel-Investment-in-India-768x432.jpeg" alt="Angel Investment In India: A Necessity for Startups"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">13 Sept 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/angel-investment-in-india-for-your-startup/" target="_blank" rel="noopener">Angel Investment In India: A Necessity for Startups</a></h3>
+          <p class="t-mute mb-3">Running your startup is as smooth as riding a roller coaster. It has many dips, highs, and slippery slopes that sometimes make…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/angel-investment-in-india-for-your-startup/" target="_blank" rel="noopener" aria-label="Read more: Angel Investment In India: A Necessity for Startups">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="how angel investors help startup firms in india do you have a stunning idea for creating a product or service that can potentially grow into a thriving startup? if you do,…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/angel-investors-help-startup-firm-in-india/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/09/Angel-Investors-Help-Startup-Firms-768x433.jpeg" alt="How Angel Investors Help Startup Firms in India"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">2 Sept 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/angel-investors-help-startup-firm-in-india/" target="_blank" rel="noopener">How Angel Investors Help Startup Firms in India</a></h3>
+          <p class="t-mute mb-3">Do you have a stunning idea for creating a product or service that can potentially grow into a thriving startup? If you do,…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/angel-investors-help-startup-firm-in-india/" target="_blank" rel="noopener" aria-label="Read more: How Angel Investors Help Startup Firms in India">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="what is seed funding for startups? how does it work? converting an idea into actionable business is easier said than done. you need to get the right resources, personnel, and…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/seed-funding-for-startups/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/09/Seed-Funding-For-Startups-768x432.jpeg" alt="What is Seed Funding for Startups? How Does It Work?"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">2 Sept 2024 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/seed-funding-for-startups/" target="_blank" rel="noopener">What is Seed Funding for Startups? How Does It Work?</a></h3>
+          <p class="t-mute mb-3">Converting an idea into actionable business is easier said than done. You need to get the right resources, personnel, and…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/seed-funding-for-startups/" target="_blank" rel="noopener" aria-label="Read more: What is Seed Funding for Startups? How Does It Work?">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="venture capital for startups: a comprehensive guide do you want to raise large-scale capital for your startup? or are you looking to understand venture capital for future…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/venture-capital-for-startups/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/09/Venture-Capital-for-Startups-768x432.jpeg" alt="Venture Capital for Startups: A Comprehensive Guide"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">2 Sept 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/venture-capital-for-startups/" target="_blank" rel="noopener">Venture Capital for Startups: A Comprehensive Guide</a></h3>
+          <p class="t-mute mb-3">Do you want to raise large-scale capital for your startup? Or are you looking to understand venture capital for future…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/venture-capital-for-startups/" target="_blank" rel="noopener" aria-label="Read more: Venture Capital for Startups: A Comprehensive Guide">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="the role of seed funding in startup growth startups are a crucial part of the economy, paving the road to prosperity and improving living standards. however, converting…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/seed-funding-in-startup-growth/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/09/Seed-Funding-in-Stratup-Growth-768x432.jpeg" alt="The Role of Seed Funding in Startup Growth"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">2 Sept 2024 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/seed-funding-in-startup-growth/" target="_blank" rel="noopener">The Role of Seed Funding in Startup Growth</a></h3>
+          <p class="t-mute mb-3">Startups are a crucial part of the economy, paving the road to prosperity and improving living standards. However, converting…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/seed-funding-in-startup-growth/" target="_blank" rel="noopener" aria-label="Read more: The Role of Seed Funding in Startup Growth">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Start-Up Summit|Startup Ecosystem" data-q="bootstrapping your startup: challenges and opportunities to finance any idea or product, there is a moment when you have to give up some equity. however many entrepreneurs find it…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/bootstrapping-your-startup/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/08/Bootstrapping-your-Startups-768x432.jpeg" alt="Bootstrapping Your Startup: Challenges and Opportunities"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">31 Aug 2024 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/bootstrapping-your-startup/" target="_blank" rel="noopener">Bootstrapping Your Startup: Challenges and Opportunities</a></h3>
+          <p class="t-mute mb-3">To finance any idea or product, there is a moment when you have to give up some equity. However many entrepreneurs find it…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/bootstrapping-your-startup/" target="_blank" rel="noopener" aria-label="Read more: Bootstrapping Your Startup: Challenges and Opportunities">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="networking for entrepreneurs and startups – a conversation to success there comes a point in every entrepreneur’s life when they face uncertainty while running their startup. a time when success…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/networking-for-entrepreneurs-and-startups/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/08/Networking-for-Entrepreneurs-and-Startups-768x432.jpeg" alt="Networking for Entrepreneurs and Startups – A Conversation To Success"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">17 Aug 2024 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/networking-for-entrepreneurs-and-startups/" target="_blank" rel="noopener">Networking for Entrepreneurs and Startups – A Conversation To Success</a></h3>
+          <p class="t-mute mb-3">There comes a point in every entrepreneur’s life when they face uncertainty while running their startup. A time when success…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/networking-for-entrepreneurs-and-startups/" target="_blank" rel="noopener" aria-label="Read more: Networking for Entrepreneurs and Startups – A Conversation To Success">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Start-Up Summit|Startup Ecosystem" data-q="how to get startup funding with venture capital? if you are a startup owner, you have an idea about the different types of funding available for startups. but do you know…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-funding-with-venture-capital/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/08/How-to-get-Startup-Funding-with-Venture-Capital-768x432.jpeg" alt="How To Get Startup Funding With Venture Capital?"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">17 Aug 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-funding-with-venture-capital/" target="_blank" rel="noopener">How To Get Startup Funding With Venture Capital?</a></h3>
+          <p class="t-mute mb-3">If you are a startup owner, you have an idea about the different types of funding available for startups. But do you know…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/startup-funding-with-venture-capital/" target="_blank" rel="noopener" aria-label="Read more: How To Get Startup Funding With Venture Capital?">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Start-Up Summit|Startup Ecosystem" data-q="the role of accelerators &amp; incubators in startup funding have a fantastic startup idea but are looking for funds to turn it into a business. do you want to learn to survive in…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/accelerators-and-incubators-role-in-startup-funding/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/08/The-Role-of-Accelerators-Incubators-in-Startup-Funding-768x432.jpeg" alt="The Role of Accelerators &amp; Incubators in Startup Funding"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">16 Aug 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/accelerators-and-incubators-role-in-startup-funding/" target="_blank" rel="noopener">The Role of Accelerators &amp; Incubators in Startup Funding</a></h3>
+          <p class="t-mute mb-3">Have a fantastic startup idea but are looking for funds to turn it into a business. Do you want to learn to survive in…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Riofos</span><a class="blog-more" href="https://www.21by72.com/accelerators-and-incubators-role-in-startup-funding/" target="_blank" rel="noopener" aria-label="Read more: The Role of Accelerators &amp; Incubators in Startup Funding">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Startup Ecosystem" data-q="how to find investors for startups and businesses no startup journey is without its challenges. a startup will inevitably encounter them. their challenges range from promoting…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/how-to-find-investors-for-startups/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/07/Find-Investors-For-Startups-768x432.jpeg" alt="How to Find Investors for Startups and Businesses"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">30 Jul 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/how-to-find-investors-for-startups/" target="_blank" rel="noopener">How to Find Investors for Startups and Businesses</a></h3>
+          <p class="t-mute mb-3">No startup journey is without its challenges. A startup will inevitably encounter them. Their challenges range from promoting…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/how-to-find-investors-for-startups/" target="_blank" rel="noopener" aria-label="Read more: How to Find Investors for Startups and Businesses">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Startup Ecosystem" data-q="5 common mistakes to avoid when raising funds for a startup there are multiple reasons for a startup to fail. the most common ones are the failure of products in the market, marketing,…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/raising-funds-for-a-startup/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/07/Raising-Funds-For-A-Startup-768x432.jpeg" alt="5 Common Mistakes To Avoid When Raising Funds For A Startup"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">30 Jul 2024 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/raising-funds-for-a-startup/" target="_blank" rel="noopener">5 Common Mistakes To Avoid When Raising Funds For A Startup</a></h3>
+          <p class="t-mute mb-3">There are multiple reasons for a startup to fail. The most common ones are the failure of products in the market, marketing,…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/raising-funds-for-a-startup/" target="_blank" rel="noopener" aria-label="Read more: 5 Common Mistakes To Avoid When Raising Funds For A Startup">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Start-Up Summit" data-q="venture capital vs angel investing: what’s best for your startup? scaling a business needs some finance, yet deciding what type works best for your startup is challenging. you might have heard…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/venture-capital-vs-angel-investing/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/07/Venture-Capital-vs-Angel-Investing-768x432.jpeg" alt="Venture Capital vs Angel Investing: What’s Best for Your Startup?"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Start-Up Summit</span><span class="t-mute fs-sm">27 Jul 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/venture-capital-vs-angel-investing/" target="_blank" rel="noopener">Venture Capital vs Angel Investing: What’s Best for Your Startup?</a></h3>
+          <p class="t-mute mb-3">Scaling a business needs some finance, yet deciding what type works best for your startup is challenging. You might have heard…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/venture-capital-vs-angel-investing/" target="_blank" rel="noopener" aria-label="Read more: Venture Capital vs Angel Investing: What’s Best for Your Startup?">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Start-Up Summit" data-q="startup fundraising: 7 ways to raise funds as a new startup as appealing as they might appear, turning any startup into a successful business is not a walk in the park. how often do you…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-fundraising-7-ways-to-raise-funds/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/07/7-Ways-to-Raise-Funds-as-a-New-Startup-768x432.jpeg" alt="Startup Fundraising: 7 Ways to Raise Funds as a New Startup"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Start-Up Summit</span><span class="t-mute fs-sm">27 Jul 2024 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-fundraising-7-ways-to-raise-funds/" target="_blank" rel="noopener">Startup Fundraising: 7 Ways to Raise Funds as a New Startup</a></h3>
+          <p class="t-mute mb-3">As appealing as they might appear, turning any startup into a successful business is not a walk in the park. How often do you…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/startup-fundraising-7-ways-to-raise-funds/" target="_blank" rel="noopener" aria-label="Read more: Startup Fundraising: 7 Ways to Raise Funds as a New Startup">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Start-Up Summit" data-q="igniting entrepreneurial ambitions: lessons from 21by72’s keynote speakers it is a fact – motivation is hard to sustain in the face of challenges. yet, how do successful entrepreneurs keep pushing…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/keynote-speeches-at-21by72-summit/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/07/Igniting-Entrepreneurial-Ambitions-As-A-Keynote-Speeches-768x432.jpg" alt="Igniting Entrepreneurial Ambitions: Lessons from 21BY72’s Keynote Speakers"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Start-Up Summit</span><span class="t-mute fs-sm">20 Jul 2024 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/keynote-speeches-at-21by72-summit/" target="_blank" rel="noopener">Igniting Entrepreneurial Ambitions: Lessons from 21BY72’s Keynote Speakers</a></h3>
+          <p class="t-mute mb-3">It is a fact – motivation is hard to sustain in the face of challenges. Yet, how do successful entrepreneurs keep pushing…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/keynote-speeches-at-21by72-summit/" target="_blank" rel="noopener" aria-label="Read more: Igniting Entrepreneurial Ambitions: Lessons from 21BY72’s Keynote Speakers">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Start-Up Summit" data-q="10 reasons why joining a startup accelerator program will boost your business being a startup owner is not an easy feat. one can face challenges like raising funds, allocating funds, finding the right…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/why-joining-a-startup-accelerator-program/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/07/Why-Joining-Startup-Accelerator-Program--768x432.jpg" alt="10 Reasons Why Joining a Startup Accelerator Program Will Boost Your Business"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Start-Up Summit</span><span class="t-mute fs-sm">12 Jul 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/why-joining-a-startup-accelerator-program/" target="_blank" rel="noopener">10 Reasons Why Joining a Startup Accelerator Program Will Boost Your Business</a></h3>
+          <p class="t-mute mb-3">Being a startup owner is not an easy feat. One can face challenges like raising funds, allocating funds, finding the right…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/why-joining-a-startup-accelerator-program/" target="_blank" rel="noopener" aria-label="Read more: 10 Reasons Why Joining a Startup Accelerator Program Will Boost Your Business">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit" data-q="from idea to execution: key lessons from startup conferences in india what does it take to turn an idea into a potentially high-earning business? one thing that can help an entrepreneur climb up…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-conferences-in-india-for-entrepreneurs/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/07/Start-Up-Conference-in-India-768x433.jpeg" alt="From Idea to Execution: Key Lessons from Startup Conferences in India"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Events</span><span class="t-mute fs-sm">6 Jul 2024 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-conferences-in-india-for-entrepreneurs/" target="_blank" rel="noopener">From Idea to Execution: Key Lessons from Startup Conferences in India</a></h3>
+          <p class="t-mute mb-3">What does it take to turn an idea into a potentially high-earning business? One thing that can help an entrepreneur climb up…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/startup-conferences-in-india-for-entrepreneurs/" target="_blank" rel="noopener" aria-label="Read more: From Idea to Execution: Key Lessons from Startup Conferences in India">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit" data-q="pitching business ideas: how to use storytelling to engage investors converting an idea into a successful one requires finance. getting investors interested in your business enough to secure…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/guide-for-pitching-business-ideas/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/07/Pitching-Business-Ideas-768x432.jpeg" alt="Pitching Business Ideas: How to Use Storytelling to Engage Investors"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Events</span><span class="t-mute fs-sm">6 Jul 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/guide-for-pitching-business-ideas/" target="_blank" rel="noopener">Pitching Business Ideas: How to Use Storytelling to Engage Investors</a></h3>
+          <p class="t-mute mb-3">Converting an idea into a successful one requires finance. Getting investors interested in your business enough to secure…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/guide-for-pitching-business-ideas/" target="_blank" rel="noopener" aria-label="Read more: Pitching Business Ideas: How to Use Storytelling to Engage Investors">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit" data-q="global impact: how international trade fairs boost startup growth how can you, as an entrepreneur, take your business international? traditionally, there are multiple ways, each harder than…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/international-trade-fair-on-startup-growth/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/07/International-Trade-fair-768x433.jpeg" alt="Global Impact: How International Trade Fairs Boost Startup Growth"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Events</span><span class="t-mute fs-sm">2 Jul 2024 &middot; 5 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/international-trade-fair-on-startup-growth/" target="_blank" rel="noopener">Global Impact: How International Trade Fairs Boost Startup Growth</a></h3>
+          <p class="t-mute mb-3">How can you, as an entrepreneur, take your business international? Traditionally, there are multiple ways, each harder than…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/international-trade-fair-on-startup-growth/" target="_blank" rel="noopener" aria-label="Read more: Global Impact: How International Trade Fairs Boost Startup Growth">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit|Startup Ecosystem" data-q="a comprehensive guide to becoming an angel investor for startups finance is the boost any start-up needs to become successful. yet finding the right investors is not a walk in the park.…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/angel-investor-for-startups/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Angel-investor-for-Startups-768x432.jpeg" alt="A Comprehensive Guide to Becoming an Angel Investor for Startups"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Startup Ecosystem</span><span class="t-mute fs-sm">22 Jun 2024 &middot; 8 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/angel-investor-for-startups/" target="_blank" rel="noopener">A Comprehensive Guide to Becoming an Angel Investor for Startups</a></h3>
+          <p class="t-mute mb-3">Finance is the boost any start-up needs to become successful. Yet finding the right investors is not a walk in the park.…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/angel-investor-for-startups/" target="_blank" rel="noopener" aria-label="Read more: A Comprehensive Guide to Becoming an Angel Investor for Startups">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit" data-q="7 exclusive behind-the-scenes tips for preparing for a startup event panel discussion a successful individual has the ability to learn from others’ stories. hence, you must listen, observe, and learn to be a…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/panel-discussion-at-the-startup-event/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Preparing-for-a-Panel-Discussion-at-a-Startup-Event-in-Gujarat-768x432.jpeg" alt="7 Exclusive Behind-the-Scenes Tips for Preparing for a Startup Event Panel Discussion"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Events</span><span class="t-mute fs-sm">22 Jun 2024 &middot; 5 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/panel-discussion-at-the-startup-event/" target="_blank" rel="noopener">7 Exclusive Behind-the-Scenes Tips for Preparing for a Startup Event Panel Discussion</a></h3>
+          <p class="t-mute mb-3">A successful individual has the ability to learn from others’ stories. Hence, you must listen, observe, and learn to be a…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/panel-discussion-at-the-startup-event/" target="_blank" rel="noopener" aria-label="Read more: 7 Exclusive Behind-the-Scenes Tips for Preparing for a Startup Event Panel Discussion">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit" data-q="booking a stall at startup expo: benefits and best practices if you follow the startup circuit closely or are an entrepreneur, you know what a startup expo is and how it can help you grow…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/set-your-stall-in-startup-expo/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Startup-Expo-768x432.jpeg" alt="Booking a Stall at Startup Expo: Benefits and Best Practices"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Events</span><span class="t-mute fs-sm">21 Jun 2024 &middot; 8 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/set-your-stall-in-startup-expo/" target="_blank" rel="noopener">Booking a Stall at Startup Expo: Benefits and Best Practices</a></h3>
+          <p class="t-mute mb-3">If you follow the startup circuit closely or are an entrepreneur, you know what a startup expo is and how it can help you grow…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/set-your-stall-in-startup-expo/" target="_blank" rel="noopener" aria-label="Read more: Booking a Stall at Startup Expo: Benefits and Best Practices">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit" data-q="the insider’s guide to stall booking for startup events if you are an up-and-coming entrepreneur stepping into the startup industry, you might have heard about startup events…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/stall-booking-for-startup-events/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/The-Insiders-Guide-to-Stall-Booing-for-Startup-Events-768x432.jpeg" alt="The Insider’s Guide to Stall Booking for Startup Events"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Events</span><span class="t-mute fs-sm">21 Jun 2024 &middot; 5 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/stall-booking-for-startup-events/" target="_blank" rel="noopener">The Insider’s Guide to Stall Booking for Startup Events</a></h3>
+          <p class="t-mute mb-3">If you are an up-and-coming entrepreneur stepping into the startup industry, you might have heard about startup events…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/stall-booking-for-startup-events/" target="_blank" rel="noopener" aria-label="Read more: The Insider’s Guide to Stall Booking for Startup Events">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Start-Up Summit" data-q="strategies &amp; managing stall setup at startup events entrepreneurship isn’t a random walk in the park. it requires an immense amount of work, deduction, and discipline. to convert…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/exhibition-stall-setup-and-management/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Strategies-Managing-Stall-Setup-at-Startup-Events-768x432.jpg" alt="Strategies &amp; Managing Stall Setup at Startup Events"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Start-Up Summit</span><span class="t-mute fs-sm">20 Jun 2024 &middot; 8 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/exhibition-stall-setup-and-management/" target="_blank" rel="noopener">Strategies &amp; Managing Stall Setup at Startup Events</a></h3>
+          <p class="t-mute mb-3">Entrepreneurship isn’t a random walk in the park. It requires an immense amount of work, deduction, and discipline. To convert…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/exhibition-stall-setup-and-management/" target="_blank" rel="noopener" aria-label="Read more: Strategies &amp; Managing Stall Setup at Startup Events">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit" data-q="surat startup ecosystem: resources and support for aspiring entrepreneurs the first question that comes to anybody’s mind is, does surat even have a startup ecosystem? well, if you ask this question…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-ecosystem-of-surat/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-30-at-18.57.35-768x432.jpeg" alt="Surat Startup Ecosystem: Resources and Support for Aspiring Entrepreneurs"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Events</span><span class="t-mute fs-sm">31 May 2024 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-ecosystem-of-surat/" target="_blank" rel="noopener">Surat Startup Ecosystem: Resources and Support for Aspiring Entrepreneurs</a></h3>
+          <p class="t-mute mb-3">The first question that comes to anybody’s mind is, does Surat even have a startup ecosystem? Well, if you ask this question…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/startup-ecosystem-of-surat/" target="_blank" rel="noopener" aria-label="Read more: Surat Startup Ecosystem: Resources and Support for Aspiring Entrepreneurs">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit" data-q="global startup summit 2024: your guide to success in surat what is the first thought that comes to your mind after you are done booking your stall at the startup summit? is it how am i…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/visitors-guide-to-global-startup-summit-2024/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-30-at-18.57.28-768x432.jpeg" alt="Global Startup Summit 2024: Your Guide to Success in Surat"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Events</span><span class="t-mute fs-sm">31 May 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/visitors-guide-to-global-startup-summit-2024/" target="_blank" rel="noopener">Global Startup Summit 2024: Your Guide to Success in Surat</a></h3>
+          <p class="t-mute mb-3">What is the first thought that comes to your mind after you are done booking your stall at the Startup Summit? Is it how am I…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/visitors-guide-to-global-startup-summit-2024/" target="_blank" rel="noopener" aria-label="Read more: Global Startup Summit 2024: Your Guide to Success in Surat">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit" data-q="how panel discussions fuel innovation in startup ecosystems cracking the real world takes more than textual knowledge. how does one solve on-ground problems that arise when you are…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/panel-discussion-on-startup-ecosystems/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Impact-Of-Panel-Discussions-On-Startup-Ecosystems-768x432.jpeg" alt="How Panel Discussions Fuel Innovation in Startup Ecosystems"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Events</span><span class="t-mute fs-sm">31 May 2024 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/panel-discussion-on-startup-ecosystems/" target="_blank" rel="noopener">How Panel Discussions Fuel Innovation in Startup Ecosystems</a></h3>
+          <p class="t-mute mb-3">Cracking the real world takes more than textual knowledge. How does one solve on-ground problems that arise when you are…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/panel-discussion-on-startup-ecosystems/" target="_blank" rel="noopener" aria-label="Read more: How Panel Discussions Fuel Innovation in Startup Ecosystems">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit" data-q="mastering networking opportunities at the startup event in gujarat how does networking work at a startup event? it can be a little intimidating, but nothing we can’t get better at. we present…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/networking-opportunities-at-startup-event-in-gujarat/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-25-at-16.38.40-768x432.jpeg" alt="Mastering Networking Opportunities at the Startup Event in Gujarat"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Events</span><span class="t-mute fs-sm">25 May 2024 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/networking-opportunities-at-startup-event-in-gujarat/" target="_blank" rel="noopener">Mastering Networking Opportunities at the Startup Event in Gujarat</a></h3>
+          <p class="t-mute mb-3">How does networking work at a startup event? It can be a little intimidating, but nothing we can’t get better at. We present…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/networking-opportunities-at-startup-event-in-gujarat/" target="_blank" rel="noopener" aria-label="Read more: Mastering Networking Opportunities at the Startup Event in Gujarat">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit" data-q="decoding startup funding for founders: a comprehensive guide if you are a new startup founder or have an idea for a startup, funding might be a significant concern. we understand that…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-funding-for-founders/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-25-at-16.38.40-1-768x432.jpeg" alt="Decoding Startup Funding for Founders: A Comprehensive Guide"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Events</span><span class="t-mute fs-sm">25 May 2024 &middot; 8 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-funding-for-founders/" target="_blank" rel="noopener">Decoding Startup Funding for Founders: A Comprehensive Guide</a></h3>
+          <p class="t-mute mb-3">If you are a new startup founder or have an idea for a startup, funding might be a significant concern. We understand that…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/startup-funding-for-founders/" target="_blank" rel="noopener" aria-label="Read more: Decoding Startup Funding for Founders: A Comprehensive Guide">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit" data-q="spotlight on success: gujarat startup events and their impact start-up events in gujarat are igniting a revolution! discover how these events fuel creativity, and inspire founders to…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/gujarat-startup-events/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-25-at-16.38.41-768x432.jpeg" alt="Spotlight on Success: Gujarat Startup Events and Their Impact"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Events</span><span class="t-mute fs-sm">25 May 2024 &middot; 9 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/gujarat-startup-events/" target="_blank" rel="noopener">Spotlight on Success: Gujarat Startup Events and Their Impact</a></h3>
+          <p class="t-mute mb-3">Start-up events in Gujarat are igniting a revolution! Discover how these events fuel creativity, and inspire founders to…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/gujarat-startup-events/" target="_blank" rel="noopener" aria-label="Read more: Spotlight on Success: Gujarat Startup Events and Their Impact">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit" data-q="building valuable connections: networking advice for startup event in gujarat want the cheat code to crack the startup game? want to crack the game and learn how to network like a pro with entrepreneurs…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/startup-event-in-gujarat/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Building-Valuable-Connections_-Networking-Advice-for-Startup-Event-in-Gujarat--768x432.jpeg" alt="Building Valuable Connections: Networking Advice for Startup Event in Gujarat"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Events</span><span class="t-mute fs-sm">23 May 2024 &middot; 7 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/startup-event-in-gujarat/" target="_blank" rel="noopener">Building Valuable Connections: Networking Advice for Startup Event in Gujarat</a></h3>
+          <p class="t-mute mb-3">Want the cheat code to crack the startup game? Want to crack the game and learn how to network like a pro with entrepreneurs…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/startup-event-in-gujarat/" target="_blank" rel="noopener" aria-label="Read more: Building Valuable Connections: Networking Advice for Startup Event in Gujarat">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit" data-q="the future of events: prediction and innovation from global startup summit startup meetings have become the most crucial event for startups. it’s because startup meetings offer rich resources and…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/innovation-from-global-startup-summit/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/The-Future-Of-Event-Innovation-From-Global-Startup-Summit-768x432.webp" alt="The Future Of Events: Prediction And Innovation From Global Startup Summit"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Events</span><span class="t-mute fs-sm">11 May 2024 &middot; 6 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/innovation-from-global-startup-summit/" target="_blank" rel="noopener">The Future Of Events: Prediction And Innovation From Global Startup Summit</a></h3>
+          <p class="t-mute mb-3">Startup meetings have become the most crucial event for startups. It’s because startup meetings offer rich resources and…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/innovation-from-global-startup-summit/" target="_blank" rel="noopener" aria-label="Read more: The Future Of Events: Prediction And Innovation From Global Startup Summit">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-md-6 col-lg-4 bl-item" data-cats="Events|Start-Up Summit" data-q="global entrepreneur summit: key networking tips for success a startup summit brings together inspiring entrepreneurs, startup enthusiasts, mentors, creators and investors from all around…">
+      <article class="blog-card h-100">
+        <a class="blog-img d-block" href="https://www.21by72.com/networking-tips-for-the-global-entrepreneur-summit/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/blog-Img-768x432.jpeg" alt="Global Entrepreneur Summit: Key Networking Tips for Success"></a>
+        <div class="blog-body">
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3"><span class="blog-cat">Events</span><span class="t-mute fs-sm">4 May 2024 &middot; 9 min read</span></div>
+          <h3 class="blog-title"><a href="https://www.21by72.com/networking-tips-for-the-global-entrepreneur-summit/" target="_blank" rel="noopener">Global Entrepreneur Summit: Key Networking Tips for Success</a></h3>
+          <p class="t-mute mb-3">A startup summit brings together inspiring entrepreneurs, startup enthusiasts, mentors, creators and investors from all around…</p>
+          <div class="blog-foot d-flex align-items-center justify-content-between gap-3"><span class="t-mute fs-sm">By Rachit Poddar</span><a class="blog-more" href="https://www.21by72.com/networking-tips-for-the-global-entrepreneur-summit/" target="_blank" rel="noopener" aria-label="Read more: Global Entrepreneur Summit: Key Networking Tips for Success">Read more <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+  <p class="text-center t-mute py-5 mb-0" id="bl-none" hidden>No stories match your search.</p>
+  <div class="text-center mt-5"><button class="btn btn-ghost" type="button" id="bl-more">Load more stories</button></div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: call to action
+     WP: template-parts/section-cta.php
+     ============================================================ -->
+<section class="sec" id="contact"><div class="container">
+  <div class="box about-cta text-center" data-in>
+    <span class="eyebrow">Season 6 &middot; 10&ndash;11 April 2027</span>
+    <h2 class="h-sec t-metal mt-2 mb-3">Be part of the next story</h2>
+    <p class="sub t-soft mx-auto mb-4">Join founders, investors and speakers at Avadh Utopia, Surat.</p>
+    <div class="d-flex flex-wrap justify-content-center gap-3"><a class="btn btn-grad" href="tickets.html">Grab Your Pass</a><a class="btn btn-ghost" href="speakers.html">Meet the speakers</a></div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: footer
+     WP: footer.php  (link lists -> wp_nav_menu locations "footer-links" and "footer-policies"; contact + social -> options page)
+     The animated background (.foot-bg) is pure CSS - no script needed.
+     ============================================================ -->
+<footer class="foot position-relative overflow-hidden">
+  <div class="foot-bg" aria-hidden="true"><span class="foot-orb fo1"></span><span class="foot-orb fo2"></span><span class="foot-grid"></span></div>
+  <div class="container position-relative">
+
+    <div class="foot-cta d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-4">
+      <div>
+        <h2 class="h-sec t-metal mb-2">Be part of <span class="t-grad">Season 6</span></h2>
+        <p class="t-soft mb-0">10 &ndash; 11 April 2027 &middot; Avadh Utopia, Surat</p>
+      </div>
+      <div class="d-flex flex-wrap gap-3">
+        <a class="btn btn-grad" href="tickets.html">Grab Your Pass</a>
+        <a class="btn btn-ghost" href="index.html#book">Exhibit Your Startup</a>
+      </div>
+    </div>
+
+    <div class="row g-5 foot-main">
+      <div class="col-lg-4">
+        <div class="logo logo-img mb-3"><img src="assets/img/21by72-logo.png" width="72" height="72" alt="21BY72" loading="lazy"></div>
+        <p class="t-mute mb-4">Bharat's Leading Startup Summit &mdash; where conversations converge into companies.</p>
+        <div class="d-flex gap-2">
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.linkedin.com/company/ivy-growth-associates/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3V9.75zm6.5 0h3.8v1.6h.06c.53-1 1.82-2 3.75-2 4 0 4.75 2.63 4.75 6.05V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.58V21h-4V9.75z"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.instagram.com/21by72/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.facebook.com/21by72" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8z"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://twitter.com/Ivygrowth" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h3 class="foot-title">Explore</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="index.html#team">Our Team</a></li>
+          <li><a href="index.html#book">Book Passes</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h3 class="foot-title">Policies</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li><a href="https://www.21by72.com/terms-of-service/" target="_blank" rel="noopener">Terms of Service</a></li>
+          <li><a href="https://www.21by72.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></li>
+          <li><a href="https://www.21by72.com/refund-cancellation/" target="_blank" rel="noopener">Refund &amp; Cancellation</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h3 class="foot-title">Contact</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li>Avadh Utopia, Surat, Gujarat</li>
+          <li><a href="mailto:pitch@ivygrowth.co.in">pitch@ivygrowth.co.in</a></li>
+          <li><a href="tel:+918758812000">+91 87588 12000</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span>&copy; 2026 IVY Growth Associates. All rights reserved.</span>
+      <span>Redesign demo for client preview &ndash; not the live site.</span>
+    </div>
+  </div>
+  <div class="foot-mark" aria-hidden="true">21BY72</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js"></script>
+<script src="assets/js/blogs.js"></script>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>
