@@ -3,16 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>21BY72 Season 6 - Light Theme Demo</title>
+<title>21BY72 Season 6 - Dark Theme</title>
 <!-- WP: wp_head() goes here; enqueue the CSS below from functions.php (see README.md) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/theme-light.css">
 </head>
-<body class="theme-light">
+<body>
 
 <!-- ============================================================
      SECTION: page chrome (loader, progress bar, cursor glow)
@@ -30,12 +29,12 @@
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
   <div class="collapse navbar-collapse" id="nav">
     <ul class="navbar-nav mx-auto">
-      <li class="nav-item"><a class="nav-link" href="#book">Exhibitors</a></li>
-      <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
-      <li class="nav-item"><a class="nav-link" href="#speakers">Speakers</a></li>
+      <li class="nav-item"><a class="nav-link" href="exhibitors.html">Exhibitors</a></li>
+      <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+      <li class="nav-item"><a class="nav-link" href="speakers.html">Speakers</a></li>
       <li class="nav-item"><a class="nav-link" href="#partners">Partners</a></li>
       <li class="nav-item"><a class="nav-link" href="#book">Pitching Event</a></li>
-      <li class="nav-item"><a class="nav-link" href="#team">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
       <li class="nav-item"><a class="nav-link" href="#book">Book</a></li>
     </ul>
     <a class="btn btn-grad btn-sm-x" href="#book">Grab Your Pass</a>
@@ -66,6 +65,13 @@
     </div>
   </div>
 </section>
+
+<!-- ============================================================
+     SECTION: ticker (marquee)
+     WP: template-parts/ticker.php  (list -> ACF repeater)
+     JS: marquee.js repeats the content so the loop is seamless - output ONE copy here
+     ============================================================ -->
+<div class="ticker bg-grad"><div data-marquee="4"><span>Exhibitions &#10022;</span><span>Live Startup Pitches &#10022;</span><span>Keynote Sessions &#10022;</span><span>Panel Discussions &#10022;</span><span>Fireside Chats &#10022;</span><span>Workshops &#10022;</span><span>Speed Dating &#10022;</span></div></div>
 
 <!-- ============================================================
      SECTION: impact bar (key numbers)
@@ -657,8 +663,8 @@
       <div class="col-6 col-lg-2">
         <h3 class="foot-title">Explore</h3>
         <ul class="foot-links list-unstyled mb-0">
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
           <li><a href="#partners">Partners</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#team">Our Team</a></li>
@@ -692,7 +698,7 @@
 </footer>
 
 <a class="wa d-flex align-items-center justify-content-center" href="#" aria-label="WhatsApp">&#128172;</a>
-<div class="note">Light theme demo &middot; <a href="index.html" style="text-decoration:underline">View full dark theme</a></div>
+<div class="note">Demo only: images are loaded from 21by72.com</div>
 
 <!-- WP: wp_footer(); enqueue in this order (see README.md): bootstrap, jquery (WP core), slick, gsap, ScrollTrigger, lenis, then the theme scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>

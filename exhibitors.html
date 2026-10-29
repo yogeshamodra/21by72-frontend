@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Exhibit at 21BY72 - Stalls and Exhibitors</title>
+<!-- WP: wp_head() goes here; enqueue the CSS below from functions.php (see README.md) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/theme-light.css">
+</head>
+<body class="theme-light">
+<div id="bar" class="bg-grad"></div><div id="glow"></div>
+
+<!-- ============================================================
+     SECTION: header / navigation
+     WP: header.php  (menu items -> wp_nav_menu with a custom walker for the .nav-link classes)
+     ============================================================ -->
+<nav class="navbar navbar-expand-lg fixed-top" id="hd"><div class="container">
+  <a class="logo logo-img d-inline-flex align-items-center" href="index.html#top" aria-label="21BY72 home"><img src="assets/img/21by72-logo.png" width="48" height="48" alt="21BY72"></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="nav">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item"><a class="nav-link" href="index.html#book">Exhibitors</a></li>
+      <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+      <li class="nav-item"><a class="nav-link" href="speakers.html">Speakers</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#partners">Partners</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#book">Pitching Event</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#book">Book</a></li>
+    </ul>
+    <a class="btn btn-grad btn-sm-x" href="index.html#book">Grab Your Pass</a>
+  </div>
+</div></nav>
+
+<!-- ============================================================
+     SECTION: exhibitors hero
+     WP: page-exhibitors.php  (page template)
+     ============================================================ -->
+<section class="ex-hero" id="exhibit"><div class="container position-relative">
+  <div class="row align-items-center g-5">
+    <div class="col-lg-6" data-in>
+      <nav class="ab-crumb mb-3" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><b>Exhibitors</b></nav>
+      <span class="eyebrow">Season 6 &middot; 10&ndash;11 April 2027</span>
+      <h1 class="ex-h1 mt-2 mb-4">Showcase your startup to <span class="t-grad">Bharat's investors.</span></h1>
+      <p class="t-soft fs-5 mb-4">Book a stall at 21BY72, Surat's startup summit, and put your product in front of investors, customers and the press.</p>
+      <div class="d-flex flex-wrap gap-3"><a class="btn btn-grad" href="https://forms.gle/6f6HAbJMmqY7QwU57" target="_blank" rel="noopener">Apply for a stall</a><a class="btn btn-ghost" href="#stalls">See stall packages</a></div>
+    </div>
+    <div class="col-lg-6" data-in>
+      <div class="ex-mosaic" aria-hidden="true">
+        <div class="ex-m ex-m0"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/blinkdigital.png" alt=""></div>
+        <div class="ex-m ex-m1"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/Vijas-Indigenous-food.png" alt=""></div>
+        <div class="ex-m ex-m2"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/LETSFIN.png" alt=""></div>
+        <div class="ex-m ex-m3"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/Peatos.png" alt=""></div>
+        <div class="ex-m ex-m4"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/logo32.jpg" alt=""></div>
+        <div class="ex-m ex-m5"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/Desi-Ayurvedic.png" alt=""></div>
+        <div class="ex-m ex-m6"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/da-mushroom-nursery.png" alt=""></div>
+        <div class="ex-m ex-m7"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/farmhousehub.png" alt=""></div>
+        <div class="ex-m ex-m8"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/stratup-chaupal.png" alt=""></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: exhibitor numbers (overlaps the hero)
+     WP: template-parts/section-impact.php  (ACF repeater)
+     ============================================================ -->
+<section class="impact" id="ex-numbers" aria-label="Exhibiting at 21BY72"><div class="container">
+  <div class="impact-bar row g-0" data-in>
+    <div class="col-6 col-lg-3 impact-item"><span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><div><b class="impact-num t-grad" data-n="25000" data-s="+">0</b><span class="impact-label">Visitors from pan India</span></div></div>
+    <div class="col-6 col-lg-3 impact-item"><span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span><div><b class="impact-num t-grad" data-n="1200" data-s="+">0</b><span class="impact-label">Global investors</span></div></div>
+    <div class="col-6 col-lg-3 impact-item"><span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 7l3 3M17 7l-3 3M7 17l3-3M17 17l-3-3"/></svg></span><div><b class="impact-num t-grad" data-n="70" data-s="+">0</b><span class="impact-label">Exhibitors last season</span></div></div>
+    <div class="col-6 col-lg-3 impact-item"><span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1zM15 9a4 4 0 0 1 0 6M18 6a8 8 0 0 1 0 12"/></svg></span><div><b class="impact-num t-grad" data-n="2" data-s=" days">0</b><span class="impact-label">Of live exposure</span></div></div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: why exhibit
+     WP: template-parts/section-why-exhibit.php  (ACF repeater: icon, title, text)
+     ============================================================ -->
+<section class="sec" id="why"><div class="container">
+  <div class="text-center mb-5" data-in><span class="eyebrow">Why exhibit</span><h2 class="h-sec t-metal mt-2 mb-3">Built for founders who want to be seen</h2></div>
+  <div class="row g-4 cards">
+    <div class="col-md-6 col-lg-3"><div class="box ex-why h-100" data-in><span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span><h3 class="h5 mt-4 mb-2">Meet investors face to face</h3><p class="t-mute mb-0">Angel investors and VCs walk the floor all day - get your product in front of the people who fund it.</p></div></div>
+    <div class="col-md-6 col-lg-3"><div class="box ex-why h-100" data-in><span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><h3 class="h5 mt-4 mb-2">Reach 25,000+ visitors</h3><p class="t-mute mb-0">Founders, customers, students and ecosystem builders from across India visit the exhibition.</p></div></div>
+    <div class="col-md-6 col-lg-3"><div class="box ex-why h-100" data-in><span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h8l-1 8 10-12h-8z"/></svg></span><h3 class="h5 mt-4 mb-2">Get real leads, fast</h3><p class="t-mute mb-0">Demo your product live and collect leads and partnerships over two focused days.</p></div></div>
+    <div class="col-md-6 col-lg-3"><div class="box ex-why h-100" data-in><span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM17 9h2a2 2 0 0 1 0 4h-2M7 2v3M11 2v3M15 2v3"/></svg></span><h3 class="h5 mt-4 mb-2">Network in the lounge</h3><p class="t-mute mb-0">Every stall includes access to the networking lounge for curated investor-founder conversations.</p></div></div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: stall packages
+     WP: template-parts/section-stalls.php  (WooCommerce products or ACF repeater: tier, size, price, old price)
+     NOTE: prices are from the Season 5 stall page (ex-GST). Confirm the Season 6 prices before launch.
+     ============================================================ -->
+<section class="sec bg-alt" id="stalls"><div class="container">
+  <div class="text-center mb-5" data-in><span class="eyebrow">Stall packages</span><h2 class="h-sec t-metal mt-2 mb-3">Pick your stall</h2><p class="sub t-soft mx-auto mb-0">Every package has the same inclusions. Choose the size that fits your product.</p></div>
+  <div class="row g-4 justify-content-center cards">
+    <div class="col-md-6 col-lg-4"><div class="box ex-tier h-100 d-flex flex-column" data-in>
+      <h3 class="h4 mb-1">Silver</h3><div class="t-mute fs-sm mb-3">6.5 x 6.5 x 8 ft</div>
+      <div class="price">&#8377;35,000 <small>+ GST</small></div><div class="ex-old">&#8377;50,000</div>
+      <ul class="ticks list-unstyled t-mute fs-sm my-4 flex-grow-1"><li>3 lights + 3 chairs</li><li>Front fascia branding</li><li>Optimum table with branding</li><li>50-inch TV with stand</li><li>Vinyl printing on all walls</li><li>Food arrangements</li><li>Networking lounge access</li></ul>
+      <a class="btn btn-grad" href="https://forms.gle/6f6HAbJMmqY7QwU57" target="_blank" rel="noopener">Apply Now</a>
+    </div></div>
+    <div class="col-md-6 col-lg-4"><div class="box ex-tier h-100 d-flex flex-column" data-in>
+      <h3 class="h4 mb-1">Gold</h3><div class="t-mute fs-sm mb-3">10 x 6.5 x 8 ft</div>
+      <div class="price">&#8377;45,000 <small>+ GST</small></div><div class="ex-old">&#8377;60,000</div>
+      <ul class="ticks list-unstyled t-mute fs-sm my-4 flex-grow-1"><li>3 lights + 3 chairs</li><li>Front fascia branding</li><li>Optimum table with branding</li><li>50-inch TV with stand</li><li>Vinyl printing on all walls</li><li>Food arrangements</li><li>Networking lounge access</li></ul>
+      <a class="btn btn-grad" href="https://forms.gle/6f6HAbJMmqY7QwU57" target="_blank" rel="noopener">Apply Now</a>
+    </div></div>
+    <div class="col-md-6 col-lg-4"><div class="box ex-tier h-100 d-flex flex-column ex-pop" data-in><span class="ribbon bg-grad">POPULAR</span>
+      <h3 class="h4 mb-1">Platinum</h3><div class="t-mute fs-sm mb-3">10 x 10 x 8 ft</div>
+      <div class="price">&#8377;55,000 <small>+ GST</small></div><div class="ex-old">&#8377;70,000</div>
+      <ul class="ticks list-unstyled t-mute fs-sm my-4 flex-grow-1"><li>3 lights + 3 chairs</li><li>Front fascia branding</li><li>Optimum table with branding</li><li>50-inch TV with stand</li><li>Vinyl printing on all walls</li><li>Food arrangements</li><li>Networking lounge access</li></ul>
+      <a class="btn btn-grad" href="https://forms.gle/6f6HAbJMmqY7QwU57" target="_blank" rel="noopener">Apply Now</a>
+    </div></div>
+  </div>
+  <p class="text-center t-mute fs-sm mt-4 mb-0">Prices exclude GST. Season 5 prices shown - Season 6 prices will be confirmed.</p>
+</div></section>
+
+<!-- ============================================================
+     SECTION: exhibitors showcase (search + tabs)
+     WP: template-parts/section-exhibitors.php
+     Loop: custom post type "exhibitor" (logo, name, link) with a season tag. Each .ex-tile = one loop iteration. exhibitors.js filters by tab and search.
+     ============================================================ -->
+<section class="sec" id="exhibitors"><div class="container">
+  <div class="text-center mb-4" data-in><span class="eyebrow">Our exhibitors</span><h2 class="h-sec t-metal mt-2 mb-3">Startups that showed up</h2></div>
+  <div class="ex-bar" data-in>
+    <ul class="nav nav-pills sched-tabs gap-2" role="tablist">
+      <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#ex-latest" type="button" role="tab">Latest <small>70</small></button></li>
+      <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#ex-prev" type="button" role="tab">Previous seasons <small>70</small></button></li>
+    </ul>
+    <label class="ex-search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input id="ex-q" type="search" placeholder="Search exhibitors" aria-label="Search exhibitors"></label>
+  </div>
+  <div class="tab-content" data-in>
+    <div class="tab-pane fade show active" id="ex-latest" role="tabpanel">
+      <div class="ex-grid">
+        <div class="ex-tile" data-name="blink digital"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/blinkdigital.png" alt="BLINK DIGITAL"></div><span>BLINK DIGITAL</span></div>
+        <div class="ex-tile" data-name="vijas indigenous food"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/Vijas-Indigenous-food.png" alt="Vijas Indigenous Food"></div><span>Vijas Indigenous Food</span></div>
+        <div class="ex-tile" data-name="letsfin tech"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/LETSFIN.png" alt="LETSFIN TECH"></div><span>LETSFIN TECH</span></div>
+        <div class="ex-tile" data-name="peatos"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/Peatos.png" alt="Peatos"></div><span>Peatos</span></div>
+        <div class="ex-tile" data-name="jaggernaut organic corp"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/logo32.jpg" alt="Jaggernaut Organic Corp"></div><span>Jaggernaut Organic Corp</span></div>
+        <div class="ex-tile" data-name="desi ayurvedic"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/Desi-Ayurvedic.png" alt="Desi Ayurvedic"></div><span>Desi Ayurvedic</span></div>
+        <div class="ex-tile" data-name="da mushroom nursery"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/da-mushroom-nursery.png" alt="da mushroom nursery"></div><span>da mushroom nursery</span></div>
+        <div class="ex-tile" data-name="farmhousehub"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/farmhousehub.png" alt="FarmHouseHub"></div><span>FarmHouseHub</span></div>
+        <div class="ex-tile" data-name="startup chaupal"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/stratup-chaupal.png" alt="Startup Chaupal"></div><span>Startup Chaupal</span></div>
+        <div class="ex-tile" data-name="fimansy"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/Fimansy.png" alt="Fimansy"></div><span>Fimansy</span></div>
+        <div class="ex-tile" data-name="salesqualifyd"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/salesqualifyd.png" alt="Salesqualifyd"></div><span>Salesqualifyd</span></div>
+        <div class="ex-tile" data-name="faoud"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/Faoud.png" alt="FAOUD"></div><span>FAOUD</span></div>
+        <div class="ex-tile" data-name="metalit"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/metalit.png" alt="Metalit"></div><span>Metalit</span></div>
+        <div class="ex-tile" data-name="lit ai labs"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/LIT-2.png" alt="LIT AI Labs"></div><span>LIT AI Labs</span></div>
+        <div class="ex-tile" data-name="reformiqo"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/reformiqo.png" alt="Reformiqo"></div><span>Reformiqo</span></div>
+        <div class="ex-tile" data-name="mayavarta"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/mayavarta.png" alt="Mayavarta"></div><span>Mayavarta</span></div>
+        <div class="ex-tile" data-name="beyond formal"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/beyound-formals.png" alt="Beyond Formal"></div><span>Beyond Formal</span></div>
+        <div class="ex-tile" data-name="3eco"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/3eco.png" alt="3eco"></div><span>3eco</span></div>
+        <div class="ex-tile" data-name="artha"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/artha.png" alt="Artha"></div><span>Artha</span></div>
+        <div class="ex-tile" data-name="saadhoscale"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/SaadhoScale-200.png" alt="SaadhoScale"></div><span>SaadhoScale</span></div>
+        <div class="ex-tile" data-name="hobnob realtech"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/Hobnob-Realtech.png" alt="Hobnob Realtech"></div><span>Hobnob Realtech</span></div>
+        <div class="ex-tile" data-name="onewill"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/OneWill.png" alt="OneWill"></div><span>OneWill</span></div>
+        <div class="ex-tile" data-name="maiora diamonds"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/Maiora-Diamonds.png" alt="Maiora Diamonds"></div><span>Maiora Diamonds</span></div>
+        <div class="ex-tile" data-name="domywork"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/domywork.png" alt="DoMyWork"></div><span>DoMyWork</span></div>
+        <div class="ex-tile" data-name="proxpert"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/Proxpert.png" alt="Proxpert"></div><span>Proxpert</span></div>
+        <div class="ex-tile" data-name="antigravity apps"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/antigravity-apps.png" alt="Antigravity Apps"></div><span>Antigravity Apps</span></div>
+        <div class="ex-tile" data-name="voxup"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/voxup.png" alt="Voxup"></div><span>Voxup</span></div>
+        <div class="ex-tile" data-name="sakura"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/sakura.png" alt="Sakura"></div><span>Sakura</span></div>
+        <div class="ex-tile" data-name="kyoorious"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/kyoorious.png" alt="Kyoorious"></div><span>Kyoorious</span></div>
+        <div class="ex-tile" data-name="axentra"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/axentra.png" alt="axentra"></div><span>axentra</span></div>
+        <div class="ex-tile" data-name="adverti"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/advertichat.png" alt="Adverti"></div><span>Adverti</span></div>
+        <div class="ex-tile" data-name="kalla"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/kalla.png" alt="Kalla"></div><span>Kalla</span></div>
+        <div class="ex-tile" data-name="nish hair"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/nish-hair.png" alt="Nish Hair"></div><span>Nish Hair</span></div>
+        <div class="ex-tile" data-name="flexype"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/flexype.png" alt="Flexype"></div><span>Flexype</span></div>
+        <div class="ex-tile" data-name="dechcept"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/dechcept.png" alt="Dechcept"></div><span>Dechcept</span></div>
+        <div class="ex-tile" data-name="iaratech solutions"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/iaratechsolutions.png" alt="IARAtech Solutions"></div><span>IARAtech Solutions</span></div>
+        <div class="ex-tile" data-name="indalio"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/indalio.png" alt="Indalio"></div><span>Indalio</span></div>
+        <div class="ex-tile" data-name="global health opulence"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/gho.png" alt="Global Health Opulence"></div><span>Global Health Opulence</span></div>
+        <div class="ex-tile" data-name="gohich"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/gohich.png" alt="Gohich"></div><span>Gohich</span></div>
+        <div class="ex-tile" data-name="vinkx"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/ecommercebharat.png" alt="Vinkx"></div><span>Vinkx</span></div>
+        <div class="ex-tile" data-name="ikobuild"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/ikobuild-logo.png" alt="Ikobuild"></div><span>Ikobuild</span></div>
+        <div class="ex-tile" data-name="riofos"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/riofos-logo.png" alt="Riofos"></div><span>Riofos</span></div>
+        <div class="ex-tile" data-name="arham share"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/arham-share.png" alt="Arham Share"></div><span>Arham Share</span></div>
+        <div class="ex-tile" data-name="3c's"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/3cs.png" alt="3c's"></div><span>3c's</span></div>
+        <div class="ex-tile" data-name="nutrezy"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/Nutrezy.png" alt="Nutrezy"></div><span>Nutrezy</span></div>
+        <div class="ex-tile" data-name="sangini"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/sangini-logo.png" alt="Sangini"></div><span>Sangini</span></div>
+        <div class="ex-tile" data-name="monkis"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/monkis-logo.png" alt="Monkis"></div><span>Monkis</span></div>
+        <div class="ex-tile" data-name="aumiosct"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/Aumiosct-logo.png" alt="Aumiosct"></div><span>Aumiosct</span></div>
+        <div class="ex-tile" data-name="spin it up"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/Spin-It-Up-logo.png" alt="Spin It Up"></div><span>Spin It Up</span></div>
+        <div class="ex-tile" data-name="chapter.1"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/Chapter1-logo.png" alt="CHAPTER.1"></div><span>CHAPTER.1</span></div>
+        <div class="ex-tile" data-name="stratefix"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/Stratefix-logo-1.png" alt="Stratefix"></div><span>Stratefix</span></div>
+        <div class="ex-tile" data-name="hummy gummy"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/hummygummy.svg" alt="Hummy Gummy"></div><span>Hummy Gummy</span></div>
+        <div class="ex-tile" data-name="com bot"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/Com-Bot-logo.png" alt="Com Bot"></div><span>Com Bot</span></div>
+        <div class="ex-tile" data-name="hyper local ventures"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/Hyper-Local-Ventures-log.png" alt="Hyper Local Ventures"></div><span>Hyper Local Ventures</span></div>
+        <div class="ex-tile" data-name="advent outdoor"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/Advent-Outdoor-logo.png" alt="Advent Outdoor"></div><span>Advent Outdoor</span></div>
+        <div class="ex-tile" data-name="mufg"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/Mufg-logo.png" alt="Mufg"></div><span>Mufg</span></div>
+        <div class="ex-tile" data-name="zinq"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/Zinq-logo.png" alt="Zinq"></div><span>Zinq</span></div>
+        <div class="ex-tile" data-name="verifyu"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/Verifyu-logo.png" alt="Verifyu"></div><span>Verifyu</span></div>
+        <div class="ex-tile" data-name="aashvasan advisors"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/Aashvasan-Advisors-logo.png" alt="Aashvasan Advisors"></div><span>Aashvasan Advisors</span></div>
+        <div class="ex-tile" data-name="retner"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/Retner-logo.png" alt="Retner"></div><span>Retner</span></div>
+        <div class="ex-tile" data-name="terrenue"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/Terrenue-logo-1.png" alt="Terrenue"></div><span>Terrenue</span></div>
+        <div class="ex-tile" data-name="reeva"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/Reeva-logo.png" alt="Reeva"></div><span>Reeva</span></div>
+        <div class="ex-tile" data-name="logicwind"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/Logicwind-logo.png" alt="Logicwind"></div><span>Logicwind</span></div>
+        <div class="ex-tile" data-name="unisouk"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/unisouk-logo.png" alt="Unisouk"></div><span>Unisouk</span></div>
+        <div class="ex-tile" data-name="soulera"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/soulera-logo.png" alt="SoulEra"></div><span>SoulEra</span></div>
+        <div class="ex-tile" data-name="exitmantra"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/exit-mantra.png" alt="ExitMantra"></div><span>ExitMantra</span></div>
+        <div class="ex-tile" data-name="tredo"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/tredo-logo.png" alt="Tredo"></div><span>Tredo</span></div>
+        <div class="ex-tile" data-name="coloraura"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/coloraura-logo.png" alt="ColorAura"></div><span>ColorAura</span></div>
+        <div class="ex-tile" data-name="bizaay"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/bizaay.png" alt="Bizaay"></div><span>Bizaay</span></div>
+        <div class="ex-tile" data-name="decent technologies"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/decent-logo.png" alt="Decent Technologies"></div><span>Decent Technologies</span></div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="ex-prev" role="tabpanel">
+      <div class="ex-grid">
+        <div class="ex-tile" data-name="counselvise"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/counselvise.png" alt="Counselvise"></div><span>Counselvise</span></div>
+        <div class="ex-tile" data-name="procom digital solutions"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Procom-Ex.png" alt="Procom Digital Solutions"></div><span>Procom Digital Solutions</span></div>
+        <div class="ex-tile" data-name="anubha innovations"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Anubha-Ex.png" alt="AnuBha Innovations"></div><span>AnuBha Innovations</span></div>
+        <div class="ex-tile" data-name="technowire data science"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Technowire-Ex.png" alt="Technowire Data Science"></div><span>Technowire Data Science</span></div>
+        <div class="ex-tile" data-name="trulot"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Truelot-Ex.png" alt="Trulot"></div><span>Trulot</span></div>
+        <div class="ex-tile" data-name="citynect"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/citynect-Ex.png" alt="citynect"></div><span>citynect</span></div>
+        <div class="ex-tile" data-name="neerain"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Neerain-Ex.png" alt="Neerain"></div><span>Neerain</span></div>
+        <div class="ex-tile" data-name="forensic cybertech"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/FORENSIC-CYBERTECH-EX.png" alt="Forensic Cybertech"></div><span>Forensic Cybertech</span></div>
+        <div class="ex-tile" data-name="ayodhya ramaland"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Ayodhya-Rama-Land-Ex.png" alt="Ayodhya Ramaland"></div><span>Ayodhya Ramaland</span></div>
+        <div class="ex-tile" data-name="monkey ads"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/monkey-ads.png" alt="Monkey Ads"></div><span>Monkey Ads</span></div>
+        <div class="ex-tile" data-name="tech cloud erp"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Teachcloud-1.png" alt="Tech Cloud ERP"></div><span>Tech Cloud ERP</span></div>
+        <div class="ex-tile" data-name="grid club"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/gridclubex.png" alt="Grid Club"></div><span>Grid Club</span></div>
+        <div class="ex-tile" data-name="flyzy"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Flyzy-Travel.png" alt="Flyzy"></div><span>Flyzy</span></div>
+        <div class="ex-tile" data-name="atominc"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Atomincex.png" alt="Atominc"></div><span>Atominc</span></div>
+        <div class="ex-tile" data-name="pavitrak"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/PavitrakEx.png" alt="Pavitrak"></div><span>Pavitrak</span></div>
+        <div class="ex-tile" data-name="jordensky"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/JordenEx.png" alt="Jordensky"></div><span>Jordensky</span></div>
+        <div class="ex-tile" data-name="sandcup design"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/Sandcup.png" alt="SandCup Design"></div><span>SandCup Design</span></div>
+        <div class="ex-tile" data-name="hummsa biotech"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Hummsa-Biotech-Ex.png" alt="Hummsa Biotech"></div><span>Hummsa Biotech</span></div>
+        <div class="ex-tile" data-name="byrn natural products"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/BYRN-EX.png" alt="Byrn Natural Products"></div><span>Byrn Natural Products</span></div>
+        <div class="ex-tile" data-name="jojo app"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Jojo-Ex.png" alt="JOJO App"></div><span>JOJO App</span></div>
+        <div class="ex-tile" data-name="360 eye"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/360EYE.png" alt="360 EYE"></div><span>360 EYE</span></div>
+        <div class="ex-tile" data-name="newsreach"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/NewsReach-Ex.png" alt="NewsReach"></div><span>NewsReach</span></div>
+        <div class="ex-tile" data-name="krypsm advisors"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Krypsm-Advisors-EX.png" alt="Krypsm Advisors"></div><span>Krypsm Advisors</span></div>
+        <div class="ex-tile" data-name="avimee herbal"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Avimee-Herbal-EX.png" alt="Avimee Herbal"></div><span>Avimee Herbal</span></div>
+        <div class="ex-tile" data-name="printbrriix"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/Printbriix.png" alt="PrintBrriix"></div><span>PrintBrriix</span></div>
+        <div class="ex-tile" data-name="grip invest"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Grip-Invest-Ex.png" alt="Grip Invest"></div><span>Grip Invest</span></div>
+        <div class="ex-tile" data-name="laundry house"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/Laundry.png" alt="Laundry House"></div><span>Laundry House</span></div>
+        <div class="ex-tile" data-name="curlin professional"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/Curlins.png" alt="Curlin Professional"></div><span>Curlin Professional</span></div>
+        <div class="ex-tile" data-name="wadhwani foundation"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/wadhwani-foundation.png" alt="Wadhwani Foundation"></div><span>Wadhwani Foundation</span></div>
+        <div class="ex-tile" data-name="kiarx"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Kiarxex-1.png" alt="KiarX"></div><span>KiarX</span></div>
+        <div class="ex-tile" data-name="zebralearn"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/Zebra.png" alt="ZebraLearn"></div><span>ZebraLearn</span></div>
+        <div class="ex-tile" data-name="twyn"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/TWYN-EX.png" alt="TWYN"></div><span>TWYN</span></div>
+        <div class="ex-tile" data-name="mirrikh infratech"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/mirrikh-Ex.png" alt="Mirrikh Infratech"></div><span>Mirrikh Infratech</span></div>
+        <div class="ex-tile" data-name="little indian spice"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Little-Indian-eX.png" alt="Little Indian Spice"></div><span>Little Indian Spice</span></div>
+        <div class="ex-tile" data-name="servall automotive"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Servall-Automotive-Pvt-Ltd-eX.png" alt="Servall Automotive"></div><span>Servall Automotive</span></div>
+        <div class="ex-tile" data-name="aics logistics"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/aics.png" alt="AICS Logistics"></div><span>AICS Logistics</span></div>
+        <div class="ex-tile" data-name="actipass"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Actipass.png" alt="ActiPass"></div><span>ActiPass</span></div>
+        <div class="ex-tile" data-name="webledger"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/WebLedger-Ex.png" alt="WebLedger"></div><span>WebLedger</span></div>
+        <div class="ex-tile" data-name="inside fpv"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Inside-FPV-EX.png" alt="Inside FPV"></div><span>Inside FPV</span></div>
+        <div class="ex-tile" data-name="surat jugaad"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Surat.png" alt="Surat Jugaad"></div><span>Surat Jugaad</span></div>
+        <div class="ex-tile" data-name="rakez"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/RAKEZEX.png" alt="RAKEZ"></div><span>RAKEZ</span></div>
+        <div class="ex-tile" data-name="esah organic tea"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/ESAHex.png" alt="ESAH Organic Tea"></div><span>ESAH Organic Tea</span></div>
+        <div class="ex-tile" data-name="snbotics research"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Snbotics.png" alt="SNBotics Research"></div><span>SNBotics Research</span></div>
+        <div class="ex-tile" data-name="joyspoon"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/JoySpoon.png" alt="Joyspoon"></div><span>Joyspoon</span></div>
+        <div class="ex-tile" data-name="cur8"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/cur8.png" alt="CUR8"></div><span>CUR8</span></div>
+        <div class="ex-tile" data-name="impactful pitch"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/impactful-pitch.png" alt="Impactful Pitch"></div><span>Impactful Pitch</span></div>
+        <div class="ex-tile" data-name="hisabkitab"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Hisaab-Kitab.png" alt="hisabkitab"></div><span>hisabkitab</span></div>
+        <div class="ex-tile" data-name="regrip india"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/regrip.png" alt="Regrip India"></div><span>Regrip India</span></div>
+        <div class="ex-tile" data-name="solnce energy"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Solnce.png" alt="Solnce Energy"></div><span>Solnce Energy</span></div>
+        <div class="ex-tile" data-name="11za"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Whatsapp-Marketing-11za.png" alt="11za"></div><span>11za</span></div>
+        <div class="ex-tile" data-name="the elefant"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/The-Elefant.png" alt="the EleFant"></div><span>the EleFant</span></div>
+        <div class="ex-tile" data-name="indulge global"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/Indulge.png" alt="Indulge Global"></div><span>Indulge Global</span></div>
+        <div class="ex-tile" data-name="deciml"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/decim.png" alt="Deciml"></div><span>Deciml</span></div>
+        <div class="ex-tile" data-name="taponn"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Taponn.png" alt="TapOnn"></div><span>TapOnn</span></div>
+        <div class="ex-tile" data-name="casx"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Casx.png" alt="CasX"></div><span>CasX</span></div>
+        <div class="ex-tile" data-name="my value trip"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/My-Value-Trip.png" alt="My Value Trip"></div><span>My Value Trip</span></div>
+        <div class="ex-tile" data-name="upscale"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/UpscaleEx.png" alt="Upscale"></div><span>Upscale</span></div>
+        <div class="ex-tile" data-name="builditindia.com"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/build-it-india.png" alt="BUILDITINDIA.COM"></div><span>BUILDITINDIA.COM</span></div>
+        <div class="ex-tile" data-name="sqoos"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/sqoos.png" alt="SQOOS"></div><span>SQOOS</span></div>
+        <div class="ex-tile" data-name="onespace interior"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/Onespace.png" alt="ONESPACE Interior"></div><span>ONESPACE Interior</span></div>
+        <div class="ex-tile" data-name="upliance.ai"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Upliance.png" alt="upliance.ai"></div><span>upliance.ai</span></div>
+        <div class="ex-tile" data-name="ithink logistics"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/i-think-logistics.png" alt="iThink Logistics"></div><span>iThink Logistics</span></div>
+        <div class="ex-tile" data-name="kearo"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/KEARO.png" alt="Kearo"></div><span>Kearo</span></div>
+        <div class="ex-tile" data-name="krispcall"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Krispcall-ex.png" alt="KrispCall"></div><span>KrispCall</span></div>
+        <div class="ex-tile" data-name="siriusjewels"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Sirius-jewels.png" alt="Siriusjewels"></div><span>Siriusjewels</span></div>
+        <div class="ex-tile" data-name="auory"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/auory.png" alt="AUORY"></div><span>AUORY</span></div>
+        <div class="ex-tile" data-name="myco"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/myco.png" alt="MyCo"></div><span>MyCo</span></div>
+        <div class="ex-tile" data-name="srp crane controls"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/SRP-Crane.png" alt="SRP Crane Controls"></div><span>SRP Crane Controls</span></div>
+        <div class="ex-tile" data-name="spreadd"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/Spread.png" alt="Spreadd"></div><span>Spreadd</span></div>
+        <div class="ex-tile" data-name="erocare retails"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Coco-High.png" alt="EROCARE RETAILS"></div><span>EROCARE RETAILS</span></div>
+      </div>
+    </div>
+    <p class="text-center t-mute py-5 mb-0" id="ex-none" hidden>No exhibitors match your search.</p>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: how it works
+     WP: template-parts/section-steps.php  (ACF repeater: number, title, text)
+     ============================================================ -->
+<section class="sec bg-alt" id="how"><div class="container">
+  <div class="text-center mb-5" data-in><span class="eyebrow">How it works</span><h2 class="h-sec t-metal mt-2 mb-0">Three steps to your stall</h2></div>
+  <div class="row g-4">
+    <div class="col-md-4"><div class="ex-step" data-in><span class="ex-n t-grad">01</span><h3 class="h4 mb-2">Apply</h3><p class="t-mute mb-0">Fill the short stall application form with your startup details.</p></div></div>
+    <div class="col-md-4"><div class="ex-step" data-in><span class="ex-n t-grad">02</span><h3 class="h4 mb-2">Confirm</h3><p class="t-mute mb-0">Our team reviews your application and confirms your stall tier.</p></div></div>
+    <div class="col-md-4"><div class="ex-step" data-in><span class="ex-n t-grad">03</span><h3 class="h4 mb-2">Showcase</h3><p class="t-mute mb-0">Set up your stall on event day and meet investors and customers.</p></div></div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: call to action
+     WP: template-parts/section-cta.php
+     ============================================================ -->
+<section class="sec" id="contact"><div class="container">
+  <div class="box about-cta text-center" data-in>
+    <span class="eyebrow">Limited stalls</span>
+    <h2 class="h-sec t-metal mt-2 mb-3">Ready to exhibit at Season 6?</h2>
+    <p class="sub t-soft mx-auto mb-4">10&ndash;11 April 2027 &middot; Avadh Utopia, Surat</p>
+    <div class="d-flex flex-wrap justify-content-center gap-3"><a class="btn btn-grad" href="https://forms.gle/6f6HAbJMmqY7QwU57" target="_blank" rel="noopener">Apply for a stall</a><a class="btn btn-ghost" href="mailto:pitch@ivygrowth.co.in">pitch@ivygrowth.co.in</a><a class="btn btn-ghost" href="tel:+918758812000">+91 87588 12000</a></div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: footer
+     WP: footer.php  (link lists -> wp_nav_menu locations "footer-links" and "footer-policies"; contact + social -> options page)
+     The animated background (.foot-bg) is pure CSS - no script needed.
+     ============================================================ -->
+<footer class="foot position-relative overflow-hidden">
+  <div class="foot-bg" aria-hidden="true"><span class="foot-orb fo1"></span><span class="foot-orb fo2"></span><span class="foot-grid"></span></div>
+  <div class="container position-relative">
+
+    <div class="foot-cta d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-4">
+      <div>
+        <h2 class="h-sec t-metal mb-2">Be part of <span class="t-grad">Season 6</span></h2>
+        <p class="t-soft mb-0">10 &ndash; 11 April 2027 &middot; Avadh Utopia, Surat</p>
+      </div>
+      <div class="d-flex flex-wrap gap-3">
+        <a class="btn btn-grad" href="index.html#book">Grab Your Pass</a>
+        <a class="btn btn-ghost" href="index.html#book">Exhibit Your Startup</a>
+      </div>
+    </div>
+
+    <div class="row g-5 foot-main">
+      <div class="col-lg-4">
+        <div class="logo logo-img mb-3"><img src="assets/img/21by72-logo.png" width="72" height="72" alt="21BY72" loading="lazy"></div>
+        <p class="t-mute mb-4">Bharat's Leading Startup Summit &mdash; where conversations converge into companies.</p>
+        <div class="d-flex gap-2">
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.linkedin.com/company/ivy-growth-associates/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3V9.75zm6.5 0h3.8v1.6h.06c.53-1 1.82-2 3.75-2 4 0 4.75 2.63 4.75 6.05V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.58V21h-4V9.75z"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.instagram.com/21by72/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.facebook.com/21by72" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8z"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://twitter.com/Ivygrowth" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h3 class="foot-title">Explore</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="index.html#partners">Partners</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="index.html#team">Our Team</a></li>
+          <li><a href="index.html#book">Book Passes</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h3 class="foot-title">Policies</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li><a href="https://www.21by72.com/terms-of-service/" target="_blank" rel="noopener">Terms of Service</a></li>
+          <li><a href="https://www.21by72.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></li>
+          <li><a href="https://www.21by72.com/refund-cancellation/" target="_blank" rel="noopener">Refund &amp; Cancellation</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h3 class="foot-title">Contact</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li>Avadh Utopia, Surat, Gujarat</li>
+          <li><a href="mailto:pitch@ivygrowth.co.in">pitch@ivygrowth.co.in</a></li>
+          <li><a href="tel:+918758812000">+91 87588 12000</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span>&copy; 2026 IVY Growth Associates. All rights reserved.</span>
+      <span>Redesign demo for client preview &ndash; not the live site.</span>
+    </div>
+  </div>
+  <div class="foot-mark" aria-hidden="true">21BY72</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js"></script>
+<script src="assets/js/exhibitors.js"></script>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>

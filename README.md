@@ -5,15 +5,21 @@ Static HTML/CSS/JS prototype built on Bootstrap 5.3. Every section is plain mark
 ## Structure
 
 ```
-index.html              page; each section is wrapped in a comment banner naming its WP template part
-schedule.html           full detailed agenda (timeline + side programmes), linked from the home page
-home.html               light-theme demo: same markup as index.html + <body class="theme-light"> + assets/css/theme-light.css
+index.html              home page (light theme); each section is wrapped in a comment banner naming its WP template part
+schedule.html           full agenda (Day 1 / Day 2 tabs, session cards grouped by time of day)
+about.html              about page (video hero, numbers, mission, organisers)
+exhibitors.html         exhibit page (stall packages, exhibitor logo grid with search)
+speakers.html           speakers page (featured + all speakers with search)
+dark.html               dark-theme copy of the home page (the old index.html)
 assets/css/style.css    all theme styles, with a table of contents at the top
+assets/css/theme-light.css  light-theme overrides, scoped under .theme-light (loaded by every page except dark.html)
 assets/img/             21by72-logo.png (header, footer, loader)
 assets/js/
   marquee.js            repeats [data-marquee] content for seamless loops
   countdown.js          [data-countdown] date -> [data-cd] numbers
   hero-hex.js           canvas hexagon background (#hex)
+  exhibitors.js         live search on the exhibitors page
+  speakers.js           live search on the speakers page
   sliders.js            testimonials slider (jQuery + Slick)
   animations.js         GSAP / Lenis: loader, reveals, progress bar
 ```

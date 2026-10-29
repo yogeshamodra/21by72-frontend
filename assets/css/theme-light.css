@@ -111,3 +111,15 @@
 
 /* ===== demo note ===== */
 .theme-light .note a{color:#fff}
+
+/* ===== about page ===== */
+.theme-light .ab-hero{background:#eef0ff}
+.theme-light .ab-hero:before{background:linear-gradient(180deg,rgba(246,247,255,.82),rgba(246,247,255,.7) 50%,var(--bg))}
+.theme-light .ab-h1{color:var(--text)}
+.theme-light .ab-crumb a:hover{color:var(--text)}
+.theme-light .ab-stats,.theme-light .ab-stat{border-color:rgba(20,23,58,.12)}
+.theme-light .ab-step{border-bottom-color:rgba(20,23,58,.12)}
+.theme-light .ab-panel{background:linear-gradient(135deg,rgba(255,106,61,.08),rgba(122,77,255,.14));border-color:rgba(20,23,58,.1);box-shadow:0 18px 44px rgba(20,23,58,.09)}
+.theme-light .ab-half-2{background:rgba(255,255,255,.6);border-color:rgba(20,23,58,.1)}
+.theme-light .about-cta{background:linear-gradient(135deg,rgba(255,106,61,.12),rgba(122,77,255,.18))}
+.theme-light .about-video{box-shadow:0 20px 50px rgba(20,23,58,.2)}
