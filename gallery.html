@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>21BY72 Gallery - Moments from Past Seasons</title>
+<!-- WP: wp_head() goes here; enqueue the CSS below from functions.php (see README.md) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/theme-light.css">
+</head>
+<body class="theme-light">
+<div id="bar" class="bg-grad"></div><div id="glow"></div>
+
+<!-- ============================================================
+     SECTION: header / navigation
+     WP: header.php  (menu items -> wp_nav_menu with a custom walker for the .nav-link classes)
+     ============================================================ -->
+<nav class="navbar navbar-expand-lg fixed-top" id="hd"><div class="container">
+  <a class="logo logo-img d-inline-flex align-items-center" href="index.html#top" aria-label="21BY72 home"><img src="assets/img/21by72-logo.png" width="48" height="48" alt="21BY72"></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="nav">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item"><a class="nav-link" href="exhibitors.html">Exhibitors</a></li>
+      <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+      <li class="nav-item"><a class="nav-link" href="speakers.html">Speakers</a></li>
+      <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#book">Pitching Event</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+      <li class="nav-item"><a class="nav-link" href="tickets.html">Book</a></li>
+    </ul>
+    <a class="btn btn-grad btn-sm-x" href="tickets.html">Grab Your Pass</a>
+  </div>
+</div></nav>
+
+<!-- ============================================================
+     SECTION: gallery page header
+     WP: page-gallery.php  (page template)
+     ============================================================ -->
+<section class="sp-hero" id="gallery-top"><div class="container position-relative text-center">
+
+  <span class="eyebrow" data-in>Past seasons</span>
+  <h1 class="ex-h1 mt-2 mb-3" data-in>Moments from <span class="t-grad">21BY72</span></h1>
+  <p class="sub t-soft mx-auto mb-0" data-in>Stages, stalls, handshakes and hallway conversations - a look back at the seasons so far.</p>
+</div></section>
+
+<!-- ============================================================
+     SECTION: gallery (season filter + masonry + lightbox)
+     WP: template-parts/section-gallery.php
+     Loop: ACF gallery field per season (or a "gallery" post type with a season taxonomy). Each .gal-item = one loop iteration, data-season = season slug. gallery.js handles the filter and the lightbox.
+     NOTE: photos come from the live 21by72.com media library, grouped by the season they were published for - re-label if needed.
+     ============================================================ -->
+<section class="sec pt-0" id="photos"><div class="container">
+  <div class="gal-filter" data-in>
+    <button class="sch-chip active" type="button" data-season="">All <small>13</small></button>
+    <button class="sch-chip" type="button" data-season="s4">Season 4 <small>4</small></button>
+    <button class="sch-chip" type="button" data-season="s3">Season 3 <small>6</small></button>
+    <button class="sch-chip" type="button" data-season="e">Earlier seasons <small>3</small></button>
+  </div>
+  <div class="gal-grid" id="gal-grid" data-in>
+    <figure class="gal-item" data-season="s4">
+      <button type="button" class="gal-btn" aria-label="Open photo: Speaker on the main stage at 21BY72 Season 4"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/02/21BY72-Season-4-Event.jpg" alt="Speaker on the main stage at 21BY72 Season 4">
+      <figcaption><b>Season 4</b><span>2025</span></figcaption></button>
+    </figure>
+    <figure class="gal-item" data-season="s4">
+      <button type="button" class="gal-btn" aria-label="Open photo: Speakers on stage at Season 4"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/02/Bharats-Leading-Startup-Summit-Season-4.jpg" alt="Speakers on stage at Season 4">
+      <figcaption><b>Season 4</b><span>2025</span></figcaption></button>
+    </figure>
+    <figure class="gal-item" data-season="s4">
+      <button type="button" class="gal-btn" aria-label="Open photo: A speaker with the mic at Season 4"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/12/21BY72-Startup-Event-Season-4.jpg" alt="A speaker with the mic at Season 4">
+      <figcaption><b>Season 4</b><span>2025</span></figcaption></button>
+    </figure>
+    <figure class="gal-item" data-season="s4">
+      <button type="button" class="gal-btn" aria-label="Open photo: A speaker addressing the audience"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/12/banner-4.jpeg" alt="A speaker addressing the audience">
+      <figcaption><b>Season 4</b><span>2025</span></figcaption></button>
+    </figure>
+    <figure class="gal-item" data-season="s3">
+      <button type="button" class="gal-btn" aria-label="Open photo: Avadh Utopia on Season 3 day one"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/21BY72-Season-3-Day-1-1.jpg" alt="Avadh Utopia on Season 3 day one">
+      <figcaption><b>Season 3</b><span>2024</span></figcaption></button>
+    </figure>
+    <figure class="gal-item" data-season="s3">
+      <button type="button" class="gal-btn" aria-label="Open photo: Radhika Madan at 21BY72"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Radhika-Madan-at-21BY72-Startup-Summit.jpg" alt="Radhika Madan at 21BY72">
+      <figcaption><b>Season 3</b><span>2024</span></figcaption></button>
+    </figure>
+    <figure class="gal-item" data-season="s3">
+      <button type="button" class="gal-btn" aria-label="Open photo: A guest at the 21BY72 startup summit"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/07/21by72-startup-summit-unleashing.jpg" alt="A guest at the 21BY72 startup summit">
+      <figcaption><b>Season 3</b><span>2024</span></figcaption></button>
+    </figure>
+    <figure class="gal-item" data-season="s3">
+      <button type="button" class="gal-btn" aria-label="Open photo: On stage at the 21BY72 Global Startup Summit"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/07/the-ultimate-event-highlights-mu.jpg" alt="On stage at the 21BY72 Global Startup Summit">
+      <figcaption><b>Season 3</b><span>2024</span></figcaption></button>
+    </figure>
+    <figure class="gal-item" data-season="s3">
+      <button type="button" class="gal-btn" aria-label="Open photo: Harsh Sanghavi at the summit"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/08/Harsh-Sanghavi-at-21BY72-Global-Startup-Summit.jpg" alt="Harsh Sanghavi at the summit">
+      <figcaption><b>Season 3</b><span>2024</span></figcaption></button>
+    </figure>
+    <figure class="gal-item" data-season="s3">
+      <button type="button" class="gal-btn" aria-label="Open photo: Founders and investors sharing a laugh"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/10/Startup-Event.jpg" alt="Founders and investors sharing a laugh">
+      <figcaption><b>Season 3</b><span>2024</span></figcaption></button>
+    </figure>
+    <figure class="gal-item" data-season="e">
+      <button type="button" class="gal-btn" aria-label="Open photo: Ribbon cutting at an earlier 21BY72 season"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/04/PAST-Event-2023.webp" alt="Ribbon cutting at an earlier 21BY72 season">
+      <figcaption><b>Earlier seasons</b><span>2023</span></figcaption></button>
+    </figure>
+    <figure class="gal-item" data-season="e">
+      <button type="button" class="gal-btn" aria-label="Open photo: Crowd at an earlier 21BY72 season"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/past-event-1.webp" alt="Crowd at an earlier 21BY72 season">
+      <figcaption><b>Earlier seasons</b><span>2023</span></figcaption></button>
+    </figure>
+    <figure class="gal-item" data-season="e">
+      <button type="button" class="gal-btn" aria-label="Open photo: The 21BY72 team"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/03/we-are.webp" alt="The 21BY72 team">
+      <figcaption><b>Earlier seasons</b><span>2023</span></figcaption></button>
+    </figure>
+  </div>
+</div></section>
+
+<div class="gal-lb" id="gal-lb" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="gal-x" type="button" data-act="close" aria-label="Close">&times;</button>
+  <button class="gal-nav gal-prev" type="button" data-act="prev" aria-label="Previous photo">&#8249;</button>
+  <figure><img id="gal-img" src="" alt=""><figcaption id="gal-cap"></figcaption></figure>
+  <button class="gal-nav gal-next" type="button" data-act="next" aria-label="Next photo">&#8250;</button>
+</div>
+
+<!-- ============================================================
+     SECTION: call to action
+     WP: template-parts/section-cta.php
+     ============================================================ -->
+<section class="sec bg-alt" id="contact"><div class="container">
+  <div class="box about-cta text-center" data-in>
+    <span class="eyebrow">Season 6 &middot; 10&ndash;11 April 2027</span>
+    <h2 class="h-sec t-metal mt-2 mb-3">Be in the next frame</h2>
+    <p class="sub t-soft mx-auto mb-4">Join us at Avadh Utopia, Surat.</p>
+    <div class="d-flex flex-wrap justify-content-center gap-3"><a class="btn btn-grad" href="tickets.html">Grab Your Pass</a><a class="btn btn-ghost" href="speakers.html">Meet the speakers</a></div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: footer
+     WP: footer.php  (link lists -> wp_nav_menu locations "footer-links" and "footer-policies"; contact + social -> options page)
+     The animated background (.foot-bg) is pure CSS - no script needed.
+     ============================================================ -->
+<footer class="foot position-relative overflow-hidden">
+  <div class="foot-bg" aria-hidden="true"><span class="foot-orb fo1"></span><span class="foot-orb fo2"></span><span class="foot-grid"></span></div>
+  <div class="container position-relative">
+
+    <div class="foot-cta d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-4">
+      <div>
+        <h2 class="h-sec t-metal mb-2">Be part of <span class="t-grad">Season 6</span></h2>
+        <p class="t-soft mb-0">10 &ndash; 11 April 2027 &middot; Avadh Utopia, Surat</p>
+      </div>
+      <div class="d-flex flex-wrap gap-3">
+        <a class="btn btn-grad" href="tickets.html">Grab Your Pass</a>
+        <a class="btn btn-ghost" href="index.html#book">Exhibit Your Startup</a>
+      </div>
+    </div>
+
+    <div class="row g-5 foot-main">
+      <div class="col-lg-4">
+        <div class="logo logo-img mb-3"><img src="assets/img/21by72-logo.png" width="72" height="72" alt="21BY72" loading="lazy"></div>
+        <p class="t-mute mb-4">Bharat's Leading Startup Summit &mdash; where conversations converge into companies.</p>
+        <div class="d-flex gap-2">
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.linkedin.com/company/ivy-growth-associates/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3V9.75zm6.5 0h3.8v1.6h.06c.53-1 1.82-2 3.75-2 4 0 4.75 2.63 4.75 6.05V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.58V21h-4V9.75z"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.instagram.com/21by72/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.facebook.com/21by72" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8z"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://twitter.com/Ivygrowth" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h3 class="foot-title">Explore</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="index.html#team">Our Team</a></li>
+          <li><a href="index.html#book">Book Passes</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h3 class="foot-title">Policies</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li><a href="https://www.21by72.com/terms-of-service/" target="_blank" rel="noopener">Terms of Service</a></li>
+          <li><a href="https://www.21by72.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></li>
+          <li><a href="https://www.21by72.com/refund-cancellation/" target="_blank" rel="noopener">Refund &amp; Cancellation</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h3 class="foot-title">Contact</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li>Avadh Utopia, Surat, Gujarat</li>
+          <li><a href="mailto:pitch@ivygrowth.co.in">pitch@ivygrowth.co.in</a></li>
+          <li><a href="tel:+918758812000">+91 87588 12000</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span>&copy; 2026 IVY Growth Associates. All rights reserved.</span>
+      <span>Redesign demo for client preview &ndash; not the live site.</span>
+    </div>
+  </div>
+  <div class="foot-mark" aria-hidden="true">21BY72</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js"></script>
+<script src="assets/js/gallery.js"></script>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>

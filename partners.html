@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>21BY72 Partners - Sponsors, Supporters and Investors</title>
+<!-- WP: wp_head() goes here; enqueue the CSS below from functions.php (see README.md) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/theme-light.css">
+</head>
+<body class="theme-light">
+<div id="bar" class="bg-grad"></div><div id="glow"></div>
+
+<!-- ============================================================
+     SECTION: header / navigation
+     WP: header.php  (menu items -> wp_nav_menu with a custom walker for the .nav-link classes)
+     ============================================================ -->
+<nav class="navbar navbar-expand-lg fixed-top" id="hd"><div class="container">
+  <a class="logo logo-img d-inline-flex align-items-center" href="index.html#top" aria-label="21BY72 home"><img src="assets/img/21by72-logo.png" width="48" height="48" alt="21BY72"></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="nav">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item"><a class="nav-link" href="exhibitors.html">Exhibitors</a></li>
+      <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+      <li class="nav-item"><a class="nav-link" href="speakers.html">Speakers</a></li>
+      <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#book">Pitching Event</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+      <li class="nav-item"><a class="nav-link" href="tickets.html">Book</a></li>
+    </ul>
+    <a class="btn btn-grad btn-sm-x" href="tickets.html">Grab Your Pass</a>
+  </div>
+</div></nav>
+
+<!-- ============================================================
+     SECTION: partners page header
+     WP: page-partners.php  (page template)
+     ============================================================ -->
+<section class="sp-hero" id="partners-top"><div class="container position-relative text-center">
+  <span class="eyebrow" data-in>Backed by the ecosystem</span>
+  <h1 class="ex-h1 mt-2 mb-3" data-in>The people behind <span class="t-grad">21BY72</span></h1>
+  <p class="sub t-soft mx-auto mb-4" data-in>Sponsors, supporters, community partners and investors who help Bharat's startups grow - season after season.</p>
+  <div class="gal-filter mb-0" data-in>
+    <a class="sch-chip" href="#sponsors">Sponsors <small>6</small></a>
+    <a class="sch-chip" href="#supported">Supported by <small>5</small></a>
+    <a class="sch-chip" href="#ecosystem">Ecosystem <small>8</small></a>
+    <a class="sch-chip" href="#investors">Investors <small>51</small></a>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: sponsors (cards)
+     WP: template-parts/section-sponsors.php
+     Loop: custom post type "partner" filtered by tier = sponsor. Each .col = one loop iteration.
+     ============================================================ -->
+<section class="sec" id="sponsors" style="padding-top:30px"><div class="container">
+  <div class="text-center mb-5" data-in><span class="eyebrow">Our sponsors</span><h2 class="h-sec t-metal mt-2 mb-0">Powering the summit</h2></div>
+  <div class="row g-4 justify-content-center cards">
+    <div class="col-6 col-md-4 col-xl-2">
+      <div class="box sponsor-card h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/arham-share.png" alt="Arham Share"></div>
+        <h3 class="h6 mt-4 mb-2">Arham Share</h3>
+        <span class="sponsor-tier bg-grad">Supported By</span>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-xl-2">
+      <div class="box sponsor-card h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/Sangini_Group.png" alt="Sangini Group"></div>
+        <h3 class="h6 mt-4 mb-2">Sangini Group</h3>
+        <span class="sponsor-tier bg-grad">Co-powered By</span>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-xl-2">
+      <div class="box sponsor-card h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/monkis-logo.png" alt="Monkis"></div>
+        <h3 class="h6 mt-4 mb-2">Monkis</h3>
+        <span class="sponsor-tier bg-grad">Associate Sponsor</span>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-xl-2">
+      <div class="box sponsor-card h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/Arigato.png" alt="Arigato Capital"></div>
+        <h3 class="h6 mt-4 mb-2">Arigato Capital</h3>
+        <span class="sponsor-tier bg-grad">Hosted By</span>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-xl-2">
+      <div class="box sponsor-card h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/3eco.png" alt="3eco"></div>
+        <h3 class="h6 mt-4 mb-2">3eco</h3>
+        <span class="sponsor-tier bg-grad">Supported By</span>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-xl-2">
+      <div class="box sponsor-card h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/artha.png" alt="Artha"></div>
+        <h3 class="h6 mt-4 mb-2">Artha</h3>
+        <span class="sponsor-tier bg-grad">Supported By</span>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: supported by (cards)
+     WP: template-parts/section-supported.php
+     Loop: custom post type "partner" filtered by tier = supported-by.
+     ============================================================ -->
+<section class="sec bg-alt" id="supported"><div class="container">
+  <div class="text-center mb-5" data-in><span class="eyebrow">With thanks</span><h2 class="h-sec t-metal mt-2 mb-0">Supported by</h2></div>
+  <div class="row g-4 justify-content-center cards">
+    <div class="col-6 col-md-4 col-xl">
+      <div class="box sponsor-card sponsor-lg h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/iNDEXTb.png" alt="iNDEXTb"></div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-xl">
+      <div class="box sponsor-card sponsor-lg h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/vibrant_gujarat.png" alt="Vibrant Gujarat"></div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-xl">
+      <div class="box sponsor-card sponsor-lg h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Industries-Commissionerate.png" alt="Industries Commissionerate, Government of Gujarat"></div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-xl">
+      <div class="box sponsor-card sponsor-lg h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/ihub.png" alt="i-Hub"></div>
+      </div>
+    </div>
+    <div class="col-6 col-md-4 col-xl">
+      <div class="box sponsor-card sponsor-lg h-100 text-center" data-in>
+        <div class="sponsor-logo d-flex align-items-center justify-content-center"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/mehta-wealth.png" alt="Mehta Wealth"></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: ecosystem and community partners
+     WP: template-parts/section-ecosystem.php
+     Loop: custom post type "partner" filtered by tier = ecosystem. Each .ex-tile = one loop iteration.
+     ============================================================ -->
+<section class="sec" id="ecosystem"><div class="container">
+  <div class="text-center mb-5" data-in><span class="eyebrow">Community</span><h2 class="h-sec t-metal mt-2 mb-3">Ecosystem partners</h2><p class="sub t-soft mx-auto mb-0">Incubators, communities and media that grow with us.</p></div>
+  <div class="ex-grid" data-in>
+        <div class="ex-tile pt-eco" data-name="startup chaupal"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Startup-Chaupal.png" alt="Startup Chaupal"></div><span>Startup Chaupal</span></div>
+        <div class="ex-tile pt-eco" data-name="startlabs"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/StartLabs.png" alt="StartLabs"></div><span>StartLabs</span></div>
+        <div class="ex-tile pt-eco" data-name="e-chai"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/E-chai.png" alt="E-chai"></div><span>E-chai</span></div>
+        <div class="ex-tile pt-eco" data-name="dpg media"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/DPG_MEDIA_LOGO.png" alt="DPG Media"></div><span>DPG Media</span></div>
+        <div class="ex-tile pt-eco" data-name="four pillars"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/fourpillars.png" alt="Four Pillars"></div><span>Four Pillars</span></div>
+        <div class="ex-tile pt-eco" data-name="t-hub"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/t-hub.png" alt="T-Hub"></div><span>T-Hub</span></div>
+        <div class="ex-tile pt-eco" data-name="ivca"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/ivca.png" alt="IVCA"></div><span>IVCA</span></div>
+        <div class="ex-tile pt-eco" data-name="khushi"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/khushi.png" alt="Khushi"></div><span>Khushi</span></div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: investment partners (search)
+     WP: template-parts/section-investors.php
+     Loop: custom post type "partner" filtered by tier = investor, with a season taxonomy. Each .ex-tile = one loop iteration. partners.js filters by name.
+     NOTE: Season 5 investment partners from the live site (Season 6 list is "coming soon" there).
+     ============================================================ -->
+<section class="sec bg-alt" id="investors"><div class="container">
+  <div class="d-flex align-items-end justify-content-between flex-wrap gap-3 mb-4" data-in>
+    <div><span class="eyebrow">Investment partners</span><h2 class="h-sec t-metal mt-2 mb-0">Funds &amp; angel networks</h2></div>
+    <label class="ex-search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input id="pt-q" type="search" placeholder="Search investors" aria-label="Search investment partners"></label>
+  </div>
+  <div class="ex-grid" id="pt-grid" data-in>
+        <div class="ex-tile pt-inv" data-name="1 crowd"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/1crowd_Logo.png" alt="1 Crowd"></div><span>1 Crowd</span></div>
+        <div class="ex-tile pt-inv" data-name="247vc"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/247VC-Logo.png" alt="247VC"></div><span>247VC</span></div>
+        <div class="ex-tile pt-inv" data-name="aavishkaar capital"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Untitled-design-2.png" alt="Aavishkaar Capital"></div><span>Aavishkaar Capital</span></div>
+        <div class="ex-tile pt-inv" data-name="arbour alternate advisors"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/Arbour-Alternate-Advisors-Private-Limited.png" alt="Arbour Alternate Advisors"></div><span>Arbour Alternate Advisors</span></div>
+        <div class="ex-tile pt-inv" data-name="arthashray"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/Arthashay_Logo.png" alt="Arthashray"></div><span>Arthashray</span></div>
+        <div class="ex-tile pt-inv" data-name="ashika global family office"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Ashika-Global-Family-Office.png" alt="Ashika Global Family Office"></div><span>Ashika Global Family Office</span></div>
+        <div class="ex-tile pt-inv" data-name="billennium divas fund"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/Billennium.webp" alt="Billennium Divas Fund"></div><span>Billennium Divas Fund</span></div>
+        <div class="ex-tile pt-inv" data-name="biorx venture advisors"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/BIORx-Venture-Advisors.png" alt="BIORx Venture Advisors"></div><span>BIORx Venture Advisors</span></div>
+        <div class="ex-tile pt-inv" data-name="brand capital"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/BrandCapital.png" alt="Brand Capital"></div><span>Brand Capital</span></div>
+        <div class="ex-tile pt-inv" data-name="carnelian capital"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/Untitled-design-200.png" alt="Carnelian Capital"></div><span>Carnelian Capital</span></div>
+        <div class="ex-tile pt-inv" data-name="cognoscent ventures"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/03/Cognoscent.png" alt="Cognoscent Ventures"></div><span>Cognoscent Ventures</span></div>
+        <div class="ex-tile pt-inv" data-name="colossa ventures"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/colossa_ventures_logo.jpeg" alt="Colossa Ventures"></div><span>Colossa Ventures</span></div>
+        <div class="ex-tile pt-inv" data-name="equentis angel fund"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Equentis_Logo.jpg" alt="Equentis Angel Fund"></div><span>Equentis Angel Fund</span></div>
+        <div class="ex-tile pt-inv" data-name="ethaum venture partners"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/03/EthAum.png" alt="EthAum Venture Partners"></div><span>EthAum Venture Partners</span></div>
+        <div class="ex-tile pt-inv" data-name="eximius ventures"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/05/eximius-ventures.png" alt="Eximius Ventures"></div><span>Eximius Ventures</span></div>
+        <div class="ex-tile pt-inv" data-name="fireside ventures"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/FiresideVentures_Logo.png" alt="Fireside Ventures"></div><span>Fireside Ventures</span></div>
+        <div class="ex-tile pt-inv" data-name="growth sense"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/04/growth-sense.png" alt="Growth Sense"></div><span>Growth Sense</span></div>
+        <div class="ex-tile pt-inv" data-name="growth91 advisors"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Growth91-Advisors.png" alt="Growth91 Advisors"></div><span>Growth91 Advisors</span></div>
+        <div class="ex-tile pt-inv" data-name="growthcap ventures"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/ISHA-OSTWAL-2.png" alt="GrowthCap Ventures"></div><span>GrowthCap Ventures</span></div>
+        <div class="ex-tile pt-inv" data-name="gsf"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/GSF.png" alt="GSF"></div><span>GSF</span></div>
+        <div class="ex-tile pt-inv" data-name="gvfl"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/GVFL.webp" alt="GVFL"></div><span>GVFL</span></div>
+        <div class="ex-tile pt-inv" data-name="high table ventures"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/ht.png" alt="High Table Ventures"></div><span>High Table Ventures</span></div>
+        <div class="ex-tile pt-inv" data-name="india accelerator"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/India-Accelerator.webp" alt="India Accelerator"></div><span>India Accelerator</span></div>
+        <div class="ex-tile pt-inv" data-name="indicorn angels"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/02/Indicorn-Angels-Logo.png" alt="Indicorn Angels"></div><span>Indicorn Angels</span></div>
+        <div class="ex-tile pt-inv" data-name="inmesta ecosystem &amp; weshapeup venture studio"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/INMESTA.png" alt="InMeSta Ecosystem &amp; WeShapeUp Venture Studio"></div><span>InMeSta Ecosystem &amp; WeShapeUp Venture Studio</span></div>
+        <div class="ex-tile pt-inv" data-name="iti growth opportunities fund"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/The-investment-trust.webp" alt="ITI Growth Opportunities Fund"></div><span>ITI Growth Opportunities Fund</span></div>
+        <div class="ex-tile pt-inv" data-name="jito incubation &amp; innovation foundation"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/JIIF.webp" alt="JITO Incubation &amp; Innovation Foundation"></div><span>JITO Incubation &amp; Innovation Foundation</span></div>
+        <div class="ex-tile pt-inv" data-name="malpani ventures"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/ISHA-OSTWAL-1.png" alt="Malpani Ventures"></div><span>Malpani Ventures</span></div>
+        <div class="ex-tile pt-inv" data-name="moonshot ventures"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/Moonshot-Ventures.png" alt="Moonshot Ventures"></div><span>Moonshot Ventures</span></div>
+        <div class="ex-tile pt-inv" data-name="mycap investments"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/mycap_investments_logo.jpeg" alt="MYCap Investments"></div><span>MYCap Investments</span></div>
+        <div class="ex-tile pt-inv" data-name="nanda vc"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/Nanda-VC-200.png" alt="Nanda VC"></div><span>Nanda VC</span></div>
+        <div class="ex-tile pt-inv" data-name="novogram investments"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/Novogram-Investments.png" alt="Novogram Investments"></div><span>Novogram Investments</span></div>
+        <div class="ex-tile pt-inv" data-name="parishi capital"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/ParishiCapital.jpeg" alt="Parishi Capital"></div><span>Parishi Capital</span></div>
+        <div class="ex-tile pt-inv" data-name="pedalstart"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/Pedal-Start.webp" alt="PedalStart"></div><span>PedalStart</span></div>
+        <div class="ex-tile pt-inv" data-name="pentathalon ventures"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/Pentathalon-Ventures-200.png" alt="Pentathalon Ventures"></div><span>Pentathalon Ventures</span></div>
+        <div class="ex-tile pt-inv" data-name="pinpointx capital"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/pinpoint_x_logo.jpeg" alt="PinPointX Capital"></div><span>PinPointX Capital</span></div>
+        <div class="ex-tile pt-inv" data-name="powerplay ventures"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Powerplay-Ventures.png" alt="Powerplay Ventures"></div><span>Powerplay Ventures</span></div>
+        <div class="ex-tile pt-inv" data-name="progrowth ventures"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/03/progrowth-ventures.png" alt="ProGrowth Ventures"></div><span>ProGrowth Ventures</span></div>
+        <div class="ex-tile pt-inv" data-name="roots ventures"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Roots-Ventures.png" alt="Roots Ventures"></div><span>Roots Ventures</span></div>
+        <div class="ex-tile pt-inv" data-name="sauce vc"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/Sauce-VC.png" alt="Sauce VC"></div><span>Sauce VC</span></div>
+        <div class="ex-tile pt-inv" data-name="seafund"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Group-18.png" alt="Seafund"></div><span>Seafund</span></div>
+        <div class="ex-tile pt-inv" data-name="shc growth partners"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/SHC-Growth-Parters_Logo.jpg" alt="SHC Growth Partners"></div><span>SHC Growth Partners</span></div>
+        <div class="ex-tile pt-inv" data-name="thinkuvate"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/ThinKuvate.png" alt="ThinKuvate"></div><span>ThinKuvate</span></div>
+        <div class="ex-tile pt-inv" data-name="transition vc"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/transition_vc_logo.jpeg" alt="Transition VC"></div><span>Transition VC</span></div>
+        <div class="ex-tile pt-inv" data-name="unicorn india ventures"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Unicorn-Ventures.png" alt="Unicorn India Ventures"></div><span>Unicorn India Ventures</span></div>
+        <div class="ex-tile pt-inv" data-name="v3 ventures"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/v3-ventures.webp" alt="V3 Ventures"></div><span>V3 Ventures</span></div>
+        <div class="ex-tile pt-inv" data-name="valuebridge capital - merisis advisors"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/ValueBridgeCapital_Logo.jpg" alt="ValueBridge Capital - Merisis Advisors"></div><span>ValueBridge Capital - Merisis Advisors</span></div>
+        <div class="ex-tile pt-inv" data-name="vc mint"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/05/vc_mint_logo.jpg" alt="VC Mint"></div><span>VC Mint</span></div>
+        <div class="ex-tile pt-inv" data-name="venture garage"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/Circle-image-1.webp" alt="Venture Garage"></div><span>Venture Garage</span></div>
+        <div class="ex-tile pt-inv" data-name="vistaar group of ventures"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/VistaarGroupOfVentures_Logo.jpg" alt="Vistaar Group of Ventures"></div><span>Vistaar Group of Ventures</span></div>
+        <div class="ex-tile pt-inv" data-name="warmup ventures"><div class="ex-logo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2026/06/WarmupVentures_Logo.jpeg" alt="WarmUp Ventures"></div><span>WarmUp Ventures</span></div>
+  </div>
+  <p class="text-center t-mute py-5 mb-0" id="pt-none" hidden>No investors match your search.</p>
+</div></section>
+
+<!-- ============================================================
+     SECTION: become a partner
+     WP: template-parts/section-become-partner.php  (ACF repeater: icon, title, text)
+     ============================================================ -->
+<section class="sec" id="become"><div class="container">
+  <div class="text-center mb-5" data-in><span class="eyebrow">Partner with us</span><h2 class="h-sec t-metal mt-2 mb-3">Why partner with 21BY72</h2></div>
+  <div class="row g-4 cards">
+    <div class="col-md-4"><div class="box about-feat h-100" data-in><span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1zM15 9a4 4 0 0 1 0 6M18 6a8 8 0 0 1 0 12"/></svg></span><h3 class="h5 mt-4 mb-2">Be seen</h3><p class="t-mute mb-0">Put your brand in front of 25,000+ visitors from across India over two days in Surat.</p></div></div>
+    <div class="col-md-4"><div class="box about-feat h-100" data-in><span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span><h3 class="h5 mt-4 mb-2">Meet the investors</h3><p class="t-mute mb-0">Share the floor with 1,200+ investors and the startups they back.</p></div></div>
+    <div class="col-md-4"><div class="box about-feat h-100" data-in><span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 7l3 3M17 7l-3 3M7 17l3-3M17 17l-3-3"/></svg></span><h3 class="h5 mt-4 mb-2">Join the ecosystem</h3><p class="t-mute mb-0">Work with the community, media and institutions that grow Bharat's startups.</p></div></div>
+  </div>
+  <div class="box about-cta text-center mt-5" data-in>
+    <span class="eyebrow">Season 6 &middot; 10&ndash;11 April 2027</span>
+    <h2 class="h-sec t-metal mt-2 mb-3">Become a partner</h2>
+    <p class="sub t-soft mx-auto mb-4">Tell us what you would like to do at Season 6 and we will get back to you.</p>
+    <div class="d-flex flex-wrap justify-content-center gap-3"><a class="btn btn-grad" href="mailto:pitch@ivygrowth.co.in">pitch@ivygrowth.co.in</a><a class="btn btn-ghost" href="tel:+918758812000">+91 87588 12000</a></div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: footer
+     WP: footer.php  (link lists -> wp_nav_menu locations "footer-links" and "footer-policies"; contact + social -> options page)
+     The animated background (.foot-bg) is pure CSS - no script needed.
+     ============================================================ -->
+<footer class="foot position-relative overflow-hidden">
+  <div class="foot-bg" aria-hidden="true"><span class="foot-orb fo1"></span><span class="foot-orb fo2"></span><span class="foot-grid"></span></div>
+  <div class="container position-relative">
+
+    <div class="foot-cta d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-4">
+      <div>
+        <h2 class="h-sec t-metal mb-2">Be part of <span class="t-grad">Season 6</span></h2>
+        <p class="t-soft mb-0">10 &ndash; 11 April 2027 &middot; Avadh Utopia, Surat</p>
+      </div>
+      <div class="d-flex flex-wrap gap-3">
+        <a class="btn btn-grad" href="tickets.html">Grab Your Pass</a>
+        <a class="btn btn-ghost" href="index.html#book">Exhibit Your Startup</a>
+      </div>
+    </div>
+
+    <div class="row g-5 foot-main">
+      <div class="col-lg-4">
+        <div class="logo logo-img mb-3"><img src="assets/img/21by72-logo.png" width="72" height="72" alt="21BY72" loading="lazy"></div>
+        <p class="t-mute mb-4">Bharat's Leading Startup Summit &mdash; where conversations converge into companies.</p>
+        <div class="d-flex gap-2">
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.linkedin.com/company/ivy-growth-associates/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3V9.75zm6.5 0h3.8v1.6h.06c.53-1 1.82-2 3.75-2 4 0 4.75 2.63 4.75 6.05V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.58V21h-4V9.75z"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.instagram.com/21by72/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.facebook.com/21by72" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8z"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://twitter.com/Ivygrowth" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h3 class="foot-title">Explore</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="index.html#team">Our Team</a></li>
+          <li><a href="index.html#book">Book Passes</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h3 class="foot-title">Policies</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li><a href="https://www.21by72.com/terms-of-service/" target="_blank" rel="noopener">Terms of Service</a></li>
+          <li><a href="https://www.21by72.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></li>
+          <li><a href="https://www.21by72.com/refund-cancellation/" target="_blank" rel="noopener">Refund &amp; Cancellation</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h3 class="foot-title">Contact</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li>Avadh Utopia, Surat, Gujarat</li>
+          <li><a href="mailto:pitch@ivygrowth.co.in">pitch@ivygrowth.co.in</a></li>
+          <li><a href="tel:+918758812000">+91 87588 12000</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span>&copy; 2026 IVY Growth Associates. All rights reserved.</span>
+      <span>Redesign demo for client preview &ndash; not the live site.</span>
+    </div>
+  </div>
+  <div class="foot-mark" aria-hidden="true">21BY72</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js"></script>
+<script src="assets/js/partners.js"></script>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>

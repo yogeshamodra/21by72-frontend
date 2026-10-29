@@ -9,7 +9,12 @@ index.html              home page (light theme); each section is wrapped in a co
 schedule.html           full agenda (Day 1 / Day 2 tabs, session cards grouped by time of day)
 about.html              about page (video hero, numbers, mission, organisers)
 exhibitors.html         exhibit page (stall packages, exhibitor logo grid with search)
-speakers.html           speakers page (featured + all speakers with search)
+speakers.html           speakers page (season 1-5 tabs, featured speakers, search)
+gallery.html            photo gallery of past seasons (season filter + lightbox)
+partners.html           sponsors, supporters, ecosystem partners and investors
+tickets.html            passes with countdown, comparison table and FAQ
+stalls.html             stall packages, inclusions and a past-seasons photo slider
+rooms.html              hotel rooms (dual / triple occupancy)
 dark.html               dark-theme copy of the home page (the old index.html)
 assets/css/style.css    all theme styles, with a table of contents at the top
 assets/css/theme-light.css  light-theme overrides, scoped under .theme-light (loaded by every page except dark.html)
@@ -20,6 +25,9 @@ assets/js/
   hero-hex.js           canvas hexagon background (#hex)
   exhibitors.js         live search on the exhibitors page
   speakers.js           live search on the speakers page
+  gallery.js            season filter + lightbox on the gallery page
+  partners.js           live search on the partners page
+  slider.js             scroll-snap slider (arrows, dots, autoplay)
   sliders.js            testimonials slider (jQuery + Slick)
   animations.js         GSAP / Lenis: loader, reveals, progress bar
 ```

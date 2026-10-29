@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>21BY72 Tickets - Passes, Stalls and Rooms</title>
+<!-- WP: wp_head() goes here; enqueue the CSS below from functions.php (see README.md) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/theme-light.css">
+</head>
+<body class="theme-light">
+<div id="bar" class="bg-grad"></div><div id="glow"></div>
+
+<!-- ============================================================
+     SECTION: header / navigation
+     WP: header.php  (menu items -> wp_nav_menu with a custom walker for the .nav-link classes)
+     ============================================================ -->
+<nav class="navbar navbar-expand-lg fixed-top" id="hd"><div class="container">
+  <a class="logo logo-img d-inline-flex align-items-center" href="index.html#top" aria-label="21BY72 home"><img src="assets/img/21by72-logo.png" width="48" height="48" alt="21BY72"></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="nav">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item"><a class="nav-link" href="exhibitors.html">Exhibitors</a></li>
+      <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+      <li class="nav-item"><a class="nav-link" href="speakers.html">Speakers</a></li>
+      <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#book">Pitching Event</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+      <li class="nav-item"><a class="nav-link" href="tickets.html">Book</a></li>
+    </ul>
+    <a class="btn btn-grad btn-sm-x" href="tickets.html">Grab Your Pass</a>
+  </div>
+</div></nav>
+
+<!-- ============================================================
+     SECTION: tickets page header (countdown)
+     WP: page-tickets.php  (page template). Event date -> ACF/option field -> data-countdown (same as the home hero).
+     ============================================================ -->
+<section class="sp-hero" id="tickets-top"><div class="container position-relative text-center">
+  <span class="eyebrow" data-in>Season 6 &middot; 10&ndash;11 April 2027</span>
+  <h1 class="ex-h1 mt-2 mb-3" data-in>Get your pass to the <span class="t-grad">startup summit</span></h1>
+  <p class="sub t-soft mx-auto mb-4" data-in>Two days of talks, pitches and networking at Avadh Utopia, Surat. Pick a pass, a stall or a room.</p>
+  <div class="tk-cd" data-in>
+    <div class="cd d-flex justify-content-center gap-2" role="timer" aria-label="Time left until the event" data-countdown="2027-04-10T09:00:00+05:30">
+      <div><b data-cd="d">00</b><small class="t-mute fs-xs ls-wide">Days</small></div><div><b data-cd="h">00</b><small class="t-mute fs-xs ls-wide">Hours</small></div><div><b data-cd="m">00</b><small class="t-mute fs-xs ls-wide">Minutes</small></div><div><b data-cd="s">00</b><small class="t-mute fs-xs ls-wide">Seconds</small></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: booking tabs (passes / stalls / rooms)
+     WP: template-parts/section-tickets.php  (WooCommerce products by category: passes, stalls, rooms - each .col = one product loop iteration)
+     NOTE: stalls and hotel rooms have their own pages (stalls.html, rooms.html), like on the live site - the tabs link there. The Add to Cart links are placeholders (the live ticket buttons still say "To Be Announce").
+     ============================================================ -->
+<section class="sec" id="book" style="padding-top:30px"><div class="container">
+  <ul class="nav nav-pills sched-tabs justify-content-center gap-2 mb-5" role="tablist" data-in>
+    <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-pass" type="button" role="tab">Visitor passes <small>2 options</small></button></li>
+    <li class="nav-item"><a class="nav-link" href="stalls.html">Stalls <small>from &#8377;35,000</small></a></li>
+    <li class="nav-item"><a class="nav-link" href="rooms.html">Hotel rooms <small>from &#8377;6,500</small></a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="tab-pass" role="tabpanel">
+      <div class="row g-4 justify-content-center cards">
+    <div class="col-md-6 col-lg-5"><div class="box ex-tier h-100 d-flex flex-column" data-in>
+      <h3 class="h4 mb-3">Exhibition &amp; Panel Pass</h3>
+      <div class="price">&#8377;1,299</div>
+      <ul class="ticks list-unstyled t-mute fs-sm my-4 flex-grow-1"><li>Exhibition area</li><li>Speaker sessions</li><li>Workshops &amp; masterclasses</li></ul>
+      <a class="btn btn-grad" href="#">Add to Cart</a>
+    </div></div>
+    <div class="col-md-6 col-lg-5"><div class="box ex-tier h-100 d-flex flex-column ex-pop" data-in><span class="ribbon bg-grad">POPULAR</span>
+      <h3 class="h4 mb-3">Investor Pass</h3>
+      <div class="price">&#8377;2,199</div>
+      <ul class="ticks list-unstyled t-mute fs-sm my-4 flex-grow-1"><li>Everything in the Exhibition &amp; Panel Pass</li><li>Trailblazers Mine - live pitching event</li><li>Investor networking</li></ul>
+      <a class="btn btn-grad" href="#">Add to Cart</a>
+    </div></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: compare passes
+     WP: template-parts/section-compare.php  (ACF repeater: feature, included in pass A, included in pass B)
+     ============================================================ -->
+<section class="sec bg-alt" id="compare"><div class="container">
+  <div class="text-center mb-5" data-in><span class="eyebrow">Compare</span><h2 class="h-sec t-metal mt-2 mb-0">What is in each pass</h2></div>
+  <div class="tk-wrap" data-in>
+    <table class="tk-table">
+      <thead><tr><th scope="col"></th><th scope="col">Exhibition &amp; Panel<b class="t-grad">&#8377;1,299</b></th><th scope="col" class="tk-hl">Investor Pass<b class="t-grad">&#8377;2,199</b></th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Exhibition area (Marigold)</th><td><span class="tk-yes" aria-label="Included"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span></td><td class="tk-hl"><span class="tk-yes" aria-label="Included"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span></td></tr>
+        <tr><th scope="row">Speaker sessions (Orchid 1)</th><td><span class="tk-yes" aria-label="Included"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span></td><td class="tk-hl"><span class="tk-yes" aria-label="Included"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span></td></tr>
+        <tr><th scope="row">Workshops &amp; masterclasses (Iris)</th><td><span class="tk-yes" aria-label="Included"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span></td><td class="tk-hl"><span class="tk-yes" aria-label="Included"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span></td></tr>
+        <tr><th scope="row">Trailblazers Mine - live pitching (Orchid 2)</th><td><span class="tk-no" aria-label="Not included">&ndash;</span></td><td class="tk-hl"><span class="tk-yes" aria-label="Included"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span></td></tr>
+        <tr><th scope="row">Investor networking</th><td><span class="tk-no" aria-label="Not included">&ndash;</span></td><td class="tk-hl"><span class="tk-yes" aria-label="Included"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: FAQ
+     WP: template-parts/section-faq.php  (ACF repeater: question, answer)
+     ============================================================ -->
+<section class="sec" id="faq"><div class="container">
+  <div class="text-center mb-5" data-in><span class="eyebrow">Good to know</span><h2 class="h-sec t-metal mt-2 mb-0">Frequently asked</h2></div>
+  <div class="accordion ab-faq mx-auto" id="faqList" data-in>
+    <div class="accordion-item">
+      <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq0" aria-expanded="true">When and where is Season 6?</button></h3>
+      <div id="faq0" class="accordion-collapse collapse show" data-bs-parent="#faqList"><div class="accordion-body">Season 6 takes place on 10&ndash;11 April 2027 at Avadh Utopia, Surat.</div></div>
+    </div>
+    <div class="accordion-item">
+      <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false">What is the difference between the two passes?</button></h3>
+      <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">Both passes include the exhibition, speaker sessions and workshops. The Investor Pass adds the Trailblazers Mine live pitching event and investor networking.</div></div>
+    </div>
+    <div class="accordion-item">
+      <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false">How do I book a stall?</button></h3>
+      <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">Stalls have their own page: open <a href="stalls.html">Stalls</a>, pick Silver, Gold or Platinum and apply. Stall prices exclude GST.</div></div>
+    </div>
+    <div class="accordion-item">
+      <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false">Can I book a hotel room too?</button></h3>
+      <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">Yes. Rooms have their own page: open <a href="rooms.html">Hotel rooms</a> to check availability by date. Rooms come in dual and triple occupancy with breakfast included.</div></div>
+    </div>
+    <div class="accordion-item">
+      <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false">What about refunds and cancellations?</button></h3>
+      <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">Please read the Refund &amp; Cancellation policy on 21by72.com before you book.</div></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: call to action
+     WP: template-parts/section-cta.php
+     ============================================================ -->
+<section class="sec bg-alt" id="contact"><div class="container">
+  <div class="box about-cta text-center" data-in>
+    <span class="eyebrow">Need help?</span>
+    <h2 class="h-sec t-metal mt-2 mb-3">Talk to the team</h2>
+    <p class="sub t-soft mx-auto mb-4">Questions about passes, stalls or rooms? We are happy to help.</p>
+    <div class="d-flex flex-wrap justify-content-center gap-3"><a class="btn btn-grad" href="mailto:pitch@ivygrowth.co.in">pitch@ivygrowth.co.in</a><a class="btn btn-ghost" href="tel:+918758812000">+91 87588 12000</a></div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: footer
+     WP: footer.php  (link lists -> wp_nav_menu locations "footer-links" and "footer-policies"; contact + social -> options page)
+     The animated background (.foot-bg) is pure CSS - no script needed.
+     ============================================================ -->
+<footer class="foot position-relative overflow-hidden">
+  <div class="foot-bg" aria-hidden="true"><span class="foot-orb fo1"></span><span class="foot-orb fo2"></span><span class="foot-grid"></span></div>
+  <div class="container position-relative">
+
+    <div class="foot-cta d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-4">
+      <div>
+        <h2 class="h-sec t-metal mb-2">Be part of <span class="t-grad">Season 6</span></h2>
+        <p class="t-soft mb-0">10 &ndash; 11 April 2027 &middot; Avadh Utopia, Surat</p>
+      </div>
+      <div class="d-flex flex-wrap gap-3">
+        <a class="btn btn-grad" href="tickets.html">Grab Your Pass</a>
+        <a class="btn btn-ghost" href="index.html#book">Exhibit Your Startup</a>
+      </div>
+    </div>
+
+    <div class="row g-5 foot-main">
+      <div class="col-lg-4">
+        <div class="logo logo-img mb-3"><img src="assets/img/21by72-logo.png" width="72" height="72" alt="21BY72" loading="lazy"></div>
+        <p class="t-mute mb-4">Bharat's Leading Startup Summit &mdash; where conversations converge into companies.</p>
+        <div class="d-flex gap-2">
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.linkedin.com/company/ivy-growth-associates/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3V9.75zm6.5 0h3.8v1.6h.06c.53-1 1.82-2 3.75-2 4 0 4.75 2.63 4.75 6.05V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.58V21h-4V9.75z"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.instagram.com/21by72/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.facebook.com/21by72" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8z"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://twitter.com/Ivygrowth" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h3 class="foot-title">Explore</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="index.html#team">Our Team</a></li>
+          <li><a href="index.html#book">Book Passes</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h3 class="foot-title">Policies</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li><a href="https://www.21by72.com/terms-of-service/" target="_blank" rel="noopener">Terms of Service</a></li>
+          <li><a href="https://www.21by72.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></li>
+          <li><a href="https://www.21by72.com/refund-cancellation/" target="_blank" rel="noopener">Refund &amp; Cancellation</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h3 class="foot-title">Contact</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li>Avadh Utopia, Surat, Gujarat</li>
+          <li><a href="mailto:pitch@ivygrowth.co.in">pitch@ivygrowth.co.in</a></li>
+          <li><a href="tel:+918758812000">+91 87588 12000</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span>&copy; 2026 IVY Growth Associates. All rights reserved.</span>
+      <span>Redesign demo for client preview &ndash; not the live site.</span>
+    </div>
+  </div>
+  <div class="foot-mark" aria-hidden="true">21BY72</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js"></script>
+<script src="assets/js/countdown.js"></script>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>

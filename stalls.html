@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>21BY72 Stalls - Book Your Stall</title>
+<!-- WP: wp_head() goes here; enqueue the CSS below from functions.php (see README.md) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/theme-light.css">
+</head>
+<body class="theme-light">
+<div id="bar" class="bg-grad"></div><div id="glow"></div>
+
+<!-- ============================================================
+     SECTION: header / navigation
+     WP: header.php  (menu items -> wp_nav_menu with a custom walker for the .nav-link classes)
+     ============================================================ -->
+<nav class="navbar navbar-expand-lg fixed-top" id="hd"><div class="container">
+  <a class="logo logo-img d-inline-flex align-items-center" href="index.html#top" aria-label="21BY72 home"><img src="assets/img/21by72-logo.png" width="48" height="48" alt="21BY72"></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="nav">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item"><a class="nav-link" href="exhibitors.html">Exhibitors</a></li>
+      <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+      <li class="nav-item"><a class="nav-link" href="speakers.html">Speakers</a></li>
+      <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#book">Pitching Event</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+      <li class="nav-item"><a class="nav-link" href="tickets.html">Book</a></li>
+    </ul>
+    <a class="btn btn-grad btn-sm-x" href="tickets.html">Grab Your Pass</a>
+  </div>
+</div></nav>
+
+<!-- ============================================================
+     SECTION: stalls page header
+     WP: page-stalls.php  (page template)
+     ============================================================ -->
+<section class="sp-hero" id="stalls-top"><div class="container position-relative text-center">
+  <span class="eyebrow" data-in>Season 6 &middot; 10&ndash;11 April 2027</span>
+  <h1 class="ex-h1 mt-2 mb-3" data-in>Book your <span class="t-grad">stall</span></h1>
+  <p class="sub t-soft mx-auto mb-4" data-in>Showcase your startup to investors, customers and the press at Avadh Utopia, Surat. Three sizes, one set of inclusions.</p>
+  <div class="d-flex flex-wrap justify-content-center gap-3" data-in><a class="btn btn-grad" href="#packages">See packages</a><a class="btn btn-ghost" href="tickets.html">Back to tickets</a></div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: stall packages
+     WP: template-parts/section-stalls.php  (WooCommerce products by category "stalls": SKU SILSTALL / GOLDSTALL / PTMSTALL - or ACF repeater: tier, size, price, old price)
+     NOTE: Season 5 prices (ex-GST). Confirm the Season 6 prices before launch.
+     ============================================================ -->
+<section class="sec" id="packages" style="padding-top:30px"><div class="container">
+  <div class="text-center mb-5" data-in><span class="eyebrow">Packages</span><h2 class="h-sec t-metal mt-2 mb-3">Pick your stall size</h2><p class="sub t-soft mx-auto mb-0">Every package has the same inclusions. Choose the size that fits your product.</p></div>
+  <div class="row g-4 justify-content-center cards">
+    <div class="col-md-6 col-lg-4"><div class="box ex-tier h-100 d-flex flex-column" data-in>
+      <h3 class="h4 mb-1">Silver</h3><div class="t-mute fs-sm mb-3">6.5 x 6.5 x 8 ft</div>
+      <div class="price">&#8377;35,000 <small>+ GST</small></div><div class="ex-old">&#8377;50,000</div>
+      <ul class="ticks list-unstyled t-mute fs-sm my-4 flex-grow-1"><li>3 lights + 3 chairs</li><li>Front fascia branding</li><li>Optimum table with branding</li><li>50-inch TV with stand</li><li>Vinyl printing on all walls</li><li>Food arrangements</li><li>Networking lounge access</li></ul>
+      <a class="btn btn-grad" href="https://forms.gle/6f6HAbJMmqY7QwU57" target="_blank" rel="noopener">Apply Now</a>
+    </div></div>
+    <div class="col-md-6 col-lg-4"><div class="box ex-tier h-100 d-flex flex-column" data-in>
+      <h3 class="h4 mb-1">Gold</h3><div class="t-mute fs-sm mb-3">10 x 6.5 x 8 ft</div>
+      <div class="price">&#8377;45,000 <small>+ GST</small></div><div class="ex-old">&#8377;60,000</div>
+      <ul class="ticks list-unstyled t-mute fs-sm my-4 flex-grow-1"><li>3 lights + 3 chairs</li><li>Front fascia branding</li><li>Optimum table with branding</li><li>50-inch TV with stand</li><li>Vinyl printing on all walls</li><li>Food arrangements</li><li>Networking lounge access</li></ul>
+      <a class="btn btn-grad" href="https://forms.gle/6f6HAbJMmqY7QwU57" target="_blank" rel="noopener">Apply Now</a>
+    </div></div>
+    <div class="col-md-6 col-lg-4"><div class="box ex-tier h-100 d-flex flex-column ex-pop" data-in><span class="ribbon bg-grad">POPULAR</span>
+      <h3 class="h4 mb-1">Platinum</h3><div class="t-mute fs-sm mb-3">10 x 10 x 8 ft</div>
+      <div class="price">&#8377;55,000 <small>+ GST</small></div><div class="ex-old">&#8377;70,000</div>
+      <ul class="ticks list-unstyled t-mute fs-sm my-4 flex-grow-1"><li>3 lights + 3 chairs</li><li>Front fascia branding</li><li>Optimum table with branding</li><li>50-inch TV with stand</li><li>Vinyl printing on all walls</li><li>Food arrangements</li><li>Networking lounge access</li></ul>
+      <a class="btn btn-grad" href="https://forms.gle/6f6HAbJMmqY7QwU57" target="_blank" rel="noopener">Apply Now</a>
+    </div></div>
+  </div>
+  <p class="text-center t-mute fs-sm mt-4 mb-0">Prices exclude GST. Season 5 prices shown - Season 6 prices will be confirmed.</p>
+</div></section>
+
+<!-- ============================================================
+     SECTION: past seasons slider (stalls page)
+     WP: template-parts/section-slider.php  (ACF gallery field; each .sl-slide = one image)
+     JS: slider.js (scroll-snap track, arrows, dots, autoplay - no library). Markup: [data-slider] > .sl-track > .sl-slide, with .sl-prev / .sl-next / .sl-dots.
+     NOTE: the live site has no dedicated stall photos, so these are event photos from past seasons - swap in real stall photos by changing the img src.
+     ============================================================ -->
+<section class="sec" id="seasons"><div class="container">
+  <div class="text-center mb-5" data-in><span class="eyebrow">Past seasons</span><h2 class="h-sec t-metal mt-2 mb-3">Moments from past seasons</h2><p class="sub t-soft mx-auto mb-0">Swipe through photos from Avadh Utopia.</p></div>
+  <div class="sl" data-slider data-in>
+    <div class="sl-track">
+      <figure class="sl-slide"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/21BY72-Season-3-Day-1-1.jpg" alt="Avadh Utopia on Season 3 day one"><figcaption><b>Season 3</b><span>Avadh Utopia on Season 3 day one</span></figcaption></figure>
+      <figure class="sl-slide"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/10/Startup-Event.jpg" alt="Founders and investors sharing a laugh"><figcaption><b>Season 3</b><span>Founders and investors sharing a laugh</span></figcaption></figure>
+      <figure class="sl-slide"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Radhika-Madan-at-21BY72-Startup-Summit.jpg" alt="Walking the floor with Radhika Madan"><figcaption><b>Season 3</b><span>Walking the floor with Radhika Madan</span></figcaption></figure>
+      <figure class="sl-slide"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/07/the-ultimate-event-highlights-mu.jpg" alt="On stage at the Global Startup Summit"><figcaption><b>Season 3</b><span>On stage at the Global Startup Summit</span></figcaption></figure>
+      <figure class="sl-slide"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/12/21BY72-Startup-Event-Season-4.jpg" alt="A speaker with the mic at Season 4"><figcaption><b>Season 4</b><span>A speaker with the mic at Season 4</span></figcaption></figure>
+      <figure class="sl-slide"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/12/banner-4.jpeg" alt="A speaker addressing the audience"><figcaption><b>Season 4</b><span>A speaker addressing the audience</span></figcaption></figure>
+    </div>
+    <button class="sl-btn sl-prev" type="button" aria-label="Previous photos"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="sl-btn sl-next" type="button" aria-label="Next photos"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    <div class="sl-dots" role="tablist" aria-label="Choose slide"></div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: what every stall includes
+     WP: template-parts/section-stall-inclusions.php  (ACF repeater: icon, label)
+     ============================================================ -->
+<section class="sec bg-alt" id="included"><div class="container">
+  <div class="text-center mb-5" data-in><span class="eyebrow">Included</span><h2 class="h-sec t-metal mt-2 mb-0">What every stall comes with</h2></div>
+  <div class="row g-4 cards">
+    <div class="col-6 col-md-4 col-lg-3"><div class="box about-feat h-100 text-center" data-in><div class="d-flex justify-content-center"><span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2V17h6v-.3c0-.8.4-1.5 1-2A7 7 0 0 0 12 2z"/></svg></span></div><p class="mt-3 mb-0 fw-semibold">3 lights + 3 chairs</p></div></div>
+    <div class="col-6 col-md-4 col-lg-3"><div class="box about-feat h-100 text-center" data-in><div class="d-flex justify-content-center"><span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M7 20h10M12 16v4"/></svg></span></div><p class="mt-3 mb-0 fw-semibold">Front fascia branding</p></div></div>
+    <div class="col-6 col-md-4 col-lg-3"><div class="box about-feat h-100 text-center" data-in><div class="d-flex justify-content-center"><span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h18M5 8v12M19 8v12M3 8l2-4h14l2 4"/></svg></span></div><p class="mt-3 mb-0 fw-semibold">Optimum table with branding</p></div></div>
+    <div class="col-6 col-md-4 col-lg-3"><div class="box about-feat h-100 text-center" data-in><div class="d-flex justify-content-center"><span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="13" rx="2"/><path d="M8 21h8M12 18v3"/></svg></span></div><p class="mt-3 mb-0 fw-semibold">50-inch TV with stand</p></div></div>
+    <div class="col-6 col-md-4 col-lg-3"><div class="box about-feat h-100 text-center" data-in><div class="d-flex justify-content-center"><span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4v-7h16v7h-2M7 14h10v7H7z"/></svg></span></div><p class="mt-3 mb-0 fw-semibold">Vinyl printing on all walls</p></div></div>
+    <div class="col-6 col-md-4 col-lg-3"><div class="box about-feat h-100 text-center" data-in><div class="d-flex justify-content-center"><span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM17 9h2a2 2 0 0 1 0 4h-2M7 2v3M11 2v3M15 2v3"/></svg></span></div><p class="mt-3 mb-0 fw-semibold">Food arrangements</p></div></div>
+    <div class="col-6 col-md-4 col-lg-3"><div class="box about-feat h-100 text-center" data-in><div class="d-flex justify-content-center"><span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 7l3 3M17 7l-3 3M7 17l3-3M17 17l-3-3"/></svg></span></div><p class="mt-3 mb-0 fw-semibold">Networking lounge access</p></div></div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: compare sizes
+     WP: template-parts/section-compare.php
+     ============================================================ -->
+<section class="sec" id="compare"><div class="container">
+  <div class="text-center mb-5" data-in><span class="eyebrow">Compare</span><h2 class="h-sec t-metal mt-2 mb-0">Silver, Gold or Platinum</h2></div>
+  <div class="tk-wrap" data-in>
+    <table class="tk-table">
+      <thead><tr><th scope="col"></th><th scope="col">Silver<b class="t-grad">&#8377;35,000</b></th><th scope="col">Gold<b class="t-grad">&#8377;45,000</b></th><th scope="col" class="tk-hl">Platinum<b class="t-grad">&#8377;55,000</b></th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Stall size</th><td>6.5 x 6.5 x 8 ft</td><td>10 x 6.5 x 8 ft</td><td class="tk-hl">10 x 10 x 8 ft</td></tr>
+        <tr><th scope="row">All inclusions</th><td><span class="tk-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span></td><td><span class="tk-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span></td><td class="tk-hl"><span class="tk-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span></td></tr>
+        <tr><th scope="row">Price (+ GST)</th><td>&#8377;35,000</td><td>&#8377;45,000</td><td class="tk-hl">&#8377;55,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: call to action
+     WP: template-parts/section-cta.php
+     ============================================================ -->
+<section class="sec bg-alt" id="contact"><div class="container">
+  <div class="box about-cta text-center" data-in>
+    <span class="eyebrow">Limited stalls</span>
+    <h2 class="h-sec t-metal mt-2 mb-3">Ready to exhibit at Season 6?</h2>
+    <p class="sub t-soft mx-auto mb-4">Apply now and our team will confirm your stall.</p>
+    <div class="d-flex flex-wrap justify-content-center gap-3"><a class="btn btn-grad" href="https://forms.gle/6f6HAbJMmqY7QwU57" target="_blank" rel="noopener">Apply for a stall</a><a class="btn btn-ghost" href="exhibitors.html">See past exhibitors</a><a class="btn btn-ghost" href="tel:+918758812000">+91 87588 12000</a></div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: footer
+     WP: footer.php  (link lists -> wp_nav_menu locations "footer-links" and "footer-policies"; contact + social -> options page)
+     The animated background (.foot-bg) is pure CSS - no script needed.
+     ============================================================ -->
+<footer class="foot position-relative overflow-hidden">
+  <div class="foot-bg" aria-hidden="true"><span class="foot-orb fo1"></span><span class="foot-orb fo2"></span><span class="foot-grid"></span></div>
+  <div class="container position-relative">
+
+    <div class="foot-cta d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-4">
+      <div>
+        <h2 class="h-sec t-metal mb-2">Be part of <span class="t-grad">Season 6</span></h2>
+        <p class="t-soft mb-0">10 &ndash; 11 April 2027 &middot; Avadh Utopia, Surat</p>
+      </div>
+      <div class="d-flex flex-wrap gap-3">
+        <a class="btn btn-grad" href="tickets.html">Grab Your Pass</a>
+        <a class="btn btn-ghost" href="index.html#book">Exhibit Your Startup</a>
+      </div>
+    </div>
+
+    <div class="row g-5 foot-main">
+      <div class="col-lg-4">
+        <div class="logo logo-img mb-3"><img src="assets/img/21by72-logo.png" width="72" height="72" alt="21BY72" loading="lazy"></div>
+        <p class="t-mute mb-4">Bharat's Leading Startup Summit &mdash; where conversations converge into companies.</p>
+        <div class="d-flex gap-2">
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.linkedin.com/company/ivy-growth-associates/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3V9.75zm6.5 0h3.8v1.6h.06c.53-1 1.82-2 3.75-2 4 0 4.75 2.63 4.75 6.05V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.58V21h-4V9.75z"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.instagram.com/21by72/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.facebook.com/21by72" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8z"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://twitter.com/Ivygrowth" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h3 class="foot-title">Explore</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="index.html#team">Our Team</a></li>
+          <li><a href="index.html#book">Book Passes</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h3 class="foot-title">Policies</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li><a href="https://www.21by72.com/terms-of-service/" target="_blank" rel="noopener">Terms of Service</a></li>
+          <li><a href="https://www.21by72.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></li>
+          <li><a href="https://www.21by72.com/refund-cancellation/" target="_blank" rel="noopener">Refund &amp; Cancellation</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h3 class="foot-title">Contact</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li>Avadh Utopia, Surat, Gujarat</li>
+          <li><a href="mailto:pitch@ivygrowth.co.in">pitch@ivygrowth.co.in</a></li>
+          <li><a href="tel:+918758812000">+91 87588 12000</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span>&copy; 2026 IVY Growth Associates. All rights reserved.</span>
+      <span>Redesign demo for client preview &ndash; not the live site.</span>
+    </div>
+  </div>
+  <div class="foot-mark" aria-hidden="true">21BY72</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js"></script>
+<script src="assets/js/slider.js"></script>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>

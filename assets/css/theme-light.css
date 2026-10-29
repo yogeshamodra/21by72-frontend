@@ -113,10 +113,15 @@
 .theme-light .note a{color:#fff}
 
 /* ===== about page ===== */
-.theme-light .ab-hero{background:#eef0ff}
-.theme-light .ab-hero:before{background:linear-gradient(180deg,rgba(246,247,255,.82),rgba(246,247,255,.7) 50%,var(--bg))}
-.theme-light .ab-h1{color:var(--text)}
-.theme-light .ab-crumb a:hover{color:var(--text)}
+.theme-light .ab-hero{background:#0a0d1f}
+.theme-light .ab-hero:before{background:rgba(10,13,31,.6)}
+.theme-light .ab-h1,.theme-light .ab-hero .eyebrow{color:#fff}
+.theme-light .ab-hero .t-soft{color:#dfe3f7}
+/* about page: the navbar sits on the dark hero until it is scrolled */
+.theme-light.ab-page .navbar:not(.s) .nav-link{color:#e6e9fb}
+.theme-light.ab-page .navbar:not(.s) .nav-link:hover{color:#fff}
+.theme-light.ab-page .navbar:not(.s) .navbar-toggler{border-color:rgba(255,255,255,.4)}
+.theme-light.ab-page .navbar:not(.s) .navbar-toggler-icon{filter:invert(1)}
 .theme-light .ab-stats,.theme-light .ab-stat{border-color:rgba(20,23,58,.12)}
 .theme-light .ab-step{border-bottom-color:rgba(20,23,58,.12)}
 .theme-light .ab-panel{background:linear-gradient(135deg,rgba(255,106,61,.08),rgba(122,77,255,.14));border-color:rgba(20,23,58,.1);box-shadow:0 18px 44px rgba(20,23,58,.09)}
