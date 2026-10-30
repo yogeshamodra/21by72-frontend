@@ -24,11 +24,21 @@
      SECTION: header / navigation
      WP: header.php  (menu items -> wp_nav_menu with a custom walker for the .nav-link classes)
      ============================================================ -->
-<nav class="navbar navbar-expand-lg fixed-top" id="hd"><div class="container">
+<nav class="navbar navbar-expand-xl fixed-top" id="hd"><div class="container">
   <a class="logo logo-img d-inline-flex align-items-center" href="#top" aria-label="21BY72 home"><img src="assets/img/21by72-logo.png" width="48" height="48" alt="21BY72"></a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
   <div class="collapse navbar-collapse" id="nav">
     <ul class="navbar-nav mx-auto">
+      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Seasons</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="season-6.html">Season 6 <small>Upcoming</small></a></li>
+          <li><a class="dropdown-item" href="season-5.html">Season 5</a></li>
+          <li><a class="dropdown-item" href="season-4.html">Season 4</a></li>
+          <li><a class="dropdown-item" href="season-3.html">Season 3</a></li>
+          <li><a class="dropdown-item" href="season-2.html">Season 2</a></li>
+          <li><a class="dropdown-item" href="season-1.html">Season 1</a></li>
+        </ul>
+      </li>
       <li class="nav-item"><a class="nav-link" href="exhibitors.html">Exhibitors</a></li>
       <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
       <li class="nav-item"><a class="nav-link" href="speakers.html">Speakers</a></li>
@@ -38,6 +48,7 @@
       <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
       <li class="nav-item"><a class="nav-link" href="blogs.html">Blog</a></li>
       <li class="nav-item"><a class="nav-link" href="tickets.html">Book</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
     </ul>
     <a class="btn btn-grad btn-sm-x" href="tickets.html">Grab Your Pass</a>
   </div>
@@ -113,7 +124,7 @@
       <span class="eyebrow">About 21BY72</span>
       <h2 class="h-sec t-metal mt-2 mb-4">Join Our Flagship Gathering</h2>
       <p class="t-soft mb-4">21BY72 is Bharat's leading startup summit, held in Surat - the birthplace of some of India's most consequential companies. Spend two days in candid conversations with the founders and investors backing bold ideas early, when conviction matters more than answers. Explore startup showcases spanning fintech, deep tech, healthcare and beyond, and walk away with real connections through curated investor-founder huddles. This is where ideas turn into companies that don't just scale, but solve meaningful problems and create lasting impact.</p>
-      <a class="btn btn-grad" href="#book">Register Now</a>
+      <a class="btn btn-grad" href="tickets.html">Register Now</a>
     </div>
     <div class="col-lg-6" data-in>
       <div class="about-video">
@@ -322,13 +333,13 @@
   <h2 class="h-sec mb-2" data-in>Book your <span class="t-grad">experience</span></h2><p class="sub mb-5" data-in>Passes, stalls and rooms - all in one cart.</p>
   <div class="row g-4 cards">
     <div class="col-md-6 col-lg-3"><div class="box h-100 d-flex flex-column" data-in><h3 class="h4">Exhibition &amp; Panel Pass</h3><div class="price">&#8377;1,299</div>
-      <ul class="ticks list-unstyled t-mute fs-sm my-3 flex-grow-1"><li>Exhibition area</li><li>Speaker sessions</li><li>Workshops</li></ul><a class="btn btn-grad" href="#">Add to Cart</a></div></div>
+      <ul class="ticks list-unstyled t-mute fs-sm my-3 flex-grow-1"><li>Exhibition area</li><li>Speaker sessions</li><li>Workshops</li></ul><a class="btn btn-grad" href="tickets.html">Add to Cart</a></div></div>
     <div class="col-md-6 col-lg-3"><div class="box h-100 d-flex flex-column" data-in><span class="ribbon bg-grad">POPULAR</span><h3 class="h4">Investor Pass</h3><div class="price">&#8377;2,199</div>
-      <ul class="ticks list-unstyled t-mute fs-sm my-3 flex-grow-1"><li>Everything in Exhibition Pass</li><li>Trailblazers Mine live pitching</li><li>Investor networking</li></ul><a class="btn btn-grad" href="#">Add to Cart</a></div></div>
+      <ul class="ticks list-unstyled t-mute fs-sm my-3 flex-grow-1"><li>Everything in Exhibition Pass</li><li>Trailblazers Mine live pitching</li><li>Investor networking</li></ul><a class="btn btn-grad" href="tickets.html">Add to Cart</a></div></div>
     <div class="col-md-6 col-lg-3"><div class="box h-100 d-flex flex-column" data-in><h3 class="h4">Stalls</h3><div class="price">&#8377;35,000 <small>+ GST, from</small></div>
-      <ul class="ticks list-unstyled t-mute fs-sm my-3 flex-grow-1"><li>Silver, Gold, Platinum tiers</li><li>Lights, chairs, branded table, TV</li><li>Networking lounge access</li></ul><a class="btn btn-grad" href="#">Apply Now</a></div></div>
+      <ul class="ticks list-unstyled t-mute fs-sm my-3 flex-grow-1"><li>Silver, Gold, Platinum tiers</li><li>Lights, chairs, branded table, TV</li><li>Networking lounge access</li></ul><a class="btn btn-grad" href="stalls.html">Apply Now</a></div></div>
     <div class="col-md-6 col-lg-3"><div class="box h-100 d-flex flex-column" data-in><h3 class="h4">Hotel Rooms</h3><div class="price">&#8377;6,500 <small>/ night, from</small></div>
-      <ul class="ticks list-unstyled t-mute fs-sm my-3 flex-grow-1"><li>Dual &amp; Triple occupancy</li><li>Breakfast included</li><li>Check availability by date</li></ul><a class="btn btn-grad" href="#">Check Availability</a></div></div>
+      <ul class="ticks list-unstyled t-mute fs-sm my-3 flex-grow-1"><li>Dual &amp; Triple occupancy</li><li>Breakfast included</li><li>Check availability by date</li></ul><a class="btn btn-grad" href="rooms.html">Check Availability</a></div></div>
   </div>
 </div></section>
 
@@ -512,6 +523,87 @@
 
 
 <!-- ============================================================
+     SECTION: media and recognition
+     WP: template-parts/section-media.php  (CPT "media" or ACF repeater: clipping image, publication, headline, link - each .md-slide = one loop iteration)
+     JS: slider.js (scroll-snap slider, arrows, dots, autoplay)
+     NOTE: clippings and links come from the live 21by72.com home page.
+     ============================================================ -->
+<section class="sec" id="media"><div class="container">
+  <div class="text-center mb-5" data-in>
+    <span class="eyebrow">In the news</span>
+    <h2 class="h-sec t-metal mt-2 mb-3">Media &amp; Recognition</h2>
+    <p class="sub t-soft mx-auto mb-0">21BY72 has been covered by leading publications and backed by Gujarat's and India's leaders.</p>
+  </div>
+  <div class="sl" data-slider data-in>
+    <div class="sl-track">
+      <figure class="sl-slide md-slide">
+        <a class="md-img" href="https://www.21by72.com/wp-content/uploads/2023/01/media_3.webp" target="_blank" rel="noopener" aria-label="Chief Minister of Gujarat: Bhupendra Patel"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/media_3.webp" alt="Chief Minister of Gujarat - Bhupendra Patel"><span class="md-tag">Message of support</span></a>
+        <figcaption><b>Chief Minister of Gujarat</b><span>Bhupendra Patel</span><a href="https://www.21by72.com/wp-content/uploads/2023/01/media_3.webp" target="_blank" rel="noopener">View clipping <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></figcaption>
+      </figure>
+      <figure class="sl-slide md-slide">
+        <a class="md-img" href="https://www.21by72.com/wp-content/uploads/2023/01/media-1-1.webp" target="_blank" rel="noopener" aria-label="Minister of State for Finance: Dr. Bhagwat Karad"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/media-1-1.webp" alt="Minister of State for Finance - Dr. Bhagwat Karad"><span class="md-tag">Message of support</span></a>
+        <figcaption><b>Minister of State for Finance</b><span>Dr. Bhagwat Karad</span><a href="https://www.21by72.com/wp-content/uploads/2023/01/media-1-1.webp" target="_blank" rel="noopener">View clipping <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></figcaption>
+      </figure>
+      <figure class="sl-slide md-slide">
+        <a class="md-img" href="https://timesofindia.indiatimes.com/ivy-growth-associates-announces-startup-summit-21-by-72-in-surat-200-startups-and-investors-to-join/articleshow/91807568.cms?from=mdr" target="_blank" rel="noopener" aria-label="Times of India: 200 startups and investors to join 21 BY 72 in Surat"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/7-scaled-1.webp" alt="Times of India - 200 startups and investors to join 21 BY 72 in Surat"><span class="md-tag">News</span></a>
+        <figcaption><b>Times of India</b><span>200 startups and investors to join 21 BY 72 in Surat</span><a href="https://timesofindia.indiatimes.com/ivy-growth-associates-announces-startup-summit-21-by-72-in-surat-200-startups-and-investors-to-join/articleshow/91807568.cms?from=mdr" target="_blank" rel="noopener">Read article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></figcaption>
+      </figure>
+      <figure class="sl-slide md-slide">
+        <a class="md-img" href="https://divyagujarati.com/ivy-growth-associates-launches-3-day-mega-startup-summit-21-by-72-in-surat/" target="_blank" rel="noopener" aria-label="Divya Gujarati: IVY Growth launches 3-day mega startup summit"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/media_8.webp" alt="Divya Gujarati - IVY Growth launches 3-day mega startup summit"><span class="md-tag">News</span></a>
+        <figcaption><b>Divya Gujarati</b><span>IVY Growth launches 3-day mega startup summit</span><a href="https://divyagujarati.com/ivy-growth-associates-launches-3-day-mega-startup-summit-21-by-72-in-surat/" target="_blank" rel="noopener">Read article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></figcaption>
+      </figure>
+      <figure class="sl-slide md-slide">
+        <a class="md-img" href="https://yourstory.com/2022/06/surats-startup-summit-power-indian-startups-globally" target="_blank" rel="noopener" aria-label="YourStory: Surat's startup summit to power Indian startups globally"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/media_5.webp" alt="YourStory - Surat's startup summit to power Indian startups globally"><span class="md-tag">News</span></a>
+        <figcaption><b>YourStory</b><span>Surat's startup summit to power Indian startups globally</span><a href="https://yourstory.com/2022/06/surats-startup-summit-power-indian-startups-globally" target="_blank" rel="noopener">Read article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></figcaption>
+      </figure>
+      <figure class="sl-slide md-slide">
+        <a class="md-img" href="https://www.aninews.in/news/business/business/200-startups-and-investors-to-join-startup-summit-21-by-72-in-surat-organized-by-ivy-growth-associates20220519192927/" target="_blank" rel="noopener" aria-label="ANI: 200 startups and investors to join the summit"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/5-scaled-1.webp" alt="ANI - 200 startups and investors to join the summit"><span class="md-tag">News</span></a>
+        <figcaption><b>ANI</b><span>200 startups and investors to join the summit</span><a href="https://www.aninews.in/news/business/business/200-startups-and-investors-to-join-startup-summit-21-by-72-in-surat-organized-by-ivy-growth-associates20220519192927/" target="_blank" rel="noopener">Read article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></figcaption>
+      </figure>
+      <figure class="sl-slide md-slide">
+        <a class="md-img" href="http://businessnewsthisweek.com/business/200-startups-and-investors-to-join-startup-summit-21-by-72-in-surat-organized-by-ivy-growth-associates-2/" target="_blank" rel="noopener" aria-label="Business News This Week: 200+ startups and investors to join the summit"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/media_7.webp" alt="Business News This Week - 200+ startups and investors to join the summit"><span class="md-tag">News</span></a>
+        <figcaption><b>Business News This Week</b><span>200+ startups and investors to join the summit</span><a href="http://businessnewsthisweek.com/business/200-startups-and-investors-to-join-startup-summit-21-by-72-in-surat-organized-by-ivy-growth-associates-2/" target="_blank" rel="noopener">Read article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></figcaption>
+      </figure>
+      <figure class="sl-slide md-slide">
+        <a class="md-img" href="https://www.21by72.com/wp-content/uploads/2023/01/media-2-scaled-1.webp" target="_blank" rel="noopener" aria-label="Press release: Coverage in the print media"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/media-2-scaled-1.webp" alt="Press release - Coverage in the print media"><span class="md-tag">Press</span></a>
+        <figcaption><b>Press release</b><span>Coverage in the print media</span><a href="https://www.21by72.com/wp-content/uploads/2023/01/media-2-scaled-1.webp" target="_blank" rel="noopener">View clipping <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></figcaption>
+      </figure>
+      <figure class="sl-slide md-slide">
+        <a class="md-img" href="https://www.21by72.com/wp-content/uploads/2023/01/media-1.webp" target="_blank" rel="noopener" aria-label="Press release: IVY Growth Associates hosts a 3-day startup summit"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/media-1.webp" alt="Press release - IVY Growth Associates hosts a 3-day startup summit"><span class="md-tag">Press</span></a>
+        <figcaption><b>Press release</b><span>IVY Growth Associates hosts a 3-day startup summit</span><a href="https://www.21by72.com/wp-content/uploads/2023/01/media-1.webp" target="_blank" rel="noopener">View clipping <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></figcaption>
+      </figure>
+      <figure class="sl-slide md-slide">
+        <a class="md-img" href="https://www.21by72.com/wp-content/uploads/2023/01/image-3-scaled-1.webp" target="_blank" rel="noopener" aria-label="Press release: Coverage in the print media"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/image-3-scaled-1.webp" alt="Press release - Coverage in the print media"><span class="md-tag">Press</span></a>
+        <figcaption><b>Press release</b><span>Coverage in the print media</span><a href="https://www.21by72.com/wp-content/uploads/2023/01/image-3-scaled-1.webp" target="_blank" rel="noopener">View clipping <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></figcaption>
+      </figure>
+      <figure class="sl-slide md-slide">
+        <a class="md-img" href="https://www.21by72.com/wp-content/uploads/2023/01/media-highlights-4.jpg" target="_blank" rel="noopener" aria-label="YourStory: Surat-based IVY Growth launches Rs 250 Cr VC fund, Arigato Capital"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/media-highlights-4.jpg" alt="YourStory - Surat-based IVY Growth launches Rs 250 Cr VC fund, Arigato Capital"><span class="md-tag">News</span></a>
+        <figcaption><b>YourStory</b><span>Surat-based IVY Growth launches Rs 250 Cr VC fund, Arigato Capital</span><a href="https://www.21by72.com/wp-content/uploads/2023/01/media-highlights-4.jpg" target="_blank" rel="noopener">View clipping <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></figcaption>
+      </figure>
+      <figure class="sl-slide md-slide">
+        <a class="md-img" href="https://www.21by72.com/wp-content/uploads/2023/01/media-highlights-3.jpg" target="_blank" rel="noopener" aria-label="Hello Entrepreneurs: IVY Growth to host 3rd edition of 21BY72"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/media-highlights-3.jpg" alt="Hello Entrepreneurs - IVY Growth to host 3rd edition of 21BY72"><span class="md-tag">News</span></a>
+        <figcaption><b>Hello Entrepreneurs</b><span>IVY Growth to host 3rd edition of 21BY72</span><a href="https://www.21by72.com/wp-content/uploads/2023/01/media-highlights-3.jpg" target="_blank" rel="noopener">View clipping <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></figcaption>
+      </figure>
+      <figure class="sl-slide md-slide">
+        <a class="md-img" href="https://www.21by72.com/wp-content/uploads/2023/01/media-highlights-2.jpg" target="_blank" rel="noopener" aria-label="Dailyhunt: IVY Growth to host 3rd edition of 21BY72"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/media-highlights-2.jpg" alt="Dailyhunt - IVY Growth to host 3rd edition of 21BY72"><span class="md-tag">News</span></a>
+        <figcaption><b>Dailyhunt</b><span>IVY Growth to host 3rd edition of 21BY72</span><a href="https://www.21by72.com/wp-content/uploads/2023/01/media-highlights-2.jpg" target="_blank" rel="noopener">View clipping <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></figcaption>
+      </figure>
+      <figure class="sl-slide md-slide">
+        <a class="md-img" href="https://www.21by72.com/wp-content/uploads/2023/01/media-highlights-1.jpg" target="_blank" rel="noopener" aria-label="Press release: Coverage in the print media"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/media-highlights-1.jpg" alt="Press release - Coverage in the print media"><span class="md-tag">Press</span></a>
+        <figcaption><b>Press release</b><span>Coverage in the print media</span><a href="https://www.21by72.com/wp-content/uploads/2023/01/media-highlights-1.jpg" target="_blank" rel="noopener">View clipping <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></figcaption>
+      </figure>
+      <figure class="sl-slide md-slide">
+        <a class="md-img" href="https://www.21by72.com/wp-content/uploads/2023/01/Times-Business-awards-.jpeg" target="_blank" rel="noopener" aria-label="Times Business Awards: Celebrating the industry trailblazers"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/01/Times-Business-awards-.jpeg" alt="Times Business Awards - Celebrating the industry trailblazers"><span class="md-tag">Award</span></a>
+        <figcaption><b>Times Business Awards</b><span>Celebrating the industry trailblazers</span><a href="https://www.21by72.com/wp-content/uploads/2023/01/Times-Business-awards-.jpeg" target="_blank" rel="noopener">View clipping <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></figcaption>
+      </figure>
+    </div>
+    <button class="sl-btn sl-prev" type="button" aria-label="Previous"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="sl-btn sl-next" type="button" aria-label="Next"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    <div class="sl-dots" role="tablist" aria-label="Choose slide"></div>
+  </div>
+</div></section>
+
+<!-- ============================================================
      SECTION: partners
      WP: template-parts/section-partners.php
      Loop: custom post type "partner" (logo, name, link). Output the loop twice (second row in reverse order). Each .logo-box = one loop iteration. marquee.js repeats each row so the loop is seamless - output ONE copy per row.
@@ -647,7 +739,7 @@
       </div>
       <div class="d-flex flex-wrap gap-3">
         <a class="btn btn-grad" href="tickets.html">Grab Your Pass</a>
-        <a class="btn btn-ghost" href="#book">Exhibit Your Startup</a>
+        <a class="btn btn-ghost" href="exhibitors.html">Exhibit Your Startup</a>
       </div>
     </div>
 
@@ -670,7 +762,7 @@
           <li><a href="partners.html">Partners</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#team">Our Team</a></li>
-          <li><a href="#book">Book Passes</a></li>
+          <li><a href="tickets.html">Book Passes</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-3">
@@ -699,7 +791,7 @@
   <div class="foot-mark" aria-hidden="true">21BY72</div>
 </footer>
 
-<a class="wa d-flex align-items-center justify-content-center" href="#" aria-label="WhatsApp">&#128172;</a>
+<a class="wa d-flex align-items-center justify-content-center" href="https://wa.me/919737870125?text=Have+an+query+related+to+the+event%21" target="_blank" rel="noopener" aria-label="WhatsApp">&#128172;</a>
 <div class="note">Demo only: images are loaded from 21by72.com</div>
 
 <!-- WP: wp_footer(); enqueue in this order (see README.md): bootstrap, jquery (WP core), slick, gsap, ScrollTrigger, lenis, then the theme scripts -->
@@ -713,6 +805,7 @@
 <script src="assets/js/countdown.js"></script>
 <script src="assets/js/hero-hex.js"></script>
 <script src="assets/js/sliders.js"></script>
+<script src="assets/js/slider.js"></script>
 <script src="assets/js/animations.js"></script>
 </body>
 </html>

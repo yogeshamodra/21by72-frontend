@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>21BY72 Season 4</title>
+<!-- WP: wp_head() goes here; enqueue the CSS below from functions.php (see README.md) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/theme-light.css">
+</head>
+<body class="theme-light ab-page">
+<div id="bar" class="bg-grad"></div><div id="glow"></div>
+
+<!-- ============================================================
+     SECTION: header / navigation
+     WP: header.php  (menu items -> wp_nav_menu with a custom walker for the .nav-link classes)
+     ============================================================ -->
+<nav class="navbar navbar-expand-xl fixed-top" id="hd"><div class="container">
+  <a class="logo logo-img d-inline-flex align-items-center" href="index.html#top" aria-label="21BY72 home"><img src="assets/img/21by72-logo.png" width="48" height="48" alt="21BY72"></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="nav">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Seasons</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="season-6.html">Season 6 <small>Upcoming</small></a></li>
+          <li><a class="dropdown-item" href="season-5.html">Season 5</a></li>
+          <li><a class="dropdown-item" href="season-4.html">Season 4</a></li>
+          <li><a class="dropdown-item" href="season-3.html">Season 3</a></li>
+          <li><a class="dropdown-item" href="season-2.html">Season 2</a></li>
+          <li><a class="dropdown-item" href="season-1.html">Season 1</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="exhibitors.html">Exhibitors</a></li>
+      <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+      <li class="nav-item"><a class="nav-link" href="speakers.html">Speakers</a></li>
+      <li class="nav-item"><a class="nav-link" href="partners.html">Partners</a></li>
+      <li class="nav-item"><a class="nav-link" href="pitching.html">Pitching Event</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+      <li class="nav-item"><a class="nav-link" href="blogs.html">Blog</a></li>
+      <li class="nav-item"><a class="nav-link" href="tickets.html">Book</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+    <a class="btn btn-grad btn-sm-x" href="tickets.html">Grab Your Pass</a>
+  </div>
+</div></nav>
+
+<!-- ============================================================
+     SECTION: season 4 hero (image + dark overlay)
+     WP: single-season.php  (season taxonomy term page; hero image -> ACF image field on the term)
+     ============================================================ -->
+<section class="ab-hero ss-hero d-flex align-items-center" id="top-season">
+  <div class="ab-bg" aria-hidden="true"><img src="https://www.21by72.com/wp-content/uploads/2024/12/21BY72-Startup-Event-Season-4.jpg" alt=""></div>
+  <div class="container position-relative text-center">
+    <span class="eyebrow d-inline-block" data-in>Past season</span>
+    <h1 class="ab-h1 mt-2 mb-3" data-in>Season <span class="t-grad">4</span></h1>
+    <p class="sub t-soft mx-auto mb-4" data-in>Speakers and moments from Season 4.</p>
+    <div class="d-flex flex-wrap justify-content-center gap-3" data-in><a class="btn btn-grad" href="#speakers">Meet the speakers</a><a class="btn btn-ghost" href="gallery.html">See the photos</a></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION: season facts (overlaps the hero)
+     WP: template-parts/section-season-facts.php  (term meta: date, venue, counts)
+     ============================================================ -->
+<section class="impact ex-stats" id="facts" aria-label="Season 4 at a glance"><div class="container">
+  <div class="impact-bar row g-0 justify-content-center" data-in>
+    <div class="col-6 col-lg-3 impact-item"><span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><div><b class="impact-num t-grad ss-val">2025</b><span class="impact-label">Dates</span></div></div>
+    <div class="col-6 col-lg-3 impact-item"><span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><b class="impact-num t-grad ss-val">Avadh Utopia, Surat</b><span class="impact-label">Venue</span></div></div>
+    <div class="col-6 col-lg-3 impact-item"><span class="impact-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><div><b class="impact-num t-grad ss-val">73</b><span class="impact-label">Speakers</span></div></div>
+  </div>
+</div></section>
+
+<div class="container pb-0 pt-4" data-in>
+  <div class="text-center"><div class="gal-filter mb-0">
+    <a class="sch-chip" href="season-6.html">Season 6</a>
+    <a class="sch-chip" href="season-5.html">Season 5</a>
+    <a class="sch-chip active" href="season-4.html">Season 4</a>
+    <a class="sch-chip" href="season-3.html">Season 3</a>
+    <a class="sch-chip" href="season-2.html">Season 2</a>
+    <a class="sch-chip" href="season-1.html">Season 1</a>
+  </div></div>
+</div>
+
+<!-- ============================================================
+     SECTION: season 4 speakers
+     WP: template-parts/section-speakers-grid.php  (speaker CPT filtered by season term; each .sp-item = one loop iteration)
+     ============================================================ -->
+<section class="sec" id="speakers"><div class="container">
+  <div class="d-flex align-items-end justify-content-between flex-wrap gap-3 mb-4" data-in>
+    <div><span class="eyebrow">Season 4</span><h2 class="h-sec t-metal mt-2 mb-0">The speakers</h2></div>
+    <a class="btn btn-ghost btn-sm-x" href="speakers.html">All seasons</a>
+  </div>
+  <div class="row g-4 cards">
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Abhishek-Agarwal-1.jpg" alt="Abhishek Agarwal"></div>
+            <div class="sp-info"><h3>Abhishek Agarwal</h3><p>Founder and Managing Partner, Rockstud Capital</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/aleena-gandhi.png" alt="Aleena Gandhi"></div>
+            <div class="sp-info"><h3>Aleena Gandhi</h3><p>Founder &amp; CEO, Social Media Dissect</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Amanda-Robinson.jpg" alt="Amanda Robinson"></div>
+            <div class="sp-info"><h3>Amanda Robinson</h3><p>Asset Management, Stake</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/05/Amit-Jain.png" alt="Amit Jain"></div>
+            <div class="sp-info"><h3>Amit Jain</h3><p>Co-Founder, Ashika Global Family Office</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Ananya-Narang-350x350.jpeg" alt="Ananya Narang"></div>
+            <div class="sp-info"><h3>Ananya Narang</h3><p>Founder and CEO, Entourage</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Angad-Khanna.jpg" alt="Angad Khanna"></div>
+            <div class="sp-info"><h3>Angad Khanna</h3><p>Director - Memberships &amp; Community, The Quorum</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Anil-Joshi-350x350.jpg" alt="Anil Joshi"></div>
+            <div class="sp-info"><h3>Anil Joshi</h3><p>Managing Partner, Unicorn India Ventures</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/05/Anushka-Rathod.png" alt="Anushka Rathod"></div>
+            <div class="sp-info"><h3>Anushka Rathod</h3><p>Digital Content Creator - Business &amp; Finance, Ex-Investment Banker</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/04/Arjun-Vaidya-Co-Founder-21BY72.png" alt="Arjun Vaidya"></div>
+            <div class="sp-info"><h3>Arjun Vaidya</h3><p>Co-founder, V3 Ventures</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/04/Ayushman-Pandita.png" alt="Ayushman Pandita"></div>
+            <div class="sp-info"><h3>Ayushman Pandita</h3><p>Founder, growthrocket.media</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Bhagyashree-Soni.jpg" alt="Bhagyashree Soni"></div>
+            <div class="sp-info"><h3>Bhagyashree Soni</h3><p>Founder of Cambio</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/dhairya-gangwani-350x350.jpg" alt="Dhairya Gangwani"></div>
+            <div class="sp-info"><h3>Dhairya Gangwani</h3><p>Founder, Dhairya Decodes, Career Coach, Public Speaker</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Divye-Agarwal-350x350.jpg" alt="Divye Agarwal"></div>
+            <div class="sp-info"><h3>Divye Agarwal</h3><p>Co-founder, Bingelabs</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/sidharath-sharma-350x350.png" alt="Dr. Sidharath S Sharma"></div>
+            <div class="sp-info"><h3>Dr. Sidharath S Sharma</h3><p>Advisor, Department Of Cooperation, Government Of Haryana</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/05/Ganesh-Prasad.png" alt="Ganeshprasad Sridharan"></div>
+            <div class="sp-info"><h3>Ganeshprasad Sridharan</h3><p>COO, Think School</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/GarimaSeth_ValueBridgeCapital.jpg" alt="Garima Seth"></div>
+            <div class="sp-info"><h3>Garima Seth</h3><p>Director, Merisis Opportunities Fund &amp; ValueBridge Capital</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Harsh-Deodhar-350x350.jpeg" alt="Harsh Deodhar"></div>
+            <div class="sp-info"><h3>Harsh Deodhar</h3><p>India Head, Enrission India Capital</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Himanshu-Maradiya-350x350.jpg" alt="Himanshu Maradiya"></div>
+            <div class="sp-info"><h3>Himanshu Maradiya</h3><p>Founder &amp; Chairman, CIFDAQ</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/05/Jatin-Chaudhary.png" alt="Jatin Chaudhary"></div>
+            <div class="sp-info"><h3>Jatin Chaudhary</h3><p>Co-founder, E-chai Ventures</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Jatin-Gajera-350x350.jpeg" alt="Jatin Gajera"></div>
+            <div class="sp-info"><h3>Jatin Gajera</h3><p>Laxmi Group</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/05/Jatin-Kataria-350x350.jpeg" alt="Jatin Kataria"></div>
+            <div class="sp-info"><h3>Jatin Kataria</h3><p>Partner, InMeSta Capital</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/jay-desai-350x350.jpg" alt="Jay Desai"></div>
+            <div class="sp-info"><h3>Jay Desai</h3><p>Founder of Insiders Club, Chartered Accountant, Content Creator</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Jessica-Brennan.jpg" alt="Jessica Brennan"></div>
+            <div class="sp-info"><h3>Jessica Brennan</h3><p>Founder, The Change Agency</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Jon-Hill-350x350.jpeg" alt="Jon Hill"></div>
+            <div class="sp-info"><h3>Jon Hill</h3><p>Partner, STRAKT; Network lead, CAMentrepreneurs Oxford</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Kapil-Hingorani.png" alt="Kapil Hingorani"></div>
+            <div class="sp-info"><h3>Kapil Hingorani</h3><p>Managing Director, Kashwill Capital</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Karan-Juneja.jpg" alt="Karan Juneja"></div>
+            <div class="sp-info"><h3>Karan Juneja</h3><p>Siddharth Industries</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/02/Karishma-Chandak-1.jpg" alt="Karishma Chandak"></div>
+            <div class="sp-info"><h3>Karishma Chandak</h3><p>Business &amp; Mindset Coach</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/03/Koyesha-Mukherjee-350x350.jpeg" alt="Koyesha Mukherjee"></div>
+            <div class="sp-info"><h3>Koyesha Mukherjee</h3><p>Founder, The Leading You^nth</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Krunal-Mehta.png" alt="Krunal Mehta"></div>
+            <div class="sp-info"><h3>Krunal Mehta</h3><p>Founder and Group CEO, Mehta Wealth</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Lokesh-Jain-350x350.png" alt="Lokesh Jain"></div>
+            <div class="sp-info"><h3>Lokesh Jain</h3><p>Manager - Portfolio and Fund Ops, Eximius Ventures</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/03/Mahavir-Pratap-Sharma-350x350-1.webp" alt="Mahavir Pratap Sharma"></div>
+            <div class="sp-info"><h3>Mahavir Pratap Sharma</h3><p>Chairman and Co-founder, Rajasthan Angel Innovators Network</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Mayuresh-Raut.png" alt="Mayuresh Raut"></div>
+            <div class="sp-info"><h3>Mayuresh Raut</h3><p>Co-Founder &amp; Managing Partner, Seafund</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Megha-Sethia-1.jpg" alt="Megha Sethia"></div>
+            <div class="sp-info"><h3>Megha Sethia</h3><p>Ginza Industries Limited</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Meghna-Dixit.png" alt="Meghna Dixit"></div>
+            <div class="sp-info"><h3>Meghna Dixit</h3><p>Founder, Mevan Consulting FZE</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Nisha-Barot.png" alt="Nisha Barot"></div>
+            <div class="sp-info"><h3>Nisha Barot</h3><p>Investor &amp; Strategic Consultant</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Nishita-Surolia-1.jpg" alt="Nishita Surolia"></div>
+            <div class="sp-info"><h3>Nishita Surolia</h3><p>Chairwoman, GBIZEX Global Commerce Council</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Nitesh-Aggarwal-350x350.jpeg" alt="Nitesh Aggarwal"></div>
+            <div class="sp-info"><h3>Nitesh Aggarwal</h3><p>VP - Innovations &amp; Investments, Baldota Family Office</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Niyati-Mavinkurve.png" alt="Niyati Mavinkurve"></div>
+            <div class="sp-info"><h3>Niyati Mavinkurve</h3><p>Co-founder, Abhi and Niyu; Co-founder, Let's Make You Rich</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Paras-Barot-1.png" alt="Paras Barot"></div>
+            <div class="sp-info"><h3>Paras Barot</h3><p>Strategic Investor and UAE Partner, IVY Growth Associates</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Pavan-Shah-.jpg" alt="Pavan Shah"></div>
+            <div class="sp-info"><h3>Pavan Shah</h3><p>General Manager, IFSCA</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Piyush-Chandak.jpg" alt="Piyush Chandak"></div>
+            <div class="sp-info"><h3>Piyush Chandak</h3><p>Director, SOLEX.IN</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Pratik-Awana.jpg" alt="Pratik Awana"></div>
+            <div class="sp-info"><h3>Pratik Awana</h3><p>Founder of Surat Updates</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/03/Radhika-Bajoria.png" alt="Radhika Bajoria"></div>
+            <div class="sp-info"><h3>Radhika Bajoria</h3><p>Founder, Radically Yours</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Raghav-Gupta.png" alt="Raghav Gupta"></div>
+            <div class="sp-info"><h3>Raghav Gupta</h3><p>Founder &amp; CEO, Co-Founder, Futurense; 1% Club</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Rahul-Bansal.jpg" alt="Rahul Bansal"></div>
+            <div class="sp-info"><h3>Rahul Bansal</h3><p>Co-Founder and CEO, Propacity</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/04/Rahul-Jain.png" alt="Rahul Jain"></div>
+            <div class="sp-info"><h3>Rahul Jain</h3><p>Founder, Market Kya Kehti Hai</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/raj-kumar-goel-350x350.jpg" alt="Raj Kumar Goel"></div>
+            <div class="sp-info"><h3>Raj Kumar Goel</h3><p>Managing Director, SLR Metaliks Ltd</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/06/Raunaq-Jaisinghani.webp" alt="Raunaq Jaisinghani"></div>
+            <div class="sp-info"><h3>Raunaq Jaisinghani</h3><p>Partner, Venture Capital</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Rishikesh-Trivedi.jpg" alt="Rishikesh Trivedi"></div>
+            <div class="sp-info"><h3>Rishikesh Trivedi</h3><p>Strategic Advisor, Pitchmatter</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/JTP_1716-1.jpg" alt="Rohan Parulekar"></div>
+            <div class="sp-info"><h3>Rohan Parulekar</h3><p>Sr. Vice President, IVCA</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Sadhvi-Dhawan-350x350.jpeg" alt="Sadhvi Dhawan"></div>
+            <div class="sp-info"><h3>Sadhvi Dhawan</h3><p>Vice President, Blink Digital</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Sahil-Khan-1.png" alt="Sahil Khan"></div>
+            <div class="sp-info"><h3>Sahil Khan</h3><p>Leader Healthcare, Business Development Manager</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Sakshi-Darpan-350x350.jpg" alt="Sakshi Darpan"></div>
+            <div class="sp-info"><h3>Sakshi Darpan</h3><p>Founder / Agency Owner, SackBerry</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Sandra-Louw-350x350.jpg" alt="Sandra Louw"></div>
+            <div class="sp-info"><h3>Sandra Louw</h3><p>CEO, RAK International Corporate Centre</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Sanjna-Yadav.jpg" alt="Sanjna Yadav"></div>
+            <div class="sp-info"><h3>Sanjna Yadav</h3><p>Brand Storytelling &amp; Social Media Consultant</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/04/Sarthak-Ahuja.png" alt="Sarthak Ahuja"></div>
+            <div class="sp-info"><h3>Sarthak Ahuja</h3><p>Director, Niamh Ventures LLC</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/satish-kumar-350x350.png" alt="Satish Kumar"></div>
+            <div class="sp-info"><h3>Satish Kumar</h3><p>National Co-organiser, Swadeshi Jagaran Manch / Swavlambhan Bharat Abhiyan</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Sharad-Bansal-.png" alt="Sharad Bansal"></div>
+            <div class="sp-info"><h3>Sharad Bansal</h3><p>Founder &amp; Managing Partner, WarmUp Ventures</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/05/Sheetal-Soni-350x350.jpeg" alt="Sheetal Soni"></div>
+            <div class="sp-info"><h3>Sheetal Soni</h3><p>Founder Partner, MICS International</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Shiva-Shanker-350x350.jpeg" alt="Shiva Shanker"></div>
+            <div class="sp-info"><h3>Shiva Shanker</h3><p>Director, Ankur Capital</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/shivangi-dham-350x350.jpg" alt="Shivangi Dham"></div>
+            <div class="sp-info"><h3>Shivangi Dham</h3><p>Marketer, Lawyer, UAE Partner, IVY Growth Associates</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/06/Shivangi-Narula.png" alt="Shivangi Narula"></div>
+            <div class="sp-info"><h3>Shivangi Narula</h3><p>CEO &amp; Director, Skilldify</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/04/Shivani-Gera.png" alt="Shivani Gera"></div>
+            <div class="sp-info"><h3>Shivani Gera</h3><p>Finance Consultant, Investment Banking, Ex-Deloitte, PWC, EY, YP; SEBI</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Shivansh-Garg-1.png" alt="Shivansh Garg"></div>
+            <div class="sp-info"><h3>Shivansh Garg</h3><p>Founder, Imprfct</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/05/Shreya-Jaiswal.png" alt="Shreya Jaiswal"></div>
+            <div class="sp-info"><h3>Shreya Jaiswal</h3><p>Co-Founder, FINTroop</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/06/Siddhant-Agarwal.png" alt="Siddhant Agarwal"></div>
+            <div class="sp-info"><h3>Siddhant Agarwal</h3><p>Co-Founder, Avimee Herbal</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/06/Sumit-Srivastawa-.jpeg" alt="Sumit Srivastawa"></div>
+            <div class="sp-info"><h3>Sumit Srivastawa</h3><p>Founder &amp; CEO, Startup Chaupal</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/surbhi-gandhi.png" alt="Surbhi Gandhi"></div>
+            <div class="sp-info"><h3>Surbhi Gandhi</h3><p>Founder, Pro FIRO; Podcast Host</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/04/twinkle-jain.png" alt="Twinkle Jain"></div>
+            <div class="sp-info"><h3>Twinkle Jain</h3><p>Chartered Accountant, Finance Educator, Content Consultant</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2023/06/unnati-bagga-350x350.jpg" alt="Unnati Bagga"></div>
+            <div class="sp-info"><h3>Unnati Bagga</h3><p>Co-Founder, TheGrowthSquare</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/Vivek-Kumar.jpeg-350x350.jpg" alt="Vivek Kumar"></div>
+            <div class="sp-info"><h3>Vivek Kumar</h3><p>CEO, Venture Garage</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/yaman-jindal-350x350.jpg" alt="Yaman Jindal"></div>
+            <div class="sp-info"><h3>Yaman Jindal</h3><p>Founder &amp; Managing Director, Noble Horizon; The Jindal Group</p></div>
+          </article></div>
+    <div class="col-6 col-md-4 col-xl-3 sp-item"><article class="sp-card">
+            <div class="sp-photo"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/05/yogesh-mehta-1-350x350.png" alt="Yogesh Mehta"></div>
+            <div class="sp-info"><h3>Yogesh Mehta</h3><p>Managing Director, Vyankatesh Metals and Alloys Pvt Ltd</p></div>
+          </article></div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: season 4 photos
+     WP: template-parts/section-gallery.php  (ACF gallery field on the season term)
+     ============================================================ -->
+<section class="sec bg-alt" id="photos"><div class="container">
+  <div class="d-flex align-items-end justify-content-between flex-wrap gap-3 mb-4" data-in>
+    <div><span class="eyebrow">Moments</span><h2 class="h-sec t-metal mt-2 mb-0">Photos</h2></div>
+    <a class="btn btn-ghost btn-sm-x" href="gallery.html">Open the gallery</a>
+  </div>
+  <div class="ss-photos" data-in>
+    <a href="gallery.html"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/02/21BY72-Season-4-Event.jpg" alt="Speaker on the main stage at 21BY72 Season 4"></a>
+    <a href="gallery.html"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2025/02/Bharats-Leading-Startup-Summit-Season-4.jpg" alt="Speakers on stage at Season 4"></a>
+    <a href="gallery.html"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/12/21BY72-Startup-Event-Season-4.jpg" alt="A speaker with the mic at Season 4"></a>
+    <a href="gallery.html"><img loading="lazy" src="https://www.21by72.com/wp-content/uploads/2024/12/banner-4.jpeg" alt="A speaker addressing the audience"></a>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: call to action
+     WP: template-parts/section-cta.php
+     ============================================================ -->
+<section class="sec bg-alt" id="next"><div class="container">
+  <div class="box about-cta text-center" data-in>
+    <span class="eyebrow">Next up: Season 6</span>
+    <h2 class="h-sec t-metal mt-2 mb-3">Join us for Season 6</h2>
+    <p class="sub t-soft mx-auto mb-4">10&ndash;11 April 2027 &middot; Avadh Utopia, Surat</p>
+    <div class="d-flex flex-wrap justify-content-center gap-3"><a class="btn btn-grad" href="tickets.html">Grab Your Pass</a><a class="btn btn-ghost" href="stalls.html">Book a stall</a><a class="btn btn-ghost" href="pitching.html">Pitch your startup</a></div>
+  </div>
+</div></section>
+
+<!-- ============================================================
+     SECTION: footer
+     WP: footer.php  (link lists -> wp_nav_menu locations "footer-links" and "footer-policies"; contact + social -> options page)
+     The animated background (.foot-bg) is pure CSS - no script needed.
+     ============================================================ -->
+<footer class="foot position-relative overflow-hidden">
+  <div class="foot-bg" aria-hidden="true"><span class="foot-orb fo1"></span><span class="foot-orb fo2"></span><span class="foot-grid"></span></div>
+  <div class="container position-relative">
+
+    <div class="foot-cta d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-4">
+      <div>
+        <h2 class="h-sec t-metal mb-2">Be part of <span class="t-grad">Season 6</span></h2>
+        <p class="t-soft mb-0">10 &ndash; 11 April 2027 &middot; Avadh Utopia, Surat</p>
+      </div>
+      <div class="d-flex flex-wrap gap-3">
+        <a class="btn btn-grad" href="tickets.html">Grab Your Pass</a>
+        <a class="btn btn-ghost" href="index.html#book">Exhibit Your Startup</a>
+      </div>
+    </div>
+
+    <div class="row g-5 foot-main">
+      <div class="col-lg-4">
+        <div class="logo logo-img mb-3"><img src="assets/img/21by72-logo.png" width="72" height="72" alt="21BY72" loading="lazy"></div>
+        <p class="t-mute mb-4">Bharat's Leading Startup Summit &mdash; where conversations converge into companies.</p>
+        <div class="d-flex gap-2">
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.linkedin.com/company/ivy-growth-associates/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3V9.75zm6.5 0h3.8v1.6h.06c.53-1 1.82-2 3.75-2 4 0 4.75 2.63 4.75 6.05V21h-4v-4.9c0-1.17-.02-2.67-1.63-2.67-1.63 0-1.88 1.27-1.88 2.58V21h-4V9.75z"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.instagram.com/21by72/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://www.facebook.com/21by72" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8z"/></svg></a>
+          <a class="foot-social d-inline-flex align-items-center justify-content-center" href="https://twitter.com/Ivygrowth" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h3 class="foot-title">Explore</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="index.html#team">Our Team</a></li>
+          <li><a href="index.html#book">Book Passes</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h3 class="foot-title">Policies</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li><a href="https://www.21by72.com/terms-of-service/" target="_blank" rel="noopener">Terms of Service</a></li>
+          <li><a href="https://www.21by72.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></li>
+          <li><a href="https://www.21by72.com/refund-cancellation/" target="_blank" rel="noopener">Refund &amp; Cancellation</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h3 class="foot-title">Contact</h3>
+        <ul class="foot-links list-unstyled mb-0">
+          <li>Avadh Utopia, Surat, Gujarat</li>
+          <li><a href="mailto:pitch@ivygrowth.co.in">pitch@ivygrowth.co.in</a></li>
+          <li><a href="tel:+918758812000">+91 87588 12000</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span>&copy; 2026 IVY Growth Associates. All rights reserved.</span>
+      <span>Redesign demo for client preview &ndash; not the live site.</span>
+    </div>
+  </div>
+  <div class="foot-mark" aria-hidden="true">21BY72</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js"></script>
+<script src="assets/js/marquee.js"></script>
+<script src="assets/js/animations.js"></script>
+</body>
+</html>

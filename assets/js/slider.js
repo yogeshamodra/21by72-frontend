@@ -4,7 +4,8 @@
   document.querySelectorAll('[data-slider]').forEach(function (root) {
     var track = root.querySelector('.sl-track'), slides = [].slice.call(track.children),
         prev = root.querySelector('.sl-prev'), next = root.querySelector('.sl-next'), dots = root.querySelector('.sl-dots'),
-        timer, paused = false, still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        timer, unlock, paused = false, still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    track.setAttribute('data-lenis-prevent', '');
     slides.forEach(function (s, i) {
       var b = document.createElement('button');
       b.type = 'button'; b.setAttribute('aria-label', 'Go to slide ' + (i + 1));
@@ -14,7 +15,13 @@
     function step() { return slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : track.clientWidth; }
     function index() { return Math.round(track.scrollLeft / step()); }
     function maxIndex() { return Math.round((track.scrollWidth - track.clientWidth) / step()); }
-    function go(i) { track.scrollTo({ left: Math.max(0, Math.min(i, maxIndex())) * step(), behavior: 'smooth' }); }
+    function go(i, instant) {
+      // scroll-snap fights a smooth programmatic scroll (that is the stutter), so snapping is paused while it runs
+      track.style.scrollSnapType = 'none';
+      track.scrollTo({ left: Math.max(0, Math.min(i, maxIndex())) * step(), behavior: instant ? 'auto' : 'smooth' });
+      clearTimeout(unlock);
+      unlock = setTimeout(function () { track.style.scrollSnapType = ''; }, instant ? 60 : 650);
+    }
     function sync() {
       var i = Math.min(index(), maxIndex());
       [].forEach.call(dots.children, function (d, k) { d.classList.toggle('on', k === i); d.hidden = k > maxIndex(); });
@@ -24,7 +31,7 @@
     next.addEventListener('click', function () { go(index() + 1); });
     track.addEventListener('scroll', function () { window.requestAnimationFrame(sync); });
     window.addEventListener('resize', sync);
-    function play() { clearInterval(timer); if (still) return; timer = setInterval(function () { if (!paused) go(index() >= maxIndex() ? 0 : index() + 1); }, 4000); }
+    function play() { clearInterval(timer); if (still) return; timer = setInterval(function () { if (paused) return; if (index() >= maxIndex()) go(0, true); else go(index() + 1); }, 4000); }
     ['mouseenter', 'focusin', 'touchstart'].forEach(function (e) { root.addEventListener(e, function () { paused = true; }, { passive: true }); });
     ['mouseleave', 'focusout', 'touchend'].forEach(function (e) { root.addEventListener(e, function () { paused = false; }, { passive: true }); });
     sync(); play();

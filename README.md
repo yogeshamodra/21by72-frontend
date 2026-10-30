@@ -17,6 +17,9 @@ stalls.html             stall packages, inclusions and a past-seasons photo slid
 rooms.html              hotel rooms (dual / triple occupancy)
 pitching.html           Trailblazers Mine pitching event (steps, past startups, investors, FAQ)
 blogs.html              blog (featured post, category chips, search, load more)
+contact.html            contact (details + form, topic cards, map)
+season-1.html .. season-6.html  one page per season (speakers, facts; S5 adds exhibitors + investors, S6 is coming soon)
+home-video.html         TEST copy of the home page with a video hero instead of the hex canvas
 dark.html               dark-theme copy of the home page (the old index.html)
 assets/css/style.css    all theme styles, with a table of contents at the top
 assets/css/theme-light.css  light-theme overrides, scoped under .theme-light (loaded by every page except dark.html)
@@ -31,6 +34,7 @@ assets/js/
   partners.js           live search on the partners page
   slider.js             scroll-snap slider (arrows, dots, autoplay)
   blogs.js              category chips, search and load more on the blog page
+  contact.js            demo form validation on the contact page
   sliders.js            testimonials slider (jQuery + Slick)
   animations.js         GSAP / Lenis: loader, reveals, progress bar
 ```
